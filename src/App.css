@@ -1,0 +1,259 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Blog */
+.blog {
+  color: #A2A2C7;
+  font-size: 60px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Stay up to date with current initiatives */
+.stay-updated {
+  color: white;
+  font-size: 64px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 72px;
+  word-wrap: break-word;
+}
+
+/* READ MORE */
+.read-more {
+  color: black;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.60px;
+  word-wrap: break-word;
+}
+
+/* Services */
+.services {
+  color: #DED8D8;
+  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 3px;
+  word-wrap: break-word;
+}
+
+/* Community Minded Consulting Firm */
+.community {
+  color: white;
+  font-size: 64px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 72px;
+  word-wrap: break-word;
+}
+
+/* E3 Strategic Solutions empowers organizations to reach their full potential with professional planning services */
+.empowers-organizations {
+  color: white;
+  font-size: 24px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  line-height: 32px;
+  word-wrap: break-word;
+}
+
+/* ABOUT US */
+.about-us {
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.60px;
+  word-wrap: break-word;
+}
+
+/* Book Now */
+.book-now {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 4px;
+  word-wrap: break-word;
+}
+
+/* Terms of Use */
+.terms-of-use {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Privacy */
+.privacy {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Contact */
+.contact {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* E3 Strategic Solutions */
+.e3-strategic-solutions {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Web Design: PM Daybreak Designs */
+.web-design {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* About Us */
+.about-us-secondary {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+}
+
+/* Services (Secondary) */
+.services-secondary {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+}
+
+/* Blog (Secondary) */
+.blog-secondary {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+}
+
+/* Contact (Secondary) */
+.contact-secondary {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+}
+
+.Title {
+  text-shadow: 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.ButtonAbout:hover, .ButtonServices:hover,.ButtonBlog:hover{
+transform:scale(1.2);
+transition: transform ease;
+cursor: pointer; 
+}
+
+.ListitemDesktopNa,.Logos,.ListitemDesktopNaActive{
+cursor: pointer; 
+}
+
+.ListitemDesktopNa:hover{
+background-color:#5F5FB0 !important;
+}
+
+.Button:hover{
+  transform:scale(1.2);
+  transition: transform ease;
+  background-color: white !important;
+  cursor: pointer; 
+}
+
+.Button:hover .Label{
+  color:black !important;
+}
+
+/* .fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+} */
+
+
+
