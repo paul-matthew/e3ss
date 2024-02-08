@@ -135,13 +135,13 @@ const handleHomeClick = () => {
           {/* Services */}
           <div className="Overlay2" style={{display:displayState,zIndex:1,width: '25vw', height: '100vh', left: SeroverlayLeft, top: 1, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'left 0.5s ease-in-out' }} />
           <div className="HoverOverlay2" style={{zIndex:displayState2,width: '25vw', height: '100vh', left: SeroverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', border: '1px #8C8484 solid', flexDirection: 'column', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'left 0.5s ease-in-out'}}>
-              <div className="ButtonServices" style={{display:displayState,position: 'absolute',marginTop:17,top:'70vh', textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex:1,letterSpacing: 3, wordWrap: 'break-word'}}onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
+            <div className="ButtonServices" style={{ display: displayState, position: 'absolute', marginTop: 0, height: '15vh', top: '70vh', textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex: 1, letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
           </div>
 
           {/* Blog */}
           <div className="Overlay2" style={{display:displayState,zIndex:1,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'left 0.5s ease-in-out' }} />
           <div className="HoverOverlay3" style={{zIndex:displayState2,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', borderLeft: '1px #8C8484 solid', borderTop: '1px #8C8484 solid', borderRight: '1px #8C8484 solid', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'left 0.5s ease-in-out' }}>
-              <div className="ButtonBlog" style={{display:displayState,zIndex:1,color: '#DED8D8', position: 'absolute',marginTop:17,top:'70vh',fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word'}}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
+              <div className="ButtonBlog" style={{display:displayState,zIndex:1,color: '#DED8D8', position: 'absolute',height:'15vh',top:'70vh',textAlign:'center',fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word',display: 'flex', justifyContent: 'center', alignItems: 'center' }}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
           </div>
       
       {desktopState === 'Homedesktop1' && (
@@ -156,7 +156,7 @@ const handleHomeClick = () => {
               </div>
               <div className="Lead" style={{width:'45vw',alignSelf: 'stretch', color: 'white', fontSize: 'clamp(20px, 4vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word'}}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
               <div className="Button" style={{zIndex:2, maxHeight:40,paddingLeft: 20, paddingRight: 20, paddingTop: 0, paddingBottom: 0, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px #3A3AC0 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 16px)', fontFamily: 'Roboto', fontWeight: '700', lineHeight: 1, letterSpacing: 1.0, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>ABOUT US</div>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 16px)', fontFamily: 'Roboto', fontWeight: '700', lineHeight: 1.5, letterSpacing: 1.0, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>ABOUT US</div>
               </div>
           </div>
           
