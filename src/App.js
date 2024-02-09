@@ -14,13 +14,19 @@ function App() {
   
   const handleButtonClick = (newState) => {
     if (desktopState === 'Homedesktop1'){
-        setDesktopState('Homedesktop3') //3 is Services
-    }
-    else if (desktopState === 'Homedesktop2'){
-        setDesktopState('Homedesktop1')
-    }
-    else {
-        setDesktopState('Homedesktop1')
+      setTimeout(() => {
+          setDesktopState('Homedesktop3'); // Ease in the state change
+      }, 300); // Adjust the delay for the transition duration
+  }
+  else if (desktopState === 'Homedesktop2'){
+      setTimeout(() => {
+          setDesktopState('Homedesktop1'); // Ease in the state change
+      }, 300); // Adjust the delay for the transition duration
+  }
+  else {
+      setTimeout(() => {
+          setDesktopState('Homedesktop1'); // Ease in the state change
+      }, 300);
     }
     // setDesktopState(newState);
     if (SeroverlayLeft === '50vw' && BlogoverlayLeft==='75vw') {
@@ -139,7 +145,7 @@ const handleHomeClick = () => {
           </div>
 
           {/* Blog */}
-          <div className="Overlay2" style={{display:displayState,zIndex:1,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'left 0.5s ease-in-out' }} />
+          <div className="Overlay3" style={{display:displayState,zIndex:1,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'left 0.5s ease-in-out' }} />
           <div className="HoverOverlay3" style={{zIndex:displayState2,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', borderLeft: '1px #8C8484 solid', borderTop: '1px #8C8484 solid', borderRight: '1px #8C8484 solid', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'left 0.5s ease-in-out' }}>
               <div className="ButtonBlog" style={{display:displayState,zIndex:1,color: '#DED8D8', position: 'absolute',height:'15vh',top:'70vh',textAlign:'center',fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word',display: 'flex', justifyContent: 'center', alignItems: 'center' }}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
           </div>
@@ -150,13 +156,13 @@ const handleHomeClick = () => {
               <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom-bright.jpg" />
           </div>
             
-          <div className="TextContent1" style={{border:'hidden red',height: '80vh', left: '3.5vw', top: '20vh', position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+          <div className="TextContent1" style={{border:'hidden red',height: '80vh', left: '3.5vw', top: '15vh', position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
               <div className="Title" style={{width: '30vw', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'flex'}}>
                   <div className="Title" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word'}}>Community Minded Consulting Firm</div>
               </div>
-              <div className="Lead" style={{width:'45vw',alignSelf: 'stretch', color: 'white', fontSize: 'clamp(20px, 4vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word'}}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
-              <div className="Button" style={{zIndex:2, maxHeight:40,paddingLeft: 20, paddingRight: 20, paddingTop: 0, paddingBottom: 0, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px #3A3AC0 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 16px)', fontFamily: 'Roboto', fontWeight: '700', lineHeight: 1.5, letterSpacing: 1.0, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>ABOUT US</div>
+              <div className="Lead" style={{maxWidth:'28vw',alignSelf: 'stretch', color: 'white', fontSize: 'clamp(10px, 2.5vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word'}}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
+              <div className="Button">
+                  <div className="Label" onClick={() => handleAboutClick()}>ABOUT US</div>
               </div>
           </div>
           
@@ -174,13 +180,13 @@ const handleHomeClick = () => {
           </div>
           <div className="Overlay1" style={{width: '50vw', height: '100vh', top: 0, left:'50vw',position: 'absolute', background: 'rgba(0, 0, 0, 0.20)'}}></div> */}
           
-          <div className="TextContent1" style={{height: '50vh', paddingLeft:'0vw',left: '62.5vw', top: 132, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 24, display: 'inline-flex'}}>
+          <div className="TextContent1" style={{height: '100vh', paddingLeft:'0vw',left: '60vw', top: '10vh', position: 'absolute', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 24, display: 'inline-flex'}}>
               <div className="Title" style={{width: '30vw', height: 28, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'flex'}}>
-                  <div className="Title" style={{color: 'white', fontSize: 54, fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center'}}>Stay up to date with current intitiatives and valuable insights</div>
+                  <div className="Title" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center'}}>Stay up to date with current intitiatives and valuable insights</div>
               </div>
-              <div className="Button" style={{paddingLeft: 20, paddingRight: 20, paddingTop: 0, paddingBottom: 0, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px #3A3AC0 solid', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 16, fontFamily: 'Roboto', fontWeight: '700', lineHeight: 4, letterSpacing: 1.60, wordWrap: 'break-word'}}>Read Blog</div>
-              </div>
+              <div className="Button">
+                <div className="Label">Read Blog</div>
+              </div>  
           </div>
 
           {/* <div className="Overlay2" style={{width: '25vw', height: '100vh', left: '25vw', top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)'}} />
@@ -202,16 +208,16 @@ const handleHomeClick = () => {
           </div> */}
           {/* <div className="Overlay1" style={{width: '50vw', height: '100vh', top: 0, left:'25vw',position: 'absolute', background: 'rgba(0, 0, 0, 0.20)'}}></div> */}
           
-          <div className="TextContent1" style={{height: '50vh', paddingLeft:'0vw',left: '25vw', top: 132, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 24, display: 'inline-flex'}}>
+          <div className="TextContent1" style={{height: '100vh', paddingLeft:'0vw',left: '25vw', position: 'absolute', flexDirection: 'column', top:'10vh',justifyContent: 'center', alignItems: 'center', gap: 24, display: 'inline-flex'}}>
               <div className="Title" style={{width: '50vw', height: 28, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'flex'}}>
-                  <div className="Title" style={{color: 'white', fontSize: 54, fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center'}}>Assessments & Strategic Planning to achieve your business objectives</div>
+                  <div className="Title" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center'}}>Assessments & Strategic Planning to achieve your business objectives</div>
               </div>
-              <div className="Button" style={{minWidth:210, paddingLeft: 20, paddingRight: 20, paddingTop: 0, paddingBottom: 0, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px #3A3AC0 solid', justifyContent: 'center', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 16, fontFamily: 'Roboto', fontWeight: '700', lineHeight: 4, letterSpacing: 1.60, wordWrap: 'break-word'}}>OUR SERVICES</div>
+              <div className="Button">
+                  <div className="Label">OUR SERVICES</div>
               </div>
-              <div className="Button" style={{minWidth:210,paddingLeft: 20, paddingRight: 20, paddingTop: 0, paddingBottom: 0, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px #3A3AC0 solid', justifyContent: 'center', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 16, fontFamily: 'Roboto', fontWeight: '700', lineHeight: 4, letterSpacing: 1.60, wordWrap: 'break-word'}}>BOOK A CONSULTATION</div>
-              </div>
+              {/* <div className="Button" style={{minWidth:'10vw',paddingLeft: 10, paddingRight: 10, paddingTop: 0, paddingBottom: 0, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px #3A3AC0 solid', justifyContent: 'center', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(3px, 1.5vw, 16px)', fontFamily: 'Roboto', fontWeight: '700', lineHeight: 4, letterSpacing: 1.60, wordWrap: 'break-word'}}>BOOK A CONSULTATION</div>
+              </div> */}
           </div>
 
           {/* <div className="Overlay2" style={{width: '25vw', height: '100vh', left: '75vw', top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)'}} />
@@ -229,23 +235,23 @@ const handleHomeClick = () => {
       <div className="Footerprivacy" style={{height: 43, marginRight:20, right: '0vw', top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
           <div className="HeadingName" style={{height: 43,paddingTop: 0, paddingBottom: 0, justifyContent: 'center', alignItems: 'flex-start', gap: 20, display: 'flex'}}>
               <div className="HeaderMenuDefault" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Terms of Use</div>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Terms of Use</div>
               </div>
               <div className="MenuItemDefault" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Privacy</div>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Privacy</div>
               </div>
               <div className="MenuItemDefault" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Contact</div>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Contact</div>
               </div>
               <div className="MenuItemDefault" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}><a href='https://www.pmdaybreak.com' style={{color:'white'}}>Web Design: PM Daybreak Designs</a></div>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}><a href='https://www.pmdaybreak.com' style={{color:'white'}}>Web Design: PM Daybreak Designs</a></div>
               </div>
           </div>
       </div>
       <div className="Footercompany" style={{width: 358, height: 43, left: 0, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
           <div className="HeadingName" style={{paddingTop: 9, paddingBottom: 10, paddingRight: 119, justifyContent: 'flex-start', alignItems: 'center', display: 'flex'}}>
               <div className="MenuItemDefault" style={{alignSelf: 'stretch', paddingLeft: 20, paddingRight: 20, justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                  <div className="Label" style={{color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>E3 Strategic Solutions</div>
+                  <div className="Label" style={{color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>E3 Strategic Solutions</div>
               </div>
           </div>
       </div>

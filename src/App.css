@@ -217,12 +217,12 @@
 }
 
 .Title {
-  text-shadow: 0 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 
 .ButtonAbout:hover, .ButtonServices:hover,.ButtonBlog:hover{
 transform:scale(1.2);
-transition: transform ease;
+transition: transform ease-in-out 0.3s;
 cursor: pointer; 
 }
 
@@ -236,13 +236,33 @@ background-color:#5F5FB0 !important;
 
 .Button:hover{
   transform:scale(1.2);
-  transition: transform ease;
+  transition: transform ease-in-out 0.5s;
   background-color: white !important;
   cursor: pointer; 
 }
 
 .Button:hover .Label{
   color:black !important;
+}
+
+.Button {
+  z-index: 4;
+  padding: 8px 20px; /* Adjust padding for the button */
+  background: #5F5FB0;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; /* Adjust border radius for a less oval shape */
+  border: 2px #3A3AC0 solid;
+  display: inline-flex;
+  align-items: center;
+}
+
+.Label {
+  color: white;
+  font-size: clamp(12px, 2vw, 16px); /* Adjust font size */
+  font-family: 'Roboto';
+  font-weight: 700;
+  letter-spacing: 1.60px;
+  word-wrap: break-word;
 }
 
 

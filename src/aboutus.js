@@ -218,8 +218,8 @@ function About() {
                             <div className="Text" style={{width: '50vw', color: '#828282', fontSize: 'clamp(13px, 2vw, 24px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word',lineHeight: '1.5' }}>I have over twenty years of experience working in non-profits in Canada and Internationally and has spent the last 15 years working at the municipal level in grant making, health system transformation and healthy public policy.</div>
                         </div>
                     </div>
-                    <div className="Button" style={{paddingLeft: 10, paddingRight: 10, paddingTop: 10, paddingBottom: 10, background: '#5F5FB0', boxShadow: '4px 5px 4px rgba(0, 0, 0, 0.25)', borderRadius: 40, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
-                        <div className="Label" style={{color: 'white', fontSize: 'clamp(13px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 1.60, wordWrap: 'break-word'}}>READ MORE</div>
+                    <div className="Button">
+                        <div className="Label">READ MORE</div>
                     </div>
                 </div>
             </div>
