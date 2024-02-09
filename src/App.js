@@ -113,7 +113,7 @@ function App() {
     setDesktopState('AboutUs');
 };
 const handleHomeClick = () => {
-  if (desktopState!='Homedesktop1'){
+  if (desktopState!=='Homedesktop1'){
     setDisplayState('block');
     setDisplayState2('1');  
   }
@@ -141,13 +141,13 @@ const handleHomeClick = () => {
           {/* Services */}
           <div className="Overlay2" style={{display:displayState,zIndex:1,width: '25vw', height: '100vh', left: SeroverlayLeft, top: 1, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'left 0.5s ease-in-out' }} />
           <div className="HoverOverlay2" style={{zIndex:displayState2,width: '25vw', height: '100vh', left: SeroverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', border: '1px #8C8484 solid', flexDirection: 'column', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'left 0.5s ease-in-out'}}>
-            <div className="ButtonServices" style={{ display: displayState, position: 'absolute', marginTop: 0, height: '15vh', top: '70vh', textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex: 1, letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
+            <div className="ButtonServices" style={{ position: 'absolute', marginTop: 0, height: '15vh', top: '70vh', textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex: 1, letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
           </div>
 
           {/* Blog */}
           <div className="Overlay3" style={{display:displayState,zIndex:1,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'left 0.5s ease-in-out' }} />
           <div className="HoverOverlay3" style={{zIndex:displayState2,width: '25vw', height: '100vh', left: BlogoverlayLeft, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', borderLeft: '1px #8C8484 solid', borderTop: '1px #8C8484 solid', borderRight: '1px #8C8484 solid', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'left 0.5s ease-in-out' }}>
-              <div className="ButtonBlog" style={{display:displayState,zIndex:1,color: '#DED8D8', position: 'absolute',height:'15vh',top:'70vh',textAlign:'center',fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word',display: 'flex', justifyContent: 'center', alignItems: 'center' }}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
+              <div className="ButtonBlog" style={{zIndex:1,color: '#DED8D8', position: 'absolute',height:'15vh',top:'70vh',textAlign:'center',fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word',display: 'flex', justifyContent: 'center', alignItems: 'center' }}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
           </div>
       
       {desktopState === 'Homedesktop1' && (
