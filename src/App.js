@@ -129,7 +129,7 @@ const handleHomeClick = () => {
             <div className="Navbanner" style={{width: '100vw', height:'10vh', left: 0, top: 0, position: 'absolute', background: '#0E0E0E'}} />
             <div className="Navlogo" style={{width: 99, height:'10vh', left: 39, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Logos" style={{justifyContent: 'center', alignItems: 'center', display: 'flex'}}onClick={() => handleHomeClick()}>
-                    <img className="Logo1" style={{width: 'auto', height: '10vh'}} src="./logo1b.png" />
+                    <img className="Logo1" style={{width: 'auto', height: '10vh'}} src="./logo1b.png" alt="logo" />
                 </div>
             </div>
         </div>
@@ -153,7 +153,7 @@ const handleHomeClick = () => {
       {desktopState === 'Homedesktop1' && (
         <div className='Homedesktop1' style={{left: 0, top: 0, position: 'absolute', border: '1px black solid'}}>
           <div className="Image" style={{width: '100vw', height: '100vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom-bright.jpg" />
+              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom-bright.jpg"alt="About me"  />
           </div>
             
           <div className="TextContent1" style={{border:'hidden red',height: '80vh', left: '3.5vw', top: '15vh', position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
@@ -171,7 +171,7 @@ const handleHomeClick = () => {
       {desktopState === 'Homedesktop2' && (
         <div className='Homedesktop2' style={{left: 0, top: 0, position: 'absolute', border: '1px black solid'}}>
           <div className="Image" style={{width: '100vw', height: '100vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom.jpeg" />
+              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom.jpeg" alt="Boardroom picture" />
           </div>
           {/* <div className="Rectangle158" style={{width: '50vw', height: 68, left: '0vw', top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)'}} /> */}
           {/* <div className="Overlay2" style={{width: '25vw', height: '100vh', left: '0vw', top: 1, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)'}} />
@@ -198,7 +198,7 @@ const handleHomeClick = () => {
       {desktopState === 'Homedesktop3' && (
         <div className="Homedesktop3" style={{left: 0, top: 0, position: 'absolute', border: '1px black solid'}}>
           <div className="Image" style={{width: '100vw', height: '100vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./planning.jpeg" />
+              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./planning.jpeg" alt="Planning picture" />
           </div>
           {/* <div className="Rectangle158" style={{width: '25vw', height: 68, left: '0vw', top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)'}} />
           <div className="Rectangle158" style={{width: '25vw', height: 68, left: '75vw', top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)'}} /> */}
