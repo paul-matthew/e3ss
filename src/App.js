@@ -171,7 +171,7 @@ const handleHomeClick = () => {
       {desktopState === 'Homedesktop2' && (
         <div className='Homedesktop2' style={{left: 0, top: 0, position: 'absolute', border: '1px black solid'}}>
           <div className="Image" style={{width: '100vw', height: '100vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom.jpeg" alt="Boardroom picture" />
+              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./boardroom.jpeg" alt="Boardroom" />
           </div>
           {/* <div className="Rectangle158" style={{width: '50vw', height: 68, left: '0vw', top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)'}} /> */}
           {/* <div className="Overlay2" style={{width: '25vw', height: '100vh', left: '0vw', top: 1, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)'}} />
@@ -198,7 +198,7 @@ const handleHomeClick = () => {
       {desktopState === 'Homedesktop3' && (
         <div className="Homedesktop3" style={{left: 0, top: 0, position: 'absolute', border: '1px black solid'}}>
           <div className="Image" style={{width: '100vw', height: '100vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./planning.jpeg" alt="Planning picture" />
+              <img className="AboutMem2" style={{width: '100%', height: '100%', objectFit:'cover'}} src="./planning.jpeg" alt="Planning" />
           </div>
           {/* <div className="Rectangle158" style={{width: '25vw', height: 68, left: '0vw', top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)'}} />
           <div className="Rectangle158" style={{width: '25vw', height: 68, left: '75vw', top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)'}} /> */}
