@@ -245,6 +245,10 @@ background-color:#5F5FB0 !important;
   color:black !important;
 }
 
+.Button:hover .ReadMore{
+  color:black !important;
+}
+
 .Button {
   z-index: 4;
   padding: 8px 20px; /* Adjust padding for the button */
@@ -350,4 +354,132 @@ display: 'flex';
   .Blog {
       top: 600vh; /* Adjust this value as needed */
   }
+}
+
+/*SERVICES PAGE*/
+
+.Servicecards1 {
+  align-self: stretch;
+  justify-content: center;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.Frame2230 {
+  flex: 1 1 0;
+  height: 276.38px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.Servicecard {
+  width: 387.50px;
+  height: 276.38px;
+  position: relative;
+}
+
+.Group1 {
+  width: 387.50px;
+  height: 276.38px;
+  left: 0;
+  top: -0;
+  position: absolute;
+}
+
+.Rectangle1 {
+  width: 387.50px;
+  height: 276.24px;
+  left: 0;
+  top: 0.14px;
+  position: absolute;
+  background: #FBFDFD;
+  box-shadow: 5px 5px 60px -20px #5F5FB0;
+  border-radius: 20px;
+  border: 3px #5F5FB0 solid;
+}
+
+.CardImage {
+  width: 213.65px;
+  height: 276.38px;
+  left: 1px;
+  top: 3px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.UnsplashDuxrc8vt5wq {
+  width: 213.65px;
+  height: 276.38px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  object-fit: cover;
+}
+
+.CardTextx {
+  width: 150px;
+  height: 151px;
+  left: 226px;
+  top: 44px;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Group5 {
+  width: 388px;
+  height: 38px;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.Rectangle161 {
+  width: 388px;
+  height: 38px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.50);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.TitleSer {
+  width: 388px;
+  height: 38px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  font-family: Bowlby One SC;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Button {
+  left: 120px;
+  top: 219px;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ReadMore {
+  color: white;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 700;
+  letter-spacing: 2px;
+  word-wrap: break-word;
 }

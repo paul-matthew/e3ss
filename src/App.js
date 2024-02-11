@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import About from './aboutus'
+import Services from './services'
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -105,14 +106,16 @@ function App() {
   
   
   const handleAboutClick = () => {
-    // setOverlayLeft('200');
-    // setBlogOverlayLeft('200vw');
-    // setManOverlayLeft('200vw');
     setDisplayState('none');
     setDisplayState2('0');
     setDesktopState('AboutUs');
-};
-const handleHomeClick = () => {
+  };
+  const handleServicesClick = () => {
+    setDisplayState('none');
+    setDisplayState2('0');
+    setDesktopState('Services');
+  };
+  const handleHomeClick = () => {
   if (desktopState!=='Homedesktop1'){
     setDisplayState('block');
     setDisplayState2('1');  
@@ -121,7 +124,7 @@ const handleHomeClick = () => {
   setOverlayLeft('50vw');
   setBlogOverlayLeft('75vw');
   setManOverlayLeft('0vw');
-};
+  };
 
   return (
     <div className="Homepage" style={{ width: '100vw', height: '100vh', position: 'relative', background: 'white', border: 'hidden red' }}>
@@ -138,7 +141,7 @@ const handleHomeClick = () => {
             <div className="Label" style={{width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>
         </div>
         <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-            <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Services</div>
+            <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleServicesClick()}>Services</div>
         </div>
         <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
             <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Blog</div>
@@ -225,6 +228,9 @@ const handleHomeClick = () => {
       )}
       {desktopState === 'AboutUs' && (
         <About />
+      )}
+      {desktopState === 'Services' && (
+        <Services />
       )}
       <div className="Footerdesktop" style={{zIndex:4, width: '100vw', height: 43, left: 0, bottom: '0vh', position: 'fixed', background: '#0E0E0E'}}>
         <div className="Footerprivacy" style={{height: 43, marginRight:20, right: '0vw', top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
