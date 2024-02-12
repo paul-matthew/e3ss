@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
 import './App.css';
 import App from './App'
+import Services from './services'
+import Blog from './blog'
 
 function About() {
-    const [desktopState] = useState('About1');
-  
+    const [desktopState, setDesktopState] = useState('About1');  
+
+    const handleAboutClick = () => {
+        setDesktopState('AboutUs');
+      };
+      const handleServicesClick = () => {
+        setDesktopState('Services');
+      };
+      const handleBlogClick = () => {
+        setDesktopState('Blog');
+      };
+
   return (
     
     <div className="AboutUs" style={{width: '100vw', height: '100vh', right:'0', position: 'relative', background: 'white'}}>
         {desktopState === 'About1' && (
         <div>
-            <div className="Aboutus" style={{width: '100vw', left: 0, top: '10vh', position: 'absolute', background: 'white'}}>
+            <div className="Aboutus" style={{width: '100vw', top: '10vh', position: 'absolute', background: 'white'}}>
                 <div className="Image" style={{width: '100%', height: '100%', right: 0, bottom: 0, position: 'absolute'}}>
                     <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro.png" alt='Placeholder'/>
                 </div>
@@ -194,16 +206,22 @@ function About() {
         {desktopState === 'Homedesktop1' && (
         <App />
         )}
+        {desktopState === 'Services' && (
+        <Services />
+        )}
+        {desktopState === 'Blog' && (
+        <Blog />
+        )}
 
-        <div className="Navmenudesktop" style={{zIndex:2, width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
-            <div className="ListitemDesktopNaActive" style={{width: 'clamp(83px, 3vw, 16px)', height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#FFD700', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 100, textAlign: 'center', color: 'black', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>About Us</div>
+        <div className="Navmenudesktop" style={{width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
+            <div className="ListitemDesktopNaActive" style={{zIndex:2, width: 'clamp(83px, 3vw, 16px)', height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#FFD700', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+                <div className="Label" style={{width: 100, textAlign: 'center', color: 'black', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>
             </div>
             <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Services</div>
+                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleServicesClick()}>Services</div>
             </div>
             <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Blog</div>
+                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleBlogClick()}>Blog</div>
             </div>
             <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Contact</div>

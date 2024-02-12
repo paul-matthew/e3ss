@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import About from './aboutus'
 import Services from './services'
+import Blog from './blog'
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -115,6 +116,11 @@ function App() {
     setDisplayState2('0');
     setDesktopState('Services');
   };
+  const handleBlogClick = () => {
+    setDisplayState('none');
+    setDisplayState2('0');
+    setDesktopState('Blog');
+  };
   const handleHomeClick = () => {
   if (desktopState!=='Homedesktop1'){
     setDisplayState('block');
@@ -144,7 +150,7 @@ function App() {
             <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleServicesClick()}>Services</div>
         </div>
         <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-            <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Blog</div>
+            <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleBlogClick()}>Blog</div>
         </div>
         <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
             <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Contact</div>
@@ -231,6 +237,9 @@ function App() {
       )}
       {desktopState === 'Services' && (
         <Services />
+      )}
+      {desktopState === 'Blog' && (
+        <Blog />
       )}
       <div className="Footerdesktop" style={{zIndex:4, width: '100vw', height: 43, left: 0, bottom: '0vh', position: 'fixed', background: '#0E0E0E'}}>
         <div className="Footerprivacy" style={{height: 43, marginRight:20, right: '0vw', top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>

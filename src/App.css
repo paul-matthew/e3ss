@@ -70,12 +70,11 @@
 }
 
 /* Services */
-.services {
+.services, .blogx {
   color: #DED8D8;
   font-size: 30px;
   font-family: 'Roboto';
   font-weight: 700;
-  line-height: 24px;
   letter-spacing: 3px;
   word-wrap: break-word;
 }
@@ -358,128 +357,133 @@ display: 'flex';
 
 /*SERVICES PAGE*/
 
+/* Servicecards1 */
 .Servicecards1 {
-  align-self: stretch;
-  justify-content: center;
-  align-items: flex-start;
-  display: inline-flex;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5vw; /* Adjust spacing on the sides */
 }
 
 .Frame2230 {
-  flex: 1 1 0;
-  height: 276.38px;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
   display: flex;
+  gap: 2vw; /* Reduce space between cards */
 }
 
 .Servicecard {
-  width: 387.50px;
-  height: 276.38px;
+  border:solid #5F5FB0;
+  width: 20vw;
+  max-width: 300px; /* Maximum width for each card */
+  height: 350px; /* Increased height for taller cards */
   position: relative;
-}
-
-.Group1 {
-  width: 387.50px;
-  height: 276.38px;
-  left: 0;
-  top: -0;
-  position: absolute;
-}
-
-.Rectangle1 {
-  width: 387.50px;
-  height: 276.24px;
-  left: 0;
-  top: 0.14px;
-  position: absolute;
-  background: #FBFDFD;
   box-shadow: 5px 5px 60px -20px #5F5FB0;
   border-radius: 20px;
-  border: 3px #5F5FB0 solid;
+  overflow: hidden; /* Ensure content doesn't overflow */ 
 }
+
+@media (max-height: 400px) and (max-width: 700px) {
+  .Servicecard {
+    width: 40vw !important;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  .Frame2230 {
+    /* flex-wrap: wrap; */
+    max-width:90vw;
+    justify-content: space-between;
+  }
+
+}
+
 
 .CardImage {
-  width: 213.65px;
-  height: 276.38px;
-  left: 1px;
-  top: 3px;
-  position: absolute;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
+  width: 100%;
 }
 
-.UnsplashDuxrc8vt5wq {
-  width: 213.65px;
-  height: 276.38px;
+.cardpic {
+  width: 100%;
+  height: auto;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   object-fit: cover;
 }
 
 .CardTextx {
-  width: 150px;
-  height: 151px;
-  left: 226px;
-  top: 44px;
-  position: absolute;
+  width: 100%;
   color: black;
   font-size: 16px;
   font-family: Roboto;
   font-weight: 400;
-  word-wrap: break-word;
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .Group5 {
-  width: 388px;
-  height: 38px;
-  left: 0;
-  top: 0;
   position: absolute;
-}
-
-.Rectangle161 {
-  width: 388px;
-  height: 38px;
-  left: 0;
   top: 0;
-  position: absolute;
+  width: 100%;
   background: rgba(255, 255, 255, 0.50);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  text-align: center;
+  padding: 10px 0; /* Adjust padding as needed */
 }
 
 .TitleSer {
-  width: 388px;
-  height: 38px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  text-align: center;
   color: black;
   font-size: 24px;
-  font-family: Bowlby One SC;
+  font-family: 'Bowlby One SC', sans-serif;
   font-weight: 400;
-  word-wrap: break-word;
+  margin: 0; /* Remove default margin */
 }
 
-.Button {
-  left: 120px;
-  top: 219px;
+.Servicecard .Button {
   position: absolute;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
+  justify-content: center;
+  bottom: 10px;
+  width: 50%;
+  text-align: center;
+  margin-top: 2px; /* Adjust margin as needed */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .ReadMore {
   color: white;
-  font-size: 20px;
-  font-family: Roboto;
+  font-size: clamp(10px, 2vw, 20px);
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
-  word-wrap: break-word;
+  padding: 1px 2px; /* Adjust padding as needed */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+  .BodyX{
+    height: 944.38px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .BodyX{
+    height: 644.38px;
+  }
+}
+
+/*BLOG*/
+
+.BlogX {
+  position: absolute;
+  background: white;
+  top:0;
+}
+
+.ComingSoon {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  /* Additional styles can be added as needed */
 }
