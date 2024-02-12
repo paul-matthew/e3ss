@@ -3,6 +3,7 @@ import './App.css';
 import About from './aboutus'
 import Services from './services'
 import Blog from './blog'
+import Contact from './contact'
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -121,6 +122,11 @@ function App() {
     setDisplayState2('0');
     setDesktopState('Blog');
   };
+  const handleContactClick = () => {
+    setDisplayState('none');
+    setDisplayState2('0');
+    setDesktopState('Contact');
+  };
   const handleHomeClick = () => {
   if (desktopState!=='Homedesktop1'){
     setDisplayState('block');
@@ -153,7 +159,7 @@ function App() {
             <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleBlogClick()}>Blog</div>
         </div>
         <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-            <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Contact</div>
+            <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>Contact</div>
         </div>
       </div>
       <div className="Rectangle158" style={{display:displayState, zIndex:displayState2,width: '25vw', height: '15vh', left: SeroverlayLeft ,top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)',transition: 'left 0.5s ease-in-out'}} />
@@ -207,7 +213,7 @@ function App() {
                   <div className="Title" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center'}}>Stay up to date with current intitiatives and valuable insights</div>
               </div>
               <div className="Button">
-                <div className="Label">Read Blog</div>
+                <div className="Label"onClick={() => handleBlogClick()}>Read Blog</div>
               </div>  
           </div>
 
@@ -227,7 +233,7 @@ function App() {
                   <div className="Title" style={{color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center'}}>Assessments & Strategic Planning to achieve your business objectives</div>
               </div>
               <div className="Button">
-                  <div className="Label">OUR SERVICES</div>
+                  <div className="Label"onClick={() => handleServicesClick()}>OUR SERVICES</div>
               </div>
           </div>
         </div>
@@ -240,6 +246,9 @@ function App() {
       )}
       {desktopState === 'Blog' && (
         <Blog />
+      )}
+      {desktopState === 'Contact' && (
+        <Contact />
       )}
       <div className="Footerdesktop" style={{zIndex:4, width: '100vw', height: 43, left: 0, bottom: '0vh', position: 'fixed', background: '#0E0E0E'}}>
         <div className="Footerprivacy" style={{height: 43, marginRight:20, right: '0vw', top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
