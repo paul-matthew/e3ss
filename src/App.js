@@ -58,16 +58,24 @@ function App() {
 
   const handleButton2Click = (newState) => {
     if (desktopState === 'Homedesktop1'){
+      setTimeout(() => {
         setDesktopState('Homedesktop2') //2 is blog
+      }, 300);
     }
     else if (desktopState === 'Homedesktop3'){
+      setTimeout(() => {
         setDesktopState('Homedesktop2')
+      }, 300);
     }
     else if (desktopState === 'Homedesktop2'){
+      setTimeout(() => {
         setDesktopState('Homedesktop3')
+      }, 300);
     }
     else {
+      setTimeout(() => {
         setDesktopState('Homedesktop1')
+      }, 300);
     }
 
     // setDesktopState(newState);
