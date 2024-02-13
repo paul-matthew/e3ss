@@ -43,7 +43,7 @@ function Services() {
                             <div className="Frame2230">
                                 <div className="Servicecard">
                                     <div className="CardImage">
-                                        <img className="cardpic" src="./boardroom-brightwider.jpg" />
+                                        <img className="cardpic" src="./boardroom-brightwider.jpg" alt='boardroom'/>
                                     </div>
                                     <div className="CardTextx">Assessments include state analysis and an implementation roadmap.</div>
                                     <div className="Group5">
@@ -55,7 +55,7 @@ function Services() {
                                 </div>
                                 <div className="Servicecard">
                                     <div className="CardImage">
-                                        <img className="cardpic" src="./boardroom-queenst2.jpg" />
+                                        <img className="cardpic" src="./boardroom-queenst2.jpg" alt='boardroom'/>
                                     </div>
                                     <div className="CardTextx">Detailed audits of your organization</div>
                                     <div className="Group5">
@@ -67,7 +67,7 @@ function Services() {
                                 </div>
                                 <div className="Servicecard">
                                     <div className="CardImage">
-                                        <img className="cardpic" src="./boardroom-queenst.jpg" />
+                                        <img className="cardpic" src="./boardroom-queenst.jpg" alt='boardroom'/>
                                     </div>
                                     <div className="CardTextx">Stragetic Plan for your organization</div>
                                     <div className="Group5">
@@ -79,7 +79,7 @@ function Services() {
                                 </div>
                                 <div className="Servicecard">
                                     <div className="CardImage">
-                                        <img className="cardpic" src="./groupmeeting.jpeg" />
+                                        <img className="cardpic" src="./groupmeeting.jpeg" alt='groupmeeting'/>
                                     </div>
                                     <div className="CardTextx">Comprehensive analysis that is used to maintain an effectiveness program</div>
                                     <div className="Group5">
