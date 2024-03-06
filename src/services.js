@@ -3,6 +3,7 @@ import './App.css';
 import App from './App'
 import Blog from './blog'
 import Contact from './contact'
+import Modal from './modal'
 
 
 function Services() {
@@ -23,68 +24,86 @@ function Services() {
         setDesktopState('Contact');
       };
 
-      const Modal = ({ onClose, service }) => {
-        return (
-        // <div class="portfolio-modal modal fade" id="serviceitem1" tabindex="-1" role="dialog" aria-hidden="true">
-        //     <div class="modal-dialog">
-        //         <div class="modal-content">
-        //             <div class="close-modal p-2" data-bs-dismiss="modal"><img src="images/close-icon.svg" alt="Close modal" /></div>
-        //             <div class="container">
-        //                 <div class="row justify-content-center">
-        //                     <div class="col-lg-12">
-        //                         <div class="modal-body">
-        //                             <!-- Project details-->
-        //                             <h2 class="text-uppercase">Lifting Code Luxury Facial</h2>
-        //                             <img class="img-fluid d-block mx-auto" src="images/brochure/TREATMENT_2.jpg" alt="Luxury Facial" />
-        //                             <p class="card-text">For a lifted and re plumped look. This treatment works on 
-        //                               minimizing all types of lines and wrinkles, this luxury facial 
-        //                               treatment is specially designed to improve skins hydration 
-        //                               levels, skin tone and firmness, formulas with highly 
-        //                               concentrated natural collagen and hyaluronic acid outline 
-        //                               the profile of face and neck.</p>
-        //                             <span class="px-1 price">Price: $189</span>
-        //                             <span class="px-1 price" style="font-weight:normal">70 mins</span>
-        //                             <a style="float: none;" target="_blank" href="https://booking.setmore.com/scheduleappointment/35bbcd9a-2c93-4660-90df-9873ef5c488d/services/bbd4c531-ef0c-44a6-8066-4f8e62218665?source=easyshare"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Settings/book-now-blue.svg" alt="Book an appointment with Paul M using Setmore"/></a>
-        //                             <div style="padding-top: 2rem"></div>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
 
-          <div className="portfolio-modal fade modal" style={{border:"solid gray 4px", scrollBehavior:'', background:'gray',width:'90vw',top:'10%',left:'5vw',height:'80vh',position:'fixed', display:'flex', justifyContent: '', alignItems: '',zIndex:'6'}}>
-            <div className="modal-content">
-                <div style={{margin:'15px'}}>
-                    <span className="close" style={{cursor:'pointer', fontSize:'40px', display:'flex',position:'absolute', right:20 }}onClick={onClose}>&times;</span>
-                    <h2>{service.title}</h2>
-                    <p>{service.description}</p>
+
+      const services = [
+        { 
+            title: "Assessments", 
+            description: "Assessments include state analysis and an implementation roadmap.",
+            image:'./boardroom-queenst2.jpg',
+            description2: (
+                <div>
+                    <p>Our Assessments service provides a comprehensive evaluation of your organization's current state, identifying key areas of strength and areas for improvement. Through rigorous analysis and data-driven methodologies, we deliver actionable insights to drive strategic decision-making and organizational growth.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>State Analysis: Thorough assessment of your organization's operational, financial, and strategic performance.</li>
+                        <li>SWOT Analysis: Identification of strengths, weaknesses, opportunities, and threats impacting your business.</li>
+                        <li>Strategic Recommendations: Data-driven recommendations and actionable insights to optimize business processes and enhance performance.</li>
+                    </ul>
                 </div>
-                    <img src={service.image}></img>
-            </div>
-          </div>
-        );
-      };
-
-
-    const services = [
-        { title: "Assessments", description: "Assessments include state analysis and an implementation roadmap.",image:'./boardroom-queenst2.jpg' },
-        { title: "Organization Audits", description: "Detailed audits of your organization.",image:"./boardroom-queenst.jpg" },
-        { title: "Program Evaluation", description: "Comprehensive analysis that is used to maintain an effectiveness program",image:"./groupmeeting.jpeg" },
-        { title: "Strategic Plan", description: "Stragetic Plan for your organization",image:"./boardroom-queenst.jpg" },
-
-        // Add more services as needed
+            )
+        },
+        { 
+            title: "Organization Audits", 
+            description: "Detailed audits of your organization.",
+            image:"./boardroom-queenst.jpg",
+            description2: (
+                <div>
+                    <p>Our Organization Audits service offers a detailed examination of your organization's structure, processes, and performance to identify areas for improvement and operational efficiencies.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Operational Audits: Evaluation of your organization's day-to-day operations and processes.</li>
+                        <li>Financial Audits: Review of financial statements, budgets, and financial controls.</li>
+                        <li>Compliance Audits: Assessment of compliance with industry regulations and standards.</li>
+                    </ul>
+                </div>
+            )
+        },
+        { 
+            title: "Program Evaluation", 
+            description: "Comprehensive analysis that is used to maintain an effectiveness program",
+            image:"./groupmeeting.jpeg",
+            description2: (
+                <div>
+                    <p>Our Program Evaluation service provides a comprehensive analysis of your organization's programs and initiatives to assess their effectiveness and impact. Through thorough evaluation and data analysis, we help you make informed decisions to improve program outcomes and maximize results.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Performance Measurement: Evaluation of program performance against predefined objectives and benchmarks.</li>
+                        <li>Outcome Assessment: Analysis of program outcomes and impact on target beneficiaries or stakeholders.</li>
+                        <li>Recommendation Development: Identification of strategies and recommendations for program improvement and optimization.</li>
+                    </ul>
+                </div>
+            )
+        },
+        { 
+            title: "Strategic Plan", 
+            description: "Strategic Plan for your organization",
+            image:"./boardroom-queenst.jpg",
+            description2: (
+                <div>
+                    <p>Our Strategic Plan service helps your organization develop a clear and actionable roadmap to achieve its long-term goals and objectives. Through a collaborative process, we work with you to define your vision, identify strategic priorities, and establish measurable targets for success.</p>
+                    <p><strong>Key Components:</strong></p>
+                    <ul>
+                        <li>Vision and Mission: Defining the organization's purpose, values, and long-term aspirations.</li>
+                        <li>Strategic Goals: Identifying high-level strategic objectives and priorities to guide decision-making.</li>
+                        <li>Action Plans: Developing detailed action plans with specific initiatives, timelines, and responsible parties.</li>
+                    </ul>
+                </div>
+            )
+        },
     ];
+    
 
     const handleReadMoreClick = (service) => {
         setSelectedService(service);
         setShowModal(true);
+        document.body.classList.add('modal-open');
     };
 
     const handleCloseModal = () => {
         setShowModal(false);
         setSelectedService(null);
+        document.body.classList.remove('modal-open');
     };
   
   return (
@@ -162,6 +181,7 @@ function Services() {
                                     </div>
                                 </div> */}
                                 {showModal && <Modal onClose={handleCloseModal} service={selectedService} />}
+                                {showModal ? <div className="background-overlay" /> : null}
                             </div>
                         </div>
                         <div className="IntroSection" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>

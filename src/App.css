@@ -383,6 +383,8 @@ display: 'flex';
 @media (max-height: 500px) and (max-width: 950px) {
   .Servicecard {
     width: 40vw !important;
+    height: 300px !important; 
+
   }
 }
 
@@ -415,7 +417,9 @@ display: 'flex';
   font-size: 16px;
   font-family: Roboto;
   font-weight: 400;
-  padding: 20px; /* Adjust padding as needed */
+  padding-top: 10px; 
+  padding-left: 10px;
+  padding-right: 10px; 
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
@@ -624,6 +628,7 @@ button:hover {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    height:200%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
@@ -828,3 +833,20 @@ button:hover {
         overflow-y: auto; }
       .modal-fullscreen-xxl-down .modal-footer {
         border-radius: 0; } }
+
+.modal-open {
+    overflow: hidden; /* Prevent scrolling when modal is open */
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Add blur effect to the background */
+    z-index: 1; /* Ensure the overlay is on top of other content */
+}
+
+      
