@@ -27,7 +27,7 @@ function Contact() {
                     <div className="Text" style={{alignSelf: 'stretch', height: 100, width:'100vw', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
                     </div>
                 </div>
-                <form className="ContactForm" style={{width: '80%', width: '80vw',paddingRight:'50px', border:'solid gray'}}>
+                <form className="ContactForm" style={{width: '80vw',paddingRight:'50px', border:'solid gray'}}>
                     <div className="FormGroup">
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required />
