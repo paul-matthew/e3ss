@@ -39,23 +39,23 @@ function About() {
                 <div className="Intro" style={{width: '100vw', height: '100vh', left: 50, top: 20, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
                     <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>E3 STRATEGIC SOLUTIONS</div>
                     <div className="Content" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
-                        <div style={{width:'30vw',color: '#25282B', fontSize: 'clamp(16px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>
+                        <div className='content-name' style={{width:'30vw',color: '#25282B', fontSize: 'clamp(16px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>
                         <div className="Subheadline" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
                             <div className="Text" style={{width: '50vw', color: '#828282', fontSize: 'clamp(13px, 2vw, 24px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word',lineHeight: '1.5' }}>I have over twenty years of experience working in non-profits in Canada and Internationally and has spent the last 15 years working at the municipal level in grant making, health system transformation and healthy public policy.</div>
                         </div>
                     </div>
-                    <div className="Button">
+                    <div id="about-button" className="Button">
                         <div className="Label"onClick={scrollToMySkills}>READ MORE</div>
                     </div>
                 </div>
                 <div className="MySkill" style={{height: 732.33, left: 50, top: '100vh', position: 'absolute', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 56.67, display: 'inline-flex'}}>
                     <div className="SectionTitle" style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: '3vh', display: 'flex'}}>
-                        <div className="MySkills" style={{textAlign: 'center', color: '#282938', fontSize: 'clamp(10px, 2vw, 21px)', fontFamily: 'Roboto', fontWeight: '600', wordWrap: 'break-word'}}>My Skills</div>
+                        <div className="MySkills" style={{textAlign: 'center', color: '#282938', fontSize: 'clamp(16px, 2vw, 21px)', fontFamily: 'Roboto', fontWeight: '600', wordWrap: 'break-word'}}>My Skills</div>
                         <div className="Content" style={{alignSelf: 'stretch', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
-                            <div className="MyExpertise" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(16px, 4vw, 61px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>My Expertise</div>
+                            <div className="MyExpertise" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(20px, 4vw, 61px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>My Expertise</div>
                         </div>
                     </div>
-                    <div className="Row">
+                    <div className="Row" style={{flexWrap: "wrap", justifyContent: "flex-start"}}>
                         <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, borderBottom: '4px #5E3BEE solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 351.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                 <div className="StrategyDirection" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
@@ -89,12 +89,12 @@ function About() {
                                 </div>
                             </div>
                         </div>
-                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-                            <div className="SectionTitle" style={{alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
+                        <div className="Content1 last" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+                            <div className="SectionTitle" style={{alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="WebflowDevelopment" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
                                     <img className="FeatherPen1" style={{width: 53.33, height: 53.33}} src="./project4.jpg" alt='Placeholder'/>
                                 </div>
-                                <div className="ContentX" style={{alignSelf: 'stretch', height: 205, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+                                <div className="ContentX" style={{alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                     <div className="Skill4" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(10px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700',  wordWrap: 'break-word'}}>Skill #4</div>
                                     <div className="Place" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(10px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</div>
                                 </div>
@@ -105,7 +105,7 @@ function About() {
                 <div className="Blog">
                     <div className="SectionHeader" style={{width: '100vw', justifyContent: 'flex-start', alignItems: 'center', gap: 16.67, display: 'inline-flex'}}>
                         <div className="SectionTitle" style={{width: '100vw', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-                            <div className="RecentProjects" style={{textAlign: 'center', color: '#282938', fontSize: 'clamp(10px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '600', lineHeight: 3, wordWrap: 'break-word'}}>Recent Projects</div>
+                            <div className="RecentProjects" style={{textAlign: 'center', color: '#282938', fontSize: 'clamp(16px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '600', lineHeight: 3, wordWrap: 'break-word'}}>Recent Projects</div>
                             <div className="Content" style={{alignSelf: 'stretch', height: 77, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 32, display: 'flex'}}>
                                 <div className="MyPortfolio" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(16px, 4vw, 61px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>My Portfolio</div>
                             </div>
@@ -113,7 +113,7 @@ function About() {
                     </div>
                     {/* <div className="Content" style={{alignSelf: 'stretch', height: 615.67, paddingLeft: 30, paddingRight: 30, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 85.33, display: 'flex'}}>
                         <div className="Content" style={{alignSelf: 'stretch', height: 615.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 85.33, display: 'flex'}}> */}
-                            <div className="Row">
+                            <div className="Row" style={{flexWrap: "wrap", justifyContent: "flex-start"}}>
                                 <div className="Card" style={{flex: '1 1 0', background: 'white', boxShadow: '0px 0px 32px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8,objectFit:'cover'}} src="./project1.jpg" alt='Placeholder'/>
                                     <div className="Content" style={{alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
@@ -136,7 +136,7 @@ function About() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="Card" style={{ flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 32px rgba(0, 0, 0, 0.15)', borderRadius: 8, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+                                <div className="Card last" style={{ flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 32px rgba(0, 0, 0, 0.15)', borderRadius: 8, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8,objectFit:'cover'}} src="./project3.jpg" alt='Placeholder'/>
                                     <div className="Content" style={{alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                         <div className="Content" style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
