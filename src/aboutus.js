@@ -36,7 +36,7 @@ function About() {
                 <div className="Image" style={{width: '100%', height: '100%', right: 0, bottom: 0, position: 'absolute'}}>
                     <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro.png" alt='Placeholder'/>
                 </div>
-                <div className="Intro" style={{width: '100vw', height: '100vh', left: 50, top: 20, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
+                <div className="Intro" style={{width: '100vw', height: '100vh', left: 0, top: 20, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
                     <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>E3 STRATEGIC SOLUTIONS</div>
                     <div className="Content" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
                         <div className='content-name' style={{width:'30vw',color: '#25282B', fontSize: 'clamp(16px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>

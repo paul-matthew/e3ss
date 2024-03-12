@@ -4,6 +4,7 @@ import App from './App'
 import Blog from './blog'
 import Contact from './contact'
 import Modal from './modal'
+import ServicesMobile from './components/ServicesMobile';
 
 
 function Services() {
@@ -107,7 +108,7 @@ function Services() {
     };
   
   return (
-    
+    <>
     <div className="Services" style={{width: '100vw', height: '100vh', right:'0', position: 'relative', background: 'white'}}>
         {desktopState === 'Services1' && (
         <div>
@@ -225,7 +226,8 @@ function Services() {
             </div>
         </div>
     </div>
-    
+    <ServicesMobile />
+    </>
   );
 }
 

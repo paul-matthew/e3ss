@@ -2,7 +2,7 @@ import React from 'react';
 
 const Modal = ({ onClose, service }) => {
     return (
-        <div className="portfolio-modal fade modal" style={{border:"solid black 4px", scrollBehavior:'', background:'gray',width:'90vw',top:'12%',left:'5vw',height:'80vh',position:'fixed', display:'flex', justifyContent: '', alignItems: '',zIndex:'6'}}>
+        <div className="portfolio-modal fade modal" style={{border:"solid black 4px", scrollBehavior:'', background:'gray',maxWidth:'90vw',top:'5%',left:'5vw',height:'auto',position:'fixed', display:'flex', justifyContent: '', alignItems: '',zIndex:'8', maxHeight: "90vh"}}>
             <div className="modal-content">
                 <div style={{margin:'15px'}}>
                     <span className="close" style={{cursor:'pointer', fontSize:'40px', display:'flex',position:'absolute', right:20 }}onClick={onClose}>&times;</span>

@@ -50,7 +50,7 @@ function MobileMenu({ handleAboutClick, handleServicesClick, handleBlogClick, ha
         </button>
       </div>
         {openMenuContent && (
-          <div id="menu-content" style={{ backgroundColor: "#000", position: "absolute", left: "2px", width: "100%" }}>
+          <div id="menu-content" style={{ backgroundColor: "#000", position: "absolute", left: 0, width: "119px", transform: "translateX(1px)" }}>
             <div className={desktopState === "AboutUs" ? "active-menu-mobile": "ListitemDesktopNa"} style={{ width: 'clamp(83px, 3vw, 16px)', height: '100%', padding: "8px 18px", background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
               <div className="Label" style={{ width: "100%", textAlign: 'left', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word', cursor: "pointer" }} onClick={_handleAboutClick}>About Us</div>
             </div>

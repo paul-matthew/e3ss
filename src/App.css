@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -215,6 +216,9 @@
   word-wrap: break-word;
 }
 
+.ActiveMenu {
+
+}
 .Title {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
@@ -403,6 +407,12 @@
     max-width: 90vw;
     justify-content: space-between;
   }
+
+  .Frame1 {
+   
+      padding-bottom: 5rem;
+    
+  }
 }
 
 .CardImage {
@@ -539,7 +549,7 @@ button:hover {
 }
 
 .ContactForm {
-  top: 30vh;
+  top: 17vh;
   position: absolute;
 }
 
@@ -547,12 +557,45 @@ button:hover {
   .ContactX .Frame1 {
     top: 57px;
   }
+
 }
-@media (min-width: 950px) {
+
+@media (max-width: 453px) {
+  .contact-footer {
+    display: none !important;
+  }
+
+  .Footerprivacy, .HeadingName {
+    gap: 4px !important;
+    justify-content: space-evenly !important;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 351px) {
+
+  .HeadingName {
+    .HeaderMenuDefault .Label, .MenuItemDefault .Label{
+      font-size: 8px !important; 
+    }
+  }
+  
+}
+/* @media (min-width: 950px) {
   .ContactX .Frame1 {
     top: 100px;
   }
-}
+
+    .Footerprivacy {
+    .HeaderMenuDefault {
+      .Label, .Label > a {
+        font-size: 8px !important;
+      }
+  
+    }
+  }
+} */
 
 /*MODAL*/
 
@@ -647,11 +690,12 @@ button:hover {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  height: 200%;
+  max-height: 100%;
+  height: fit-content;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   border-radius: 0.3rem;
   outline: 0;
 }
@@ -794,6 +838,15 @@ button:hover {
 }
 
 @media (max-width: 575.98px) {
+
+  .overlays-container-mobile {
+    display: block !important;
+  }
+
+  #Homedesktop1,#Homedesktop2,#Homedesktop3{
+    display: none;
+  }
+
   .modal-fullscreen-sm-down {
     width: 100vw;
     max-width: none;
@@ -814,6 +867,110 @@ button:hover {
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
   }
+
+  .text-content3-mobile{
+    transition: all 2s;
+  }
+
+  .AboutUs {
+    display: none !important;
+  }
+
+  .AboutUs-mobile {
+
+    display: block !important;
+
+    .Place {
+      margin-top: 1rem;
+    }
+
+    .Blog {
+      top: 0 !important;
+      position: relative !important;
+      left: 0 !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+
+  }
+
+  .Services {
+    display: none;
+  }
+
+  .Services-mobile {
+    display: flex !important;
+
+    .Servicesx {
+      top: 20px !important;
+
+      .Home {
+        margin-bottom: 0px !important;
+
+        .CardTextz {
+          padding-right: 0px !important;
+        }
+      }
+
+      
+    }
+
+    .BodyX {
+      .Servicecards1 {
+
+        .Frame2230 {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 40px !important;
+      
+          .Servicecard {
+             max-width: 100%;
+             width: 100%;
+          }
+        }
+
+        .Frame2230 .Servicecard {
+          display: flex !important;
+
+          .cardpic {
+            height: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+          .CardTextx {
+            margin-top: 50px;
+          }
+
+          
+        
+        }
+      }
+    }
+    
+    
+  }
+
+ 
+}
+/* mine */
+/* @media (max-width: 425px){ */
+  @media (max-width: 430px){
+  .Aboutus {
+
+    .Text, .content-name, .E3StrategicSolutions {
+      color: white !important;
+  
+    }
+  }
+}
+
+@media (min-width: 412px) and (max-width: 915px ) {
+  .Footerdesktop {
+    height: 50px !important;
+  }
+
 }
 
 @media (max-width: 767.98px) {
@@ -920,7 +1077,7 @@ button:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   backdrop-filter: blur(5px); /* Add blur effect to the background */
-  z-index: 1; /* Ensure the overlay is on top of other content */
+  z-index: 7; /* Ensure the overlay is on top of other content */
 }
 
 .color-white {
@@ -1057,11 +1214,11 @@ button:hover {
     margin-right: 0px !important;
     width: 100% !important;
 
-    .HeadingName {
+    /* .HeadingName {
       width: 100% !important;
       justify-content: space-evenly !important;
       padding: 8px;
-    }
+    } */
   }
 
   .Lead {
@@ -1076,18 +1233,8 @@ button:hover {
     }
   }
 
-  .Frame2230 {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 40px !important;
-
-    .Servicecard {
-       max-width: 100%;
-       width: 100%;
-    }
-  }
-
-  .Services {
+  
+  /* .Services {
     padding-top: 92.89px !important;
 
     .Servicesdesktop {
@@ -1112,19 +1259,19 @@ button:hover {
         }
       }
     }
-  }
+  } */
 
-  .E3StrategicSolutions {
+  /* .E3StrategicSolutions {
     font-size: 30px !important;
-  }
+  } */
 
-  .CardTextz {
+  /* .CardTextz {
     font-size: 20px !important;
     min-height: 100px !important;
     max-height: auto !important;
-  }
+  } */
 
-  .Home {
+  /* .Home {
     height: auto !important;
     margin-bottom: 3rem;
 
@@ -1135,11 +1282,11 @@ button:hover {
         padding-bottom: 50px;
       }
     }
-  }
+  } */
 
   .Aboutus {
 
-    position: relative !important;
+    /* position: relative !important;
     height: 100% !important;
     .E3StrategicSolutions{
       color: white !important;
@@ -1148,12 +1295,12 @@ button:hover {
     .content-name {
       color: white !important;
       font-size: 20px;
-    }
+    } */
 
-    .Text {
+    /* .Text {
       font-size: 16px !important;
       color: white !important;
-    }
+    } */
 
     #about-button {
       transform: translateY(200px) !important;
@@ -1167,13 +1314,6 @@ button:hover {
         height: auto !important;
       }
 
-      
-      
-  
-    .Skill2 {
-      font-size: 16px !important;
-      margin-bottom: 20px;
-    }
     }
 
     .MySkill {
@@ -1187,7 +1327,7 @@ button:hover {
       }
     }
 
-    .Blog {
+    /* .Blog {
       top: 100vh !important;
       left: 0px !important;
       padding: 20px !important;
@@ -1208,15 +1348,15 @@ button:hover {
       .Row {
         gap: 30px !important;
       }
-    }
+    } */
   }
 
-  .ContactX {
+  /* .ContactX {
     .Frame1 {
       position:  relative !important;
       top: 15vh !important;
     }
-  }
+  } */
   .last-form-group {
     display: flex !important;
     justify-content: center !important;
