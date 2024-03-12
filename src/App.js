@@ -1,14 +1,13 @@
-import React, { forwardRef, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import About from './aboutus'
 import Services from './services'
 import Blog from './blog'
 import Contact from './contact'
-import BurgerMenu from './components/MobileMenu';
-import TestComponent from './components/TestComponent';
 import MobileMenu from './components/MobileMenu';
 import OverlaysMobile from './components/OverlaysMobile';
-import AboutUsMobile from './components/AboutUsMobile';
+
+const desktopStateList = ["AboutUs", "Services", "Blog", "Contact"]
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -19,10 +18,8 @@ function App() {
   const [BlogbuttonText, setBlogButtonText] = useState('Blog');
   const [displayState, setDisplayState] = useState('block');
   const [displayState2, setDisplayState2] = useState('1');
-  const [footerHeight, setFooterHeight] = useState(0);
-  const [clientWidth, setClientWidth] = useState(0);
 
-  const footerRef = React.useRef(null);
+  const isHomeDesktop = !desktopStateList.includes(desktopState);
 
   const handleButtonClick = (newState) => {
     if (desktopState === 'Homedesktop1') {
@@ -123,8 +120,6 @@ function App() {
     }
   };
 
-  console.log(desktopState, "@blog");
-
   const handleAboutClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
@@ -156,28 +151,8 @@ function App() {
     setManOverlayLeft('0vw');
   };
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      if (footerRef?.current) {
-        const newHeight = footerRef.current?.offsetHeight;
-        setFooterHeight(newHeight)
-
-      }
-
-      setClientWidth(window.innerWidth)
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-
-    }
-  }, [])
-  console.log(footerHeight, "@height");
-
   return (
-    <div className="Homepage" style={{ width: '100vw', height: '100vh', position: 'relative', background: 'white', border: 'hidden red' }}>
+    <div className="Homepage" style={{ width: '100%', height: '100vh', position: 'relative', background: 'white', border: 'hidden red' }}>
       <div className="Navdesktop" style={{ zIndex: 2, position: 'absolute', width: "100%" }}>
         <div className="Navbanner" style={{ width: '100%', height: '10vh', left: 0, top: 0, position: 'absolute', background: '#0E0E0E' }} />
         <div className="Navlogo" style={{ width: 99, height: '10vh', left: 39, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex' }}>
@@ -188,43 +163,43 @@ function App() {
         </div>
       </div>
       <div id='Navmenudesktop' className="Navmenudesktop" style={{ zIndex: 2, width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex' }}>
-        <div className="ListitemDesktopNa" style={{ width: 'clamp(83px, 3vw, 16px)', height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
+        <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
           <div className="Label" style={{ width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleAboutClick()}>About Us</div>
         </div>
-        <div className="ListitemDesktopNa" style={{ width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
-          <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleServicesClick()}>Services</div>
+        <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
+          <div className="Label" style={{ width: "auto", textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleServicesClick()}>Services</div>
         </div>
-        <div className="ListitemDesktopNa" style={{ width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
+        <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
           <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleBlogClick()}>Blog</div>
         </div>
-        <div className="ListitemDesktopNa" style={{ width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
+        <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
           <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleContactClick()}>Contact</div>
         </div>
       </div>
 
       <MobileMenu handleContactClick={handleContactClick} handleBlogClick={handleBlogClick} handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} desktopState={desktopState} />
 
-      <div className="Rectangle158" style={{ display: displayState, zIndex: displayState2, width: '25vw', height: '15vh', maxHeight: "15%", left: `${SeroverlayLeft.replace("vw", "")}%`, top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)', transition: 'left 0.5s ease-in-out' }} />
-      <div className="Rectangle158" style={{ display: displayState, zIndex: displayState2, width: '25vw', height: '15vh', maxHeight: "15%", left: `${BlogoverlayLeft.replace("vw", "")}%`, top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)', transition: 'left 0.5s ease-in-out' }} />
+      <div className="Rectangle158" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '25vw', height: '15vh', maxHeight: "15%", left: `${SeroverlayLeft.replace("vw", "")}%`, top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)', transition: 'left 0.5s ease-in-out' }} />
+      <div className="Rectangle158" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '25vw', height: '15vh', maxHeight: "15%", left: `${BlogoverlayLeft.replace("vw", "")}%`, top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)', transition: 'left 0.5s ease-in-out' }} />
       {/* MAIN */}
-      <div className="Overlay1" style={{ display: displayState, zIndex: displayState2, width: '50vw', height: '100vh', left: `${ManoverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', transition: 'left 0.5s ease-in-out' }}></div>
+      <div className="Overlay1" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '50vw', height: '100vh', left: `${ManoverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', transition: 'left 0.5s ease-in-out' }}></div>
 
       {/* Services */}
-      <div className="Overlay2" style={{ display: displayState, zIndex: displayState2, width: '25vw', height: '100vh', left: `${SeroverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', transition: 'left 0.5s ease-in-out' }} />
-      <div id='HoverOverlay2' className="HoverOverlay2" style={{ zIndex: displayState2, opacity: displayState2, width: '25vw', height: '100vh', left: `${SeroverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', outline: '1px #8C8484 solid', flexDirection: 'column', alignItems: 'center', gap: 8, display: 'inline-flex', transition: 'left 0.5s ease-in-out' }}>
+      <div className="Overlay2" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '25vw', height: '100vh', left: `${SeroverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', transition: 'left 0.5s ease-in-out' }} />
+      <div id='HoverOverlay2' className="HoverOverlay2" style={{ zIndex: displayState2, opacity: displayState2, width: '25vw', height: '100vh', left: `${SeroverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', outline: '1px #8C8484 solid', flexDirection: 'column', alignItems: 'center', gap: 8, display: desktopStateList.includes(desktopState) ? "none":'inline-flex', transition: 'left 0.5s ease-in-out' }}>
         <div className="ButtonServices" style={{ position: 'absolute', marginTop: 0, height: '15vh', top: '70vh', textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex: 1, letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
       </div>
 
       {/* Blog */}
-      <div className="Overlay3" style={{ display: displayState, zIndex: displayState2, width: '25vw', height: '100vh', left: `${BlogoverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', transition: 'left 0.5s ease-in-out' }} />
-      <div id='HoverOverlay3' className="HoverOverlay3" style={{ zIndex: displayState2, opacity: displayState2, width: '25vw', height: '100vh', left: `${BlogoverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', hover: 'rgba(0, 0, 0, 0.20)', outline: '1px #8C8484 solid', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 8, display: 'inline-flex', transition: 'left 0.5s ease-in-out' }}>
+      <div className="Overlay3" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '25vw', height: '100vh', left: `${BlogoverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', transition: 'left 0.5s ease-in-out' }} />
+      <div id='HoverOverlay3' className="HoverOverlay3" style={{ zIndex: displayState2, opacity: displayState2, width: '25vw', height: '100vh', left: `${BlogoverlayLeft.replace("vw", "")}%`, top: 0, position: 'absolute', hover: 'rgba(0, 0, 0, 0.20)', outline: '1px #8C8484 solid', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 8, display: desktopStateList.includes(desktopState) ? "none":'inline-flex', transition: 'left 0.5s ease-in-out' }}>
         <div className="ButtonBlog" style={{ zIndex: 1, color: '#DED8D8', position: 'absolute', height: '15vh', top: '70vh', textAlign: 'center', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
       </div>
 
-      <OverlaysMobile displayState={displayState} displayState2={displayState2} desktopState={desktopState} handleBlogClick={handleBlogClick} handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} setDesktopState={setDesktopState} footerHeight={footerHeight} />
+      {isHomeDesktop && <OverlaysMobile displayState={desktopStateList.includes(desktopState) ? "none":displayState} displayState2={displayState2} desktopState={desktopState} handleBlogClick={handleBlogClick} handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} setDesktopState={setDesktopState}/>}
 
       {desktopState === 'Homedesktop1' && (
-        <div id='Homedesktop1' className='Homedesktop1' style={{ left: 0, top: 0, position: 'absolute', width: "100%" }}>
+        <div id='Homedesktop1' className='Homedesktop1' style={{ left: 0, top: 0, position: 'absolute', width: "100%", display: desktopStateList.includes(desktopState) ? "none":"static" }}>
           <div className="Image" style={{ width: '100%', height: '97vh', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex' }}>
             <img className="AboutMem2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="./boardroom-bright.jpg" alt="About me" />
           </div>
@@ -241,7 +216,7 @@ function App() {
         </div>
       )}
       {desktopState === 'Homedesktop2' && (
-        <div id='Homedesktop2' className='Homedesktop2' style={{ left: 0, top: 0, position: 'absolute', border: '1px black solid' }}>
+        <div id='Homedesktop2' className='Homedesktop2' style={{ left: 0, top: 0, position: 'absolute', border: '1px black solid', display: desktopStateList.includes(desktopState) ? "none":"static"  }}>
           <div className="Image" style={{ width: '100vw', height: '97vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex' }}>
             <img className="AboutMem2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="./boardroom.jpeg" alt="Boardroom" />
           </div>
@@ -268,7 +243,7 @@ function App() {
         </div>
       )}
       {desktopState === 'Homedesktop3' && (
-        <div id='Homedesktop3' className="Homedesktop3" style={{ left: 0, top: 0, position: 'absolute', border: '1px black solid' }}>
+        <div id='Homedesktop3' className="Homedesktop3" style={{ left: 0, top: 0, position: 'absolute', border: '1px black solid', display: desktopStateList.includes(desktopState) ? "none":"static"  }}>
           <div className="Image" style={{ width: '100vw', height: '97vh', left: '-2px', top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex' }}>
             <img className="AboutMem2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="./planning.jpeg" alt="Planning" />
           </div>
@@ -284,10 +259,7 @@ function App() {
       )}
 
       {desktopState === 'AboutUs' && (
-        <>
-          <About />
-          <AboutUsMobile />
-        </>
+        <About />
       )}
       {desktopState === 'Services' && (
         <Services />
@@ -296,10 +268,10 @@ function App() {
         <Blog />
       )}
       {desktopState === 'Contact' && (
-        <Contact windowWidth={clientWidth} />
+        <Contact />
       )}
 
-      <div className="Footerdesktop" ref={footerRef} style={{ zIndex: 4, width: '100vw', height: 43, left: 0, bottom: '0vh', position: 'fixed', background: '#0E0E0E' }}>
+      <div className="Footerdesktop" style={{ zIndex: 4, width: '100%', height: 43, left: 0, bottom: '0vh', position: 'fixed', background: '#0E0E0E' }}>
         <div className="Footerprivacy" style={{ height: 43, marginRight: 20, right: '0vw', top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
           <div className="HeadingName" style={{ height: 43, paddingTop: 0, paddingBottom: 0, justifyContent: 'center', alignItems: 'flex-start', gap: 20, display: 'flex' }}>
             <div className="HeaderMenuDefault" style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex' }}>

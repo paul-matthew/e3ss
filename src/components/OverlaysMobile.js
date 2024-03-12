@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopState,handleBlogClick, handleServicesClick, handleAboutClick, footerHeight}) => {
+const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopState,handleBlogClick, handleServicesClick, handleAboutClick}) => {
     
     const [SeroverlayLeft, setOverlayLeft] = useState('65vw');
     const [ManoverlayLeft, setManOverlayLeft] = useState('10vw');
@@ -107,10 +107,7 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
     }
   };
 
-  const isStateAboutUs = desktopState === 'Homedesktop1';
   const isStateServices = desktopState === 'Homedesktop2';
-  const isStateBlog = desktopState === 'Homedesktop3';
-
 
     return (  
         <div className='overlays-container-mobile' style={{ display: "none"}}>

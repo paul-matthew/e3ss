@@ -30,10 +30,10 @@ function AboutUsMobile() {
 
   return (
     
-    <div className="AboutUs-mobile" style={{width: '100vw', height: '100vh', right:'0', position: 'relative', background: 'white', maxWidth: "100%", display: "none"}}>
+    <div className="AboutUs-mobile" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: 'white', maxWidth: "100%", display: "none"}}>
         {desktopState === 'About1' && (
         <div>
-            <div className="Aboutus" style={{width: '100%', position: 'absolute', background: 'white'}}>
+            <div className="Aboutus" style={{width: '100%', position: 'absolute', background: 'white', top: "10vh"}}>
                 <div className="Image" style={{width: '100%', height: 'auto', right: 0, top: 0, position: 'absolute', objectFit: "cover"}}>
                     <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro.png" alt='Placeholder'/>
                 </div>
@@ -117,7 +117,7 @@ function AboutUsMobile() {
                             <div className="Row" style={{flexWrap: "wrap", justifyContent: "flex-start", rowGap: "1.5rem"}}>
                                 <div className="Card" style={{width: "100%",flex: '1 1 0', background: 'white', boxShadow: '0px 0px 32px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8,objectFit:'cover'}} src="./project1.jpg" alt='Placeholder'/>
-                                    <div className="Content" style={{alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+                                    <div className="Content" style={{alignSelf: 'stretch', height: 'auto', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                         <div className="Content" style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
                                             <div style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
                                                 <div className="Project1" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Project 1</div>
@@ -128,7 +128,7 @@ function AboutUsMobile() {
                                 </div>
                                 <div className="Card" style={{width: "100%",flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 16px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8, objectFit:'cover'}} src="./project2.jpg" alt='Placeholder'/>
-                                    <div className="Content" style={{alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+                                    <div className="Content" style={{alignSelf: 'stretch', height: 'auto', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                         <div className="Content" style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
                                             <div style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
                                                 <div className="Project2" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Project 2</div>
@@ -139,7 +139,7 @@ function AboutUsMobile() {
                                 </div>
                                 <div className="Card last" style={{ width: "100%", flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 32px rgba(0, 0, 0, 0.15)', borderRadius: 8, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8,objectFit:'cover'}} src="./project3.jpg" alt='Placeholder'/>
-                                    <div className="Content" style={{alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+                                    <div className="Content" style={{alignSelf: 'stretch', height: 'auto', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                         <div className="Content" style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
                                             <div style={{alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex'}}>
                                                 <div className="Project3" style={{alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Project 3</div>
