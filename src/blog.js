@@ -31,7 +31,7 @@ function Blog() {
             </div>
         </div>
         )}
-        {desktopState === 'Homedesktop1' && (
+        {/* {desktopState === 'Homedesktop1' && (
         <App />
         )}
         {desktopState === 'Services' && (
@@ -57,7 +57,7 @@ function Blog() {
             <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>Contact</div>
             </div>
-        </div>
+        </div> */}
     </div>
     
   );

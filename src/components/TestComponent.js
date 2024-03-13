@@ -1,6 +1,6 @@
 function TestComponent() {
     return (
-       <p className="white">
+       <p className="white" style={{ color: "black"}}>
         Test
         </p>
     );
