@@ -253,6 +253,7 @@
 }
 
 .Button {
+  transition: transform ease-in-out 0.5s; 
   z-index: 4;
   padding: 8px 20px; /* Adjust padding for the button */
   background: #5f5fb0;
