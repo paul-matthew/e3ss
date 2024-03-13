@@ -1099,6 +1099,15 @@ button:hover {
   #Navmenudesktop {
     display: none !important;
   }
+  .Navlogo{
+    display: none !important;
+  }
+  #NavlogoMobile{
+    display: flex !important;
+    position:absolute;
+    z-index:20;
+    margin:10px;
+  }
 
   #mobile-menu {
     display: flex !important;

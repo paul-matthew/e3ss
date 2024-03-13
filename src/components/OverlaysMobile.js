@@ -106,11 +106,26 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
         }, 0); // Wait for 0.5s transition duration
     }
   };
+  const handleHomeClick = () => {
+    if (desktopState !== 'Homedesktop1') {
+      setTimeout(() => {
+      setSerButtonText('Services');
+      setBlogButtonText('Blog');
+      // setDisplayState('block');
+      // setDisplayState2('1');
+      setDesktopState('Homedesktop1');
+      setOverlayLeft('65vw');
+      setBlogOverlayLeft('80vw');
+      setManOverlayLeft('10vw');
+    }, 0);
+  }
+  };
 
   const isStateServices = desktopState === 'Homedesktop2';
 
     return (  
         <div className='overlays-container-mobile' style={{ display: "none"}}>
+          <div id='NavlogoMobile'><img src='./logo-new.png' style={{height:'50px'}}onClick={() => handleHomeClick()}/></div>
         <div className="header-holder-mobile" style={{ height: "10vh", width: "100vw"}} />
         <div className="Rectangle158-mobile" style={{display:displayState, zIndex:displayState2,width: '100vw', height: '15vh', top: `${SeroverlayLeft.replace("vw", "")}%`,left: 0, position: 'absolute', background: 'rgba(217, 217, 217, 0.30)',transition: 'top 0.5s ease-in-out'}} />
       <div className="Rectangle158-mobile" style={{display:displayState,zIndex:displayState2,width: '100vw', height: '15vh', top: `${BlogoverlayLeft.replace("vw", "")}%` ,left: 0, position: 'absolute', background: 'rgba(217, 217, 217, 0.30)',transition: 'top 0.5s ease-in-out' }} />
@@ -120,13 +135,13 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
       {/* Services */}
       <div className="Overlay2-mobile" style={{display:displayState,zIndex:displayState2,width: '100vw', height: '15vh',top: `${SeroverlayLeft.replace("vw", "")}%`, left: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'top 0.5s ease-in-out' }} />
       <div id='HoverOverlay2' className="HoverOverlay2-mobile" style={{zIndex:displayState2,opacity:displayState2,width: '100vw', height: '15vh', top: `${SeroverlayLeft.replace("vw", "")}%`, left: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)', outline: '1px #8C8484 solid', flexDirection: 'column', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'top 0.5s ease-in-out'}}>
-        <div className="ButtonServices" style={{  height: '25vh',textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex: 1, letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
+        <div className="ButtonServices" style={{zIndex:2,height: '25vh',textAlign: 'center', color: '#DED8D8', fontSize: 'clamp(28px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', zIndex: 1, letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',}} onClick={() => handleButtonClick(desktopState)}>{SerbuttonText}</div>
       </div>
 
       {/* Blog */}
       <div className="Overlay3-mobile" style={{display:displayState,zIndex:displayState2,width: '100vw', height: '15vh', top: `${BlogoverlayLeft.replace("vw", "")}%`, left: 0, position: 'absolute', background: 'rgba(0, 0, 0, 0.20)',transition: 'top 0.5s ease-in-out' }} />
       <div id='HoverOverlay3' className="HoverOverlay3-mobile" style={{zIndex:displayState2,opacity:displayState2,width: '100vw', height: '15vh', top: `${BlogoverlayLeft.replace("vw", "")}%`, left: 0, position: 'absolute', hover: 'rgba(0, 0, 0, 0.20)', outline: '1px #8C8484 solid', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', gap: 8, display: 'inline-flex',transition: 'top 0.5s ease-in-out' }}>
-          <div className="ButtonBlog" style={{zIndex:1,color: '#DED8D8',height:'25vh',textAlign:'center',fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word',display: 'flex', justifyContent: 'center', alignItems: 'center' }}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
+          <div className="ButtonBlog" style={{zIndex:2,color: '#DED8D8',height:'25vh',textAlign:'center',fontSize: 'clamp(28px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word',display: 'flex', justifyContent: 'center', alignItems: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
       </div>
 
       {desktopState === 'Homedesktop1' && (
@@ -137,9 +152,9 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
             
           <div className="TextContent1" style={{border:'hidden red',height: '50vh', left: '3.5vw', top: '17vh', position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex', padding: "1rem", width: "80vw"}}>
               <div className="Title" style={{width: '40vw', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
-                  <div className="Title" style={{color: 'white', fontSize: 'clamp(25px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word'}}>Community Minded Consulting Firm</div>
+                  <div className="Title" style={{zIndex:'1', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',color: 'white', fontSize: 'clamp(25px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word'}}>Community Minded Consulting Firm</div>
               </div>
-              <div className="Lead" style={{maxWidth:'28vw',alignSelf: 'stretch', color: 'white', fontSize: 'clamp(20px, 2.5vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word'}}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
+              <div className="Lead" style={{zIndex:'1', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', maxWidth:'28vw',alignSelf: 'stretch', color: 'white', fontSize: 'clamp(20px, 2.5vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word'}}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
               <div className="Button InitialAbout">
                   <div className="Label" onClick={() => handleAboutClick()}>ABOUT US</div>
               </div>
