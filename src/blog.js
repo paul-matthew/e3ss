@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
 import './App.css';
-import App from './App'
-import Services from './services'
-import Contact from './contact'
+//UNCOMMENT WHEN READY TO BUILD BLOG PAGE
+// import App from './App'
+// import Services from './services'
+// import Contact from './contact'
 
 
 function Blog() {
-    const [desktopState,setDesktopState] = useState('Blog1');  
+  //UNCOMMENT WHEN READY TO BUILD BLOG PAGE
+    // const [desktopState,setDesktopState] = useState('Blog1');  
 
-    const handleAboutClick = () => {
-        setDesktopState('AboutUs');
-      };
-      const handleServicesClick = () => {
-        setDesktopState('Services');
-      };
-      const handleBlogClick = () => {
-        setDesktopState('Blog');
-      };
-      const handleContactClick = () => {
-        setDesktopState('Contact');
-      };
+    // const handleAboutClick = () => {
+    //     setDesktopState('AboutUs');
+    //   };
+    //   const handleServicesClick = () => {
+    //     setDesktopState('Services');
+    //   };
+    //   const handleBlogClick = () => {
+    //     setDesktopState('Blog');
+    //   };
+    //   const handleContactClick = () => {
+    //     setDesktopState('Contact');
+    //   };
   
   return (
     
