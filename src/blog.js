@@ -26,13 +26,13 @@ function Blog() {
   return (
     
     <div className="BlogX" style={{width: '100vw', height: '100vh', right:'0'}}>
-        {desktopState === 'Blog1' && (
+        {/* {desktopState === 'Blog1' && ( */}
         <div>
             <div className="BlogX" style={{width: '100vw', top:0,height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div className="ComingSoon" style={{fontSize: 'clamp(30px, 10vw, 100px)', textAlign: 'center'}}>Coming Soon...</div>
             </div>
         </div>
-        )}
+        {/* )} */}
         {/* {desktopState === 'Homedesktop1' && (
         <App />
         )}
