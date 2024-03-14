@@ -840,9 +840,6 @@ button:hover {
 
   .overlays-container-mobile {
     display: block !important;
-    position: relative;
-    overflow: hidden; /* Prevents vertical scrolling */
-    height: calc(100vh - var(--browser-ui-height)); 
   }
 
   #Homedesktop1,#Homedesktop2,#Homedesktop3{
