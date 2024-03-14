@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
 const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopState,handleBlogClick, handleServicesClick, handleAboutClick}) => {
     
@@ -7,6 +7,7 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
     const [BlogoverlayLeft, setBlogOverlayLeft] = useState('80vw');
     const [SerbuttonText, setSerButtonText] = useState('Services');
     const [BlogbuttonText, setBlogButtonText] = useState('Blog');
+    const [browserUiHeight, setBrowserUiHeight] = useState(0);
 
     const handleButtonClick = (newState) => {
         if (desktopState === 'Homedesktop1'){
@@ -120,11 +121,28 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
     }, 0);
   }
   };
+  useEffect(() => {
+    // Calculate the browser UI height
+    const browserUiHeight = window.outerHeight - window.innerHeight;
+    setBrowserUiHeight(browserUiHeight);
+
+    // Update browser UI height when window is resized
+    const handleResize = () => {
+      const newBrowserUiHeight = window.outerHeight - window.innerHeight;
+      setBrowserUiHeight(newBrowserUiHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const isStateServices = desktopState === 'Homedesktop2';
 
     return (  
-        <div className='overlays-container-mobile' style={{ display: "none"}}>
+        <div className='overlays-container-mobile' style={{ display: "none",'--browser-ui-height': `${browserUiHeight}px`}}>
           <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => handleHomeClick()}/></div>
         <div className="header-holder-mobile" style={{ height: "10vh", width: "100vw"}} />
         <div className="Rectangle158-mobile" style={{display:displayState, zIndex:displayState2,width: '100vw', height: '15vh', top: `${SeroverlayLeft.replace("vw", "")}%`,left: 0, position: 'absolute', background: 'rgba(217, 217, 217, 0.30)',transition: 'top 0.5s ease-in-out'}} />

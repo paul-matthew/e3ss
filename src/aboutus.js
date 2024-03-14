@@ -32,6 +32,7 @@ function About() {
 
         <>
             <div className="AboutUs" style={{ width: '100%', height: '100vh', right: '0', position: 'relative', background: 'white' }}>
+                {/* <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => './'()}/></div> */}
                 {desktopState === 'About1' && (
                     <div>
                         <div className="Aboutus" style={{ width: '100%', top: '10vh', position: 'absolute', background: 'white' }}>

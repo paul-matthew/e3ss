@@ -108,6 +108,7 @@ function Services() {
   return (
     
     <div className="Services-mobile" style={{width: '100%', height: 'auto', right:'0', position: 'relative', background: 'white', display: "none"}}>
+        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '10vh'}}>
