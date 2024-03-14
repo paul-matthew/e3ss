@@ -144,8 +144,8 @@ function App() {
     if (desktopState !== 'Homedesktop1') {
       setSerButtonText('Services');
       setBlogButtonText('Blog');
-      setDisplayState('block');
-      setDisplayState2('1');
+        setDisplayState('block');
+        setDisplayState2('1');
       setDesktopState('Homedesktop1');
       setOverlayLeft('50vw');
       setBlogOverlayLeft('75vw');

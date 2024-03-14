@@ -9,103 +9,101 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
     const [BlogbuttonText, setBlogButtonText] = useState('Blog');
 
     const handleButtonClick = (newState) => {
-        if (desktopState === 'Homedesktop1'){
-          setTimeout(() => {
-              setDesktopState('Homedesktop3'); // Ease in the state change
-          }, 300); // Adjust the delay for the transition duration
-      }
-      else if (desktopState === 'Homedesktop2'){
-          setTimeout(() => {
-              setDesktopState('Homedesktop1'); // Ease in the state change
-          }, 300); // Adjust the delay for the transition duration
-      }
-      else {
-          setTimeout(() => {
-              setDesktopState('Homedesktop1'); // Ease in the state change
-          }, 300);
-        }
-        // setDesktopState(newState);
-        if (SeroverlayLeft === '65vw' && BlogoverlayLeft==='80vw') {
+      const transitionDuration = 300; // Transition duration in milliseconds
+  
+      // Set the new desktop state with a delay
+      setTimeout(() => {
+          if (desktopState === 'Homedesktop1') {
+              setDesktopState('Homedesktop3');
+          } else {
+              setDesktopState('Homedesktop1');
+          }
+      }, transitionDuration);
+  
+      // Set the overlay states based on the current state
+      if (SeroverlayLeft === '65vw' && BlogoverlayLeft === '80vw') {
           setOverlayLeft('10vw');
           setManOverlayLeft('25vw');
           setTimeout(() => {
-            setSerButtonText('About Us');
-          }, 0); // Wait for 0.5s transition duration
-        } else if (SeroverlayLeft === '10vw' && BlogoverlayLeft==='80vw') {
+              setSerButtonText('About Us');
+          }, transitionDuration / 2); // Wait for half of the transition duration
+      } else if (SeroverlayLeft === '10vw' && BlogoverlayLeft === '80vw') {
           setOverlayLeft('65vw');
           setManOverlayLeft('10vw');
           setTimeout(() => {
-            setSerButtonText('Services');
-          }, 0); // Wait for 0.5s transition duration
-        }
-        else{
-            setOverlayLeft('65vw');
-            setBlogOverlayLeft('80vw');
-            setManOverlayLeft('10vw');
-            setTimeout(() => {
+              setSerButtonText('Services');
+          }, transitionDuration / 2); // Wait for half of the transition duration
+      } else {
+          // Set overlay states for other cases
+          setOverlayLeft('65vw');
+          setBlogOverlayLeft('80vw');
+          setManOverlayLeft('10vw');
+          setTimeout(() => {
               setSerButtonText('Services');
               setBlogButtonText('Blog');
-            }, 0); // Wait for 0.5s transition duration
-        }
-      };
+          }, transitionDuration / 2); // Wait for half of the transition duration
+      }
+  };
+  
     
-      const handleButton2Click = (newState) => {
-    if (desktopState === 'Homedesktop1'){
-      setTimeout(() => {
-        setDesktopState('Homedesktop2') //2 is blog
-      }, 300);
-    }
-    else if (desktopState === 'Homedesktop3'){
-      setTimeout(() => {
-        setDesktopState('Homedesktop2')
-      }, 300);
-    }
-    else if (desktopState === 'Homedesktop2'){
-      setTimeout(() => {
-        setDesktopState('Homedesktop3')
-      }, 300);
-    }
-    else {
-      setTimeout(() => {
-        setDesktopState('Homedesktop1')
-      }, 300);
-    }
+  const handleButton2Click = () => {
+    const transitionDuration = 300; // Transition duration in milliseconds
 
-    // setDesktopState(newState);
-    if (BlogoverlayLeft === '80vw' && SeroverlayLeft==='65vw') {
-      setOverlayLeft('10vw');
-      setManOverlayLeft('40vw');
-      setBlogOverlayLeft('25vw');
-      setTimeout(() => {
-        setSerButtonText('About Us');
-        setBlogButtonText('Services');
-      }, 0); // Wait for 0.5s transition duration
-    } else if (BlogoverlayLeft === '80vw' && SeroverlayLeft==='10vw'){
-      setManOverlayLeft('40vw');
-      setBlogOverlayLeft('25vw');
-      setTimeout(() => {
-        setBlogButtonText('Services');
-      }, 0);
-     } // Wait for 0.5s transition duration
-     else if (BlogoverlayLeft === '25vw' && SeroverlayLeft==='10vw'){
+    // Set the new desktop state with a delay
+    setTimeout(() => {
+        let newDesktopState;
+        switch (desktopState) {
+            case 'Homedesktop1':
+                newDesktopState = 'Homedesktop2';
+                break;
+            case 'Homedesktop3':
+                newDesktopState = 'Homedesktop2';
+                break;
+            case 'Homedesktop2':
+                newDesktopState = 'Homedesktop3';
+                break;
+            default:
+                newDesktopState = 'Homedesktop1';
+                break;
+        }
+        setDesktopState(newDesktopState);
+    }, transitionDuration);
+
+    // Set the overlay states based on the current overlay positions
+    if (BlogoverlayLeft === '80vw' && SeroverlayLeft === '65vw') {
+        setOverlayLeft('10vw');
+        setManOverlayLeft('40vw');
+        setBlogOverlayLeft('25vw');
+        setTimeout(() => {
+            setSerButtonText('About Us');
+            setBlogButtonText('Services');
+        }, transitionDuration / 2); // Wait for half of the transition duration
+    } else if (BlogoverlayLeft === '80vw' && SeroverlayLeft === '10vw') {
+        setManOverlayLeft('40vw');
+        setBlogOverlayLeft('25vw');
+        setTimeout(() => {
+            setBlogButtonText('Services');
+        }, transitionDuration / 2); // Wait for half of the transition duration
+    } else if (BlogoverlayLeft === '25vw' && SeroverlayLeft === '10vw') {
         setManOverlayLeft('25vw');
-        setOverlayLeft("10vw")
+        setOverlayLeft('10vw');
         setBlogOverlayLeft('80vw');
         setTimeout(() => {
-          setSerButtonText('About Us');
-          setBlogButtonText('Blog');
-        }, 0);
-       } // Wait for 0.5s transition duration
-      else {
+            setSerButtonText('About Us');
+            setBlogButtonText('Blog');
+        }, transitionDuration / 2); // Wait for half of the transition duration
+    } else {
+        // Set overlay states for other cases
         setOverlayLeft('65vw');
         setManOverlayLeft('10vw');
         setBlogOverlayLeft('80vw');
         setTimeout(() => {
-          setSerButtonText('About Us');  
-          setBlogButtonText('Blog');
-        }, 0); // Wait for 0.5s transition duration
+            setSerButtonText('About Us');
+            setBlogButtonText('Blog');
+        }, transitionDuration / 2); // Wait for half of the transition duration
     }
-  };
+};
+
   const handleHomeClick = () => {
     if (desktopState !== 'Homedesktop1') {
       setTimeout(() => {
