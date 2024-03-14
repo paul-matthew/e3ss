@@ -9,7 +9,7 @@ const Modal = ({ onClose, service }) => {
                     <h2>{service.title}</h2>
                     <p>{service.description2}</p>
                 </div>
-                    <img src={service.image} alt={service.title} />
+                    <img style={{maxHeight:'500px',objectFit:'cover'}} src={service.image} alt={service.title} />
             </div>
           </div>
     );

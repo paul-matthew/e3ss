@@ -77,7 +77,7 @@ function Services() {
         { 
             title: "Strategic Plan", 
             description: "Strategic Plan for your organization",
-            image:"./boardroom-queenst.jpg",
+            image:"./boardroomsmile.jpg",
             description2: (
                 <div>
                     <p>Our Strategic Plan service helps your organization develop a clear and actionable roadmap to achieve its long-term goals and objectives. Through a collaborative process, we work with you to define your vision, identify strategic priorities, and establish measurable targets for success.</p>
@@ -192,7 +192,7 @@ function Services() {
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(20px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
                                 <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(10px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>BOOK A CONSULTATION</div>
+                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>BOOK A CONSULTATION</div>
                                 </div>
                             </div>
                         </div>
