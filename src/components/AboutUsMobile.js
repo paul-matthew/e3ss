@@ -4,6 +4,7 @@ import App from '../App'
 import Services from '../services'
 import Blog from '../blog'
 import Contact from '../contact'
+import FadeInSection from './FadeIn';
 
 function AboutUsMobile() {
     const [desktopState, setDesktopState] = useState('About1');  
@@ -62,6 +63,7 @@ function AboutUsMobile() {
                         </div>
                     </div>
                     <div className="Row" style={{flexWrap: "wrap", justifyContent: "flex-start"}}>
+                        <FadeInSection>
                         <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',borderRadius: 10.67, borderBottom: '4px rgb(130, 117, 78) solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 351.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                 <div className="StrategyDirection" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
@@ -73,6 +75,8 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
+                        </FadeInSection>
+                        <FadeInSection>
                         <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="BrandingLogo" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
@@ -84,6 +88,8 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
+                        </FadeInSection>
+                        <FadeInSection>
                         <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white',boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="UiUxDesign" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
@@ -95,6 +101,8 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
+                        </FadeInSection>
+                        <FadeInSection>
                         <div className="Content1 last" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white',boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="WebflowDevelopment" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
@@ -106,6 +114,7 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
+                        </FadeInSection>
                     </div>
                 </div>
                 <div className="Blog" style={{ margin: "5%", marginBottom: "3rem"}}>
@@ -120,6 +129,7 @@ function AboutUsMobile() {
                     {/* <div className="Content" style={{alignSelf: 'stretch', height: 615.67, paddingLeft: 30, paddingRight: 30, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 85.33, display: 'flex'}}>
                         <div className="Content" style={{alignSelf: 'stretch', height: 615.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 85.33, display: 'flex'}}> */}
                             <div className="Row" style={{flexWrap: "wrap", justifyContent: "flex-start", rowGap: "1.5rem"}}>
+                            <FadeInSection>
                                 <div className="Card" style={{width: "100%",flex: '1 1 0', background: 'white', boxShadow: '0px 0px 32px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8,objectFit:'cover'}} src="./project1.jpg" alt='Placeholder'/>
                                     <div className="Content" style={{alignSelf: 'stretch', height: 'auto', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
@@ -131,6 +141,8 @@ function AboutUsMobile() {
                                         </div>
                                     </div>
                                 </div>
+                            </FadeInSection>
+                            <FadeInSection>
                                 <div className="Card" style={{width: "100%",flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 16px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8, objectFit:'cover'}} src="./project2.jpg" alt='Placeholder'/>
                                     <div className="Content" style={{alignSelf: 'stretch', height: 'auto', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
@@ -142,6 +154,7 @@ function AboutUsMobile() {
                                         </div>
                                     </div>
                                 </div>
+                            </FadeInSection>
                                 <div className="Card last" style={{ width: "100%", flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 32px rgba(0, 0, 0, 0.15)', borderRadius: 8, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                                     <img className="PlaceholderImage" style={{alignSelf: 'stretch', height: 200, borderRadius: 8,objectFit:'cover'}} src="./project3.jpg" alt='Placeholder'/>
                                     <div className="Content" style={{alignSelf: 'stretch', height: 'auto', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>

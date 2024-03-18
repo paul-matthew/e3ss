@@ -3,6 +3,7 @@ import './App.css';
 import App from './App'
 import Services from './services'
 import Blog from './blog'
+import FadeInSection from './components/FadeIn';
 
 function Contact() {
     const [desktopState,setDesktopState] = useState('Contact1');  
@@ -37,6 +38,7 @@ function Contact() {
     
     <div className="ContactX" style={{width: '100%', height: '100vh', right:'0',backgroundColor:'#efe6dd'}}>
         <div id='NavlogoMobile' className='ContactNav' style={{display:'none'}}><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
+        <FadeInSection>
         {desktopState === 'Contact1' && (
             <div className="ContactX" style={{width: '100%', height: 'auto', top: "5vh", display: 'flex', justifyContent: 'center', alignItems: 'center', position: "absolute"}}>
                 <div className="Frame1" style={{width:'auto',left:'0px',height:'auto',position:'relative',flex: '1 1 0', alignSelf: 'stretch', paddingLeft: "5vw", paddingRight: "5vw", display: "none"}}>
@@ -77,7 +79,7 @@ function Contact() {
         {desktopState === 'Contact' && (
         <Contact />
         )}
-
+    </FadeInSection>
         <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex', paddingLeft: "calc(100vw - 100%)"}}>
             <div className="ListitemDesktopNa" style={{width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>

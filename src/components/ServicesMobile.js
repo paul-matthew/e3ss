@@ -4,6 +4,7 @@ import App from '../App'
 import Blog from '../blog'
 import Contact from '../contact'
 import Modal from '../modal'
+import FadeInSection from './FadeIn';
 
 function Services() {
     const [desktopState,setDesktopState] = useState('Services1');  
@@ -107,7 +108,7 @@ function Services() {
   
   return (
     
-    <div className="Services-mobile" style={{width: '100%', right:'0', position: 'relative', height:'360%',background: '#efe6dd', display: "none"}}>
+    <div className="Services-mobile" style={{width: '100%', right:'0', position: 'relative', height:'100%',background: '#efe6dd', display: "none"}}>
         <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'Services1' && (
         <div>
@@ -124,24 +125,26 @@ function Services() {
                         </div>
                     </div>
                     {/* //flex */}
-                    <div className="BodyX" style={{width:'100%',flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'inline-flex'}}> 
+                    <div className="BodyX" style={{height:'100%',background:'#efe6dd',width:'100%',flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'inline-flex'}}> 
                         <div className="Servicecards1" >
                             <div className="Frame2230"style={{position:'relative'}}>
                                 <div className="Servicecards1">
                                     <div className="Frame2230" style={{ display: "flex"}}>
                                         {services.map((service, index) => (
+                                        <FadeInSection>
                                         <div className="Servicecard" key={index} style={{backgroundColor:'white', border:'rgb(130, 117, 78) solid'}}>
                                             <div className="CardImage">
                                             <img className="cardpic" src={`./${service.image}`} alt={service.title} />
                                             </div>
                                             <div className="CardTextx">{service.description}</div>
                                             <div className="Group5">
-                                            <div className="TitleSer">{service.title}</div>
+                                                <div className="TitleSer">{service.title}</div>
                                             </div>
                                             <div className="Button">
                                             <div className="ReadMore" onClick={() => handleReadMoreClick(service)}>READ MORE</div>
                                             </div>
                                         </div>
+                                        </FadeInSection>
                                         ))}
                                     </div>
                                 </div>
@@ -186,12 +189,12 @@ function Services() {
                             </div>
                         </div>
                         <div className="IntroSection" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
-                            <div className="Frame1" style={{flex: '1 1 0', height: "auto", paddingLeft: "5%", paddingRight: "5%", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 45, display: 'inline-flex', marginBottom: "3rem"}}>
+                        <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', top: "20px", paddingLeft: "5%", paddingRight: "5%", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
                             <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>PRICING</div>
                                 <div className="Text" style={{alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(20px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
-                                <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+                                <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}onClick={() => handleContactClick()}>
                                     <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>BOOK A CONSULTATION</div>
                                 </div>
                             </div>

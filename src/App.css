@@ -343,11 +343,14 @@ body,html {
   .Row.Card {
     max-width: "200px" !important;
   }
+  .Row.Content1 {
+    max-width: "200px" !important;
+  }
 }
 
 @media (min-height: 501px) and (min-width: 916px) {
   .Content1 {
-    max-width: 230px;
+    max-width: "25vw" !important;
   }
   .Card {
     max-width: "25vw" !important;
@@ -405,7 +408,8 @@ body,html {
 @media (max-width: 950px) {
   .Frame2230 {
     /* flex-wrap: wrap; */
-    max-width: 90%;
+    max-width: 100%;
+    margin:10px;
     justify-content: space-between;
   }
 
@@ -431,12 +435,8 @@ body,html {
 .CardTextx {
   width: 100%;
   color: black;
-  font-size: 20px;
   font-family: Roboto;
   font-weight: 400;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
@@ -452,11 +452,44 @@ body,html {
 }
 
 .TitleSer {
-  color: black;
-  font-size: 24px;
+  color:black;
   font-family: "Bowlby One SC", sans-serif;
-  font-weight: 400;
-  margin: 0; /* Remove default margin */
+  margin: 10px; /* Remove default margin */
+}
+@media (max-width:575px){
+  .TitleSer {
+    font-size: 24px !important;
+    font-weight: 400px !important;
+  }
+  .CardTextx{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width:576px){
+  .TitleSer {
+    font-size: 15px !important;
+    font-weight: 100 !important;
+  }
+  .CardTextx{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;  }
+}
+@media (min-width:770px){
+  .TitleSer {
+    font-size: 20px !important;
+    font-weight: 100 !important;
+  }
+  .CardTextx{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;  }
 }
 
 .Servicecard .Button {
@@ -1097,7 +1130,7 @@ button:hover {
 /* Largest devices such as desktops (1280px and up) */
 /* @media only screen and (min-width: 80em) {...} */
 
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 575px){
   #Navmenudesktop {
     display: none !important;
   }
@@ -1294,4 +1327,19 @@ button:hover {
 .ContactNav{
   display:block important!
 }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
