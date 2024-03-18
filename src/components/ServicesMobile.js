@@ -29,7 +29,7 @@ function Services() {
         { 
             title: "Assessments", 
             description: "Assessments include state analysis and an implementation roadmap.",
-            image:'./boardroom-queenst2.jpg',
+            image:'./assessments.jpg',
             description2: (
                 <div>
                     <p>Our Assessments service provides a comprehensive evaluation of your organization's current state, identifying key areas of strength and areas for improvement. Through rigorous analysis and data-driven methodologies, we deliver actionable insights to drive strategic decision-making and organizational growth.</p>
@@ -45,7 +45,7 @@ function Services() {
         { 
             title: "Organizational Audits", 
             description: "Detailed audits of your organization.",
-            image:"./boardroom-queenst.jpg",
+            image:"./audits.jpg",
             description2: (
                 <div>
                     <p>Our Organizational Audits service offers a detailed examination of your organization's structure, processes, and performance to identify areas for improvement and operational efficiencies.</p>
