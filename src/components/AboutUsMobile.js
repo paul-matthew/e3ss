@@ -34,16 +34,20 @@ function AboutUsMobile() {
         <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'About1' && (
         <div>
-            <div className="Aboutus" style={{width: '100%', position: 'absolute', background: 'white', top: "10vh"}}>
+            <div className="Aboutus" style={{width: '100%', position: 'absolute', background: '#efe6dd', top: "10vh"}}>
                 <div className="Image" style={{width: '100%', height: 'auto', right: 0, top: 0, position: 'absolute', objectFit: "cover"}}>
-                    <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro.png" alt='Placeholder'/>
+                    <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro-white2.png" alt='Placeholder'/>
                 </div>
                 <div className="Intro" style={{ position: "relative",width: '85vw', height: '100vh', left: "5vw", top: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
-                    <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>E3 STRATEGIC SOLUTIONS</div>
+                    {/* <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>E3 STRATEGIC SOLUTIONS</div> */}
                     <div className="Content" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
-                        <div className='content-name' style={{width:'100%', fontSize: 'clamp(30px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>
+                        <div className='content-name' style={{width:'100%', fontSize: 'clamp(25px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>
                         <div className="Subheadline" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
-                            <div className="Text" style={{width: '100%',  fontSize: 'clamp(20px, 2vw, 24px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word',lineHeight: '1.5' }}>I have over twenty years of experience working in non-profits in Canada and Internationally.</div>
+                            <div className="Text" style={{width: '100%',  fontSize: 'clamp(15px, 2vw, 24px)', marginBottom:'50px',fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word',lineHeight: '1.5' }}>
+                                <div>
+                                    I have over 20 years of experience working with non-profits.
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="about-button" className="Button">
@@ -58,7 +62,7 @@ function AboutUsMobile() {
                         </div>
                     </div>
                     <div className="Row" style={{flexWrap: "wrap", justifyContent: "flex-start"}}>
-                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, borderBottom: '4px #5E3BEE solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',borderRadius: 10.67, borderBottom: '4px rgb(130, 117, 78) solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 351.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
                                 <div className="StrategyDirection" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
                                     <img className="ProductChain1" style={{width: 53.33, height: 53.33}} src="./project1.jpg" alt='Placeholder'/>
@@ -69,7 +73,7 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
-                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="BrandingLogo" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
                                     <img className="Tag1" style={{width: 53.33, height: 53.33}} src="./project2.jpg" alt='Placeholder'/>
@@ -80,7 +84,7 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
-                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+                        <div className="Content1" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white',boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="UiUxDesign" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
                                     <img className="FeatherPen1" style={{width: 53.33, height: 53.33}} src="./project3.jpg" alt='Placeholder'/>
@@ -91,7 +95,7 @@ function AboutUsMobile() {
                                 </div>
                             </div>
                         </div>
-                        <div className="Content1 last" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
+                        <div className="Content1 last" style={{marginBottom:50,flex: '1 1 0', padding: 32, background: 'white',boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="SectionTitle" style={{alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex'}}>
                                 <div className="WebflowDevelopment" style={{padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex'}}>
                                     <img className="FeatherPen1" style={{width: 53.33, height: 53.33}} src="./project4.jpg" alt='Placeholder'/>

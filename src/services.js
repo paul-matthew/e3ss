@@ -31,7 +31,7 @@ function Services() {
         { 
             title: "Assessments", 
             description: "Assessments include state analysis and an implementation roadmap.",
-            image:'./boardroom-queenst2.jpg',
+            image:'./assessments.jpg',
             description2: (
                 <div>
                     <p>Our Assessments service provides a comprehensive evaluation of your organization's current state, identifying key areas of strength and areas for improvement. Through rigorous analysis and data-driven methodologies, we deliver actionable insights to drive strategic decision-making and organizational growth.</p>
@@ -45,9 +45,9 @@ function Services() {
             )
         },
         { 
-            title: "Organization Audits", 
+            title: "Organizational Audits", 
             description: "Detailed audits of your organization.",
-            image:"./boardroom-queenst.jpg",
+            image:"./audits.jpg",
             description2: (
                 <div>
                     <p>Our Organization Audits service offers a detailed examination of your organization's structure, processes, and performance to identify areas for improvement and operational efficiencies.</p>
@@ -62,7 +62,7 @@ function Services() {
         },
         { 
             title: "Program Evaluation", 
-            description: "Comprehensive analysis that is used to maintain an effectiveness program",
+            description: "Comprehensive analysis that is used to maintain effective program.",
             image:"./groupmeeting.jpeg",
             description2: (
                 <div>
@@ -109,11 +109,11 @@ function Services() {
   
   return (
     <>
-    <div className="Services" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: 'white'}}>
+    <div className="Services" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: '#efe6dd'}}>
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '100px'}}>
-                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "5vh", position: 'absolute', background: 'white', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
+                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "5vh", position: 'absolute', background: '#efe6dd', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
                     <div className="Home" style={{height: '13rem', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex'}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: 259, justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
                             <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', paddingLeft: 50, paddingRight: 60, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
@@ -130,7 +130,7 @@ function Services() {
                                 <div className="Servicecards1">
                                     <div className="Frame2230">
                                         {services.map((service, index) => (
-                                        <div className="Servicecard" key={index}>
+                                        <div className="Servicecard" key={index}style={{position:'relative',backgroundColor:'white',border:'rgb(130, 117, 78) solid'}}>
                                             <div className="CardImage">
                                             <img className="cardpic" src={`./${service.image}`} alt={service.title} />
                                             </div>
@@ -139,7 +139,7 @@ function Services() {
                                             <div className="TitleSer">{service.title}</div>
                                             </div>
                                             <div className="Button">
-                                            <div className="ReadMore" onClick={() => handleReadMoreClick(service)}>READ MORE</div>
+                                                <div className="ReadMore" onClick={() => handleReadMoreClick(service)}>READ MORE</div>
                                             </div>
                                         </div>
                                         ))}
@@ -191,7 +191,7 @@ function Services() {
                                 <div className="Text" style={{alignSelf: 'stretch', height: 100, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(10px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
-                                <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+                                <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}onClick={() => handleContactClick()}>
                                     <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(10px, 3vw, 20px)', fontFamily: 'Roboto', fontWeight: '600', letterSpacing: 3, wordWrap: 'break-word'}}>BOOK A CONSULTATION</div>
                                 </div>
                             </div>
@@ -215,8 +215,8 @@ function Services() {
             <div className="ListitemDesktopNa" style={{width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About</div>
             </div>
-            <div className="ListitemDesktopNaActive" style={{zIndex:2,width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#3b3b7a', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleServicesClick()}>Services</div>
+            <div className="ListitemDesktopNaActive" style={{zIndex:2,width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: 'rgb(130, 117, 78)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleServicesClick()}>Services</div>
             </div>
             <div className="ListitemDesktopNa" style={{width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleBlogClick()}>Blog</div>

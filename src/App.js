@@ -210,7 +210,7 @@ function App() {
             <div className="Title" style={{ width: '30vw', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'flex' }}>
               <div className="Title" style={{ color: 'white', fontSize: 'clamp(25px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word' }}>Community Minded Consulting Firm</div>
             </div>
-            <div className="Lead" style={{ maxWidth: '28vw', alignSelf: 'stretch', color: 'white', fontSize: 'clamp(16px, 2.5vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word' }}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
+            <div className="Lead" style={{ maxWidth: '28vw', alignSelf: 'stretch', color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',fontSize: 'clamp(16px, 2.5vw, 20px)', fontFamily: 'Roboto', fontWeight: '400', lineHeight: 1.5, wordWrap: 'break-word' }}>E3 Strategic Solutions empowers organizations to reach their full potential</div>
             <div className="Button InitialAbout">
               <div className="Label" onClick={() => handleAboutClick()}>ABOUT US</div>
             </div>

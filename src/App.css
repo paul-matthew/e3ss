@@ -223,9 +223,6 @@ body,html {
   word-wrap: break-word;
 }
 
-.ActiveMenu {
-
-}
 .Title {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
@@ -245,8 +242,12 @@ body,html {
 }
 
 .ListitemDesktopNa:hover {
-  background-color: #5f5fb0 !important;
+  background-color:#d9cfbf !important;
 }
+.ListitemDesktopNa:hover .Label {
+  color: black !important;
+}
+
 
 .Button:hover {
   transform: scale(1.1);
@@ -267,10 +268,10 @@ body,html {
   transition: transform ease-in-out 0.5s; 
   z-index: 4;
   padding: 8px 20px; /* Adjust padding for the button */
-  background: #5f5fb0;
+  background: rgb(130, 117, 78);
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px; /* Adjust border radius for a less oval shape */
-  border: 2px #3a3ac0 solid;
+  border: 2px black solid;
   display: inline-flex;
   align-items: center;
 }
@@ -430,7 +431,7 @@ body,html {
 .CardTextx {
   width: 100%;
   color: black;
-  font-size: 16px;
+  font-size: 20px;
   font-family: Roboto;
   font-weight: 400;
   padding-top: 10px;
@@ -462,7 +463,7 @@ body,html {
   position: absolute;
   justify-content: center;
   bottom: 10px;
-  width: 50%;
+  width: 76%;
   text-align: center;
   margin-top: 2px; /* Adjust margin as needed */
   left: 50%;
@@ -960,8 +961,8 @@ button:hover {
   .Aboutus {
 
     .Text, .content-name, .E3StrategicSolutions {
-      color: white !important;
-  
+      color: black !important;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8)  !important;
     }
   }
 }
@@ -1230,7 +1231,7 @@ button:hover {
   }
 
   .active-menu-mobile {
-    background-color: #3b3b7a !important;
+    background-color: rgb(130, 117, 78) !important;
     
     .Label {
       color: white !important;
@@ -1266,20 +1267,20 @@ button:hover {
 
   }
 
-  .last-form-group {
+  /* .last-form-group {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    }
+    } */
 
-      .ContactForm {
+      /* .ContactForm {
         background-color: #A2A2C7 !important;
         width: 90% !important;
       }
 
       .book-consultation{ 
         margin-bottom: 60px !important;
-      }
+      } */
  
 
 }
@@ -1287,4 +1288,10 @@ button:hover {
 .fade {
   transition: opacity 0.5s ease;
   opacity: 0.5; /* Adjust the opacity value as needed */
+}
+
+@media (max-width:641px){
+.ContactNav{
+  display:block important!
+}
 }

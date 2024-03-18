@@ -35,7 +35,8 @@ function Contact() {
   
   return (
     
-    <div className="ContactX" style={{width: '100%', height: '100vh', right:'0'}}>
+    <div className="ContactX" style={{width: '100%', height: '100vh', right:'0',backgroundColor:'#efe6dd'}}>
+        <div id='NavlogoMobile' className='ContactNav' style={{display:'none'}}><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'Contact1' && (
             <div className="ContactX" style={{width: '100%', height: 'auto', top: "5vh", display: 'flex', justifyContent: 'center', alignItems: 'center', position: "absolute"}}>
                 <div className="Frame1" style={{width:'auto',left:'0px',height:'auto',position:'relative',flex: '1 1 0', alignSelf: 'stretch', paddingLeft: "5vw", paddingRight: "5vw", display: "none"}}>
@@ -58,7 +59,7 @@ function Contact() {
                         <textarea id="message" name="message" rows="5" placeholder={ smallScreen ? "Message": "Enter your message"} required></textarea>
                     </div>
                     <div className="FormGroup last-form-group" >
-                        <button type="submit">Submit</button>
+                        <button className='Button' type="submit"><div className='Label'>Submit</div></button>
                     </div>
                 </form>
             </div>
@@ -87,8 +88,8 @@ function Contact() {
             <div className="ListitemDesktopNa" style={{width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleBlogClick()}>Blog</div>
             </div>
-            <div className="ListitemDesktopNaActive" style={{zIndex:2,width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#3b3b7a', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Contact</div>
+            <div className="ListitemDesktopNaActive" style={{zIndex:2,width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: 'rgb(130, 117, 78)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Contact</div>
             </div>
         </div>
     </div>

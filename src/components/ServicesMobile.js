@@ -43,12 +43,12 @@ function Services() {
             )
         },
         { 
-            title: "Organization Audits", 
+            title: "Organizational Audits", 
             description: "Detailed audits of your organization.",
             image:"./boardroom-queenst.jpg",
             description2: (
                 <div>
-                    <p>Our Organization Audits service offers a detailed examination of your organization's structure, processes, and performance to identify areas for improvement and operational efficiencies.</p>
+                    <p>Our Organizational Audits service offers a detailed examination of your organization's structure, processes, and performance to identify areas for improvement and operational efficiencies.</p>
                     <p><strong>Key Features:</strong></p>
                     <ul>
                         <li>Operational Audits: Evaluation of your organization's day-to-day operations and processes.</li>
@@ -60,7 +60,7 @@ function Services() {
         },
         { 
             title: "Program Evaluation", 
-            description: "Comprehensive analysis that is used to maintain an effectiveness program",
+            description: "Comprehensive analysis used to maintain an effective program",
             image:"./groupmeeting.jpeg",
             description2: (
                 <div>
@@ -107,12 +107,12 @@ function Services() {
   
   return (
     
-    <div className="Services-mobile" style={{width: '100%', height: 'auto', right:'0', position: 'relative', background: 'white', display: "none"}}>
+    <div className="Services-mobile" style={{width: '100%', height: 'auto', right:'0', position: 'relative', height:'360%',background: '#efe6dd', display: "none"}}>
         <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '10vh'}}>
-                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: 0, position: 'relative', background: 'white', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
+                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: 0, position: 'relative', background: '#efe6dd', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
                     <div className="Home" style={{height: 'auto', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex', marginBottom: "2rem", padding: "0px 3%"}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: "auto", justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex', position: "relative", top: "10vh"}}>
                             <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', top: "20px", paddingLeft: "5%", paddingRight: "5%", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
@@ -130,7 +130,7 @@ function Services() {
                                 <div className="Servicecards1">
                                     <div className="Frame2230" style={{ display: "flex"}}>
                                         {services.map((service, index) => (
-                                        <div className="Servicecard" key={index}>
+                                        <div className="Servicecard" key={index} style={{backgroundColor:'white', border:'rgb(130, 117, 78) solid'}}>
                                             <div className="CardImage">
                                             <img className="cardpic" src={`./${service.image}`} alt={service.title} />
                                             </div>

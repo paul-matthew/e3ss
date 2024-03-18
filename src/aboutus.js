@@ -31,20 +31,20 @@ function About() {
     return (
 
         <>
-            <div className="AboutUs" style={{ width: '100%', height: '100vh', right: '0', position: 'relative', background: 'white' }}>
+            <div className="AboutUs" style={{ width: '100%', height: '100%', right: '0', position: 'relative', background: 'white' }}>
                 {/* <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => './'()}/></div> */}
                 {desktopState === 'About1' && (
                     <div>
-                        <div className="Aboutus" style={{ width: '100%', top: '10vh', position: 'absolute', background: 'white' }}>
+                        <div className="Aboutus" style={{ width: '100%', height:'350%',top: '10vh', position: 'absolute', background: '#efe6dd' }}>
                             <div className="Image" style={{ width: '100%', height: '100%', right: 0, bottom: 0, position: 'absolute' }}>
-                                <img className="Samplebio21" style={{ width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute' }} src="./biointro.png" alt='Placeholder' />
+                                <img className="Samplebio21" style={{ width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute' }} src="./biointro-white2.png" alt='Placeholder' />
                             </div>
                             <div className="Intro" style={{ width: '100%', height: 'auto', top: 24, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex', padding: "0px 3vw" }}>
                                 <div className="E3StrategicSolutions" style={{ alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word' }}>E3 STRATEGIC SOLUTIONS</div>
                                 <div className="Content" style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex' }}>
                                     <div className='content-name' style={{ width: '30vw', color: '#25282B', fontSize: 'clamp(16px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word' }}>Hello, my name is Erica Opoku</div>
                                     <div className="Subheadline" style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex' }}>
-                                        <div className="Text" style={{ width: '50vw', color: '#828282', fontSize: 'clamp(13px, 2vw, 24px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word', lineHeight: '1.5' }}>I have over twenty years of experience working in non-profits in Canada and Internationally and has spent the last 15 years working at the municipal level in grant making, health system transformation and healthy public policy.</div>
+                                        <div className="Text" style={{ width: '50vw', textShadow: '2px 2px 4px rgba(255, 255, 255, 0.5)',color: 'black', fontSize: 'clamp(13px, 2vw, 24px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word', lineHeight: '1.5' }}>I have over twenty years of experience working in non-profits in Canada and Internationally and has spent the last 15 years working at the municipal level in grant making, health system transformation and healthy public policy.</div>
                                     </div>
                                 </div>
                                 <div id="about-button" className="Button">
@@ -60,7 +60,7 @@ function About() {
                                         </div>
                                     </div>
                                     <div className="Row" style={{ flexWrap: "wrap", justifyContent: "flex-start" }}>
-                                        <div className="Content1" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, borderBottom: '4px #5E3BEE solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
+                                        <div className="Content1" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', background: 'white', borderRadius: 10.67, borderBottom: '4px rgb(130, 117, 78) solid', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
                                             <div className="SectionTitle" style={{ alignSelf: 'stretch', height: 351.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex' }}>
                                                 <div className="StrategyDirection" style={{ padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex' }}>
                                                     <img className="ProductChain1" style={{ width: 53.33, height: 53.33 }} src="./project1.jpg" alt='Placeholder' />
@@ -71,7 +71,7 @@ function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="Content1" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
+                                        <div className="Content1" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',background: 'white', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
                                             <div className="SectionTitle" style={{ alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex' }}>
                                                 <div className="BrandingLogo" style={{ padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex' }}>
                                                     <img className="Tag1" style={{ width: 53.33, height: 53.33 }} src="./project2.jpg" alt='Placeholder' />
@@ -82,7 +82,7 @@ function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="Content1" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
+                                        <div className="Content1" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',background: 'white', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
                                             <div className="SectionTitle" style={{ alignSelf: 'stretch', height: 306.33, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex' }}>
                                                 <div className="UiUxDesign" style={{ padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex' }}>
                                                     <img className="FeatherPen1" style={{ width: 53.33, height: 53.33 }} src="./project3.jpg" alt='Placeholder' />
@@ -93,7 +93,7 @@ function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="Content1 last" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, background: '#F5FCFF', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
+                                        <div className="Content1 last" style={{ maxWidth: "294px", marginBottom: 50, flex: '1 1 0', padding: 32, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',background: 'white', borderRadius: 10.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
                                             <div className="SectionTitle" style={{ alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 21.33, display: 'flex' }}>
                                                 <div className="WebflowDevelopment" style={{ padding: 13.33, background: 'white', boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.10)', borderRadius: 10.67, justifyContent: 'center', alignItems: 'center', gap: 13.33, display: 'inline-flex' }}>
                                                     <img className="FeatherPen1" style={{ width: 53.33, height: 53.33 }} src="./project4.jpg" alt='Placeholder' />
@@ -118,7 +118,7 @@ function About() {
                                     {/* <div className="Content" style={{alignSelf: 'stretch', height: 615.67, paddingLeft: 30, paddingRight: 30, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 85.33, display: 'flex'}}>
                         <div className="Content" style={{alignSelf: 'stretch', height: 615.67, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 85.33, display: 'flex'}}> */}
                                     <div className="Row" style={{ flexWrap: "wrap", justifyContent: "flex-start" }}>
-                                        <div className="Card" style={{ maxWidth: "430px", flex: '1 1 0', background: 'white', boxShadow: '0px 0px 32px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
+                                        <div className="Card" style={{ maxWidth: "430px", flex: '1 1 0', background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
                                             <img className="PlaceholderImage" style={{ alignSelf: 'stretch', height: 200, borderRadius: 8, objectFit: 'cover' }} src="./project1.jpg" alt='Placeholder' />
                                             <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex' }}>
                                                 <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
@@ -129,7 +129,7 @@ function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="Card" style={{ maxWidth: "430px", flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 16px rgba(0, 0, 0, 0.15)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
+                                        <div className="Card" style={{ maxWidth: "430px", flex: '1 1 0', background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex' }}>
                                             <img className="PlaceholderImage" style={{ alignSelf: 'stretch', height: 200, borderRadius: 8, objectFit: 'cover' }} src="./project2.jpg" alt='Placeholder' />
                                             <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex' }}>
                                                 <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
@@ -140,7 +140,7 @@ function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="Card last" style={{ maxWidth: "430px", flex: '1 1 0', background: 'white', boxShadow: '0px 5.333333492279053px 32px rgba(0, 0, 0, 0.15)', borderRadius: 8, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex', marginBottom: "5rem" }}>
+                                        <div className="Card last" style={{ maxWidth: "430px", flex: '1 1 0', background: 'white', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 8, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex', marginBottom: "5rem" }}>
                                             <img className="PlaceholderImage" style={{ alignSelf: 'stretch', height: 200, borderRadius: 8, objectFit: 'cover' }} src="./project3.jpg" alt='Placeholder' />
                                             <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', padding: 32, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex' }}>
                                                 <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
@@ -219,7 +219,7 @@ function About() {
                         </div>
                     </div>
                 )}
-                {desktopState === 'Homedesktop1' && (
+                {/* {desktopState === 'Homedesktop1' && (
                     <App />
                 )}
                 {desktopState === 'Services' && (
@@ -230,11 +230,11 @@ function About() {
                 )}
                 {desktopState === 'Contact' && (
                     <Contact />
-                )}
+                )} */}
 
                 <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex', paddingLeft: "calc(100vw - 100%)" }}>
-                    <div className="ListitemDesktopNaActive" style={{ zIndex: 2, width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#3b3b7a', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
-                        <div className="Label" style={{ width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleAboutClick()}>About</div>
+                    <div className="ListitemDesktopNaActive" style={{ zIndex: 2, width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0,background: 'rgb(130, 117, 78)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
+                        <div className="Label" style={{ width: 100, textAlign: 'center', color: 'white',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleAboutClick()}>About</div>
                     </div>
                     <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
                         <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleServicesClick()}>Services</div>
