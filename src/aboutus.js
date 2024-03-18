@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
-import App from './App'
-import Services from './services'
-import Blog from './blog'
-import Contact from './contact'
+// import App from './App'
+// import Services from './services'
+// import Blog from './blog'
+// import Contact from './contact'
 import AboutUsMobile from './components/AboutUsMobile';
 
 function About() {
