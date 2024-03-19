@@ -11,15 +11,15 @@ function Services() {
     const [showModal, setShowModal] = useState(false);
     const [selectedService, setSelectedService] = useState(null);
 
-    const handleAboutClick = () => {
-        setDesktopState('AboutUs');
-      };
-      const handleServicesClick = () => {
-        setDesktopState('Services');
-      };
-      const handleBlogClick = () => {
-        setDesktopState('Blog');
-      };
+    // const handleAboutClick = () => {
+    //     setDesktopState('AboutUs');
+    //   };
+    //   const handleServicesClick = () => {
+    //     setDesktopState('Services');
+    //   };
+    //   const handleBlogClick = () => {
+    //     setDesktopState('Blog');
+    //   };
       const handleContactClick = () => {
         setDesktopState('Contact');
       };
@@ -109,7 +109,7 @@ function Services() {
   return (
     
     <div className="Services-mobile" style={{width: '100%', right:'0', position: 'relative', height:'100%',background: '#efe6dd', display: "none"}}>
-        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
+        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '10vh'}}>
@@ -214,7 +214,7 @@ function Services() {
         <Contact />
         )}
 
-        <div className="Navmenudesktop" style={{width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
+        {/* <div className="Navmenudesktop" style={{width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
             <div className="ListitemDesktopNa" style={{width: 'clamp(83px, 3%, 16px)', height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>
             </div>
@@ -227,7 +227,7 @@ function Services() {
             <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>Contact</div>
             </div>
-        </div>
+        </div> */}
     </div>
     
   );

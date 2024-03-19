@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 
 
 function About() {
-    const [desktopState, setDesktopState] = useState('About1');
+    const [desktopState] = useState('About1');
     const scrollToMySkills = () => {
         const mySkillsElement = document.querySelector('.MySkills');
         if (mySkillsElement) {
@@ -18,18 +18,18 @@ function About() {
         }
     };
 
-    const handleAboutClick = () => {
-        setDesktopState('AboutUs');
-    };
-    const handleServicesClick = () => {
-        setDesktopState('Services');
-    };
-    const handleBlogClick = () => {
-        setDesktopState('Blog');
-    };
-    const handleContactClick = () => {
-        setDesktopState('Contact');
-    };
+    // const handleAboutClick = () => {
+    //     setDesktopState('AboutUs');
+    // };
+    // const handleServicesClick = () => {
+    //     setDesktopState('Services');
+    // };
+    // const handleBlogClick = () => {
+    //     setDesktopState('Blog');
+    // };
+    // const handleContactClick = () => {
+    //     setDesktopState('Contact');
+    // };
 
     return (
 
@@ -40,7 +40,7 @@ function About() {
                     <div>
                         <div className="Aboutus" style={{ width: '100%', height:'100%',top: '10vh', position: 'absolute', background: '#efe6dd' }}>
                             <div className="Image" style={{ width: '100%', height: '100%', right: 0, bottom: 0, position: 'absolute' }}>
-                                <img className="Samplebio21" style={{ width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute' }} src="./biointro-white2.png" alt='Placeholder' />
+                                <img className="Samplebio21" style={{ width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute' }} src="./biointro-tan.png" alt='Placeholder' />
                             </div>
                             <div className="Intro" style={{ width: '100%', height: 'auto', top: 24, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex', padding: "0px 3vw" }}>
                                 <div className="E3StrategicSolutions" style={{ alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word' }}>E3 STRATEGIC SOLUTIONS</div>
@@ -251,7 +251,7 @@ function About() {
                     <Contact />
                 )} */}
 
-                <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex', paddingLeft: "calc(100vw - 100%)" }}>
+                {/* <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex', paddingLeft: "calc(100vw - 100%)" }}>
                     <div className="ListitemDesktopNaActive" style={{ zIndex: 2, width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0,background: 'rgb(130, 117, 78)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
                         <div className="Label" style={{ width: 100, textAlign: 'center', color: 'white',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleAboutClick()}>About</div>
                     </div>
@@ -264,7 +264,7 @@ function About() {
                     <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
                         <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} onClick={() => handleContactClick()}>Contact</div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <AboutUsMobile />

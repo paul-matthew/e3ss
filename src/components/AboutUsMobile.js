@@ -7,7 +7,7 @@ import Contact from '../contact'
 import FadeInSection from './FadeIn';
 
 function AboutUsMobile() {
-    const [desktopState, setDesktopState] = useState('About1');  
+    const [desktopState] = useState('About1');  
     
     const scrollToMySkills = () => {
         const mySkillsElement = document.getElementById('my-skills-mobile');
@@ -16,36 +16,36 @@ function AboutUsMobile() {
         }
     };
 
-    const handleAboutClick = () => {
-        setDesktopState('AboutUs');
-      };
-      const handleServicesClick = () => {
-        setDesktopState('Services');
-      };
-      const handleBlogClick = () => {
-        setDesktopState('Blog');
-      };
-      const handleContactClick = () => {
-        setDesktopState('Contact');
-      };
+    // const handleAboutClick = () => {
+    //     setDesktopState('AboutUs');
+    //   };
+    //   const handleServicesClick = () => {
+    //     setDesktopState('Services');
+    //   };
+    //   const handleBlogClick = () => {
+    //     setDesktopState('Blog');
+    //   };
+    //   const handleContactClick = () => {
+    //     setDesktopState('Contact');
+    //   };
 
   return (
     
     <div className="AboutUs-mobile" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: 'white', maxWidth: "100%", display: "none"}}>
-        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
+        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'About1' && (
         <div>
             <div className="Aboutus" style={{width: '100%', position: 'absolute', background: '#efe6dd', top: "10vh"}}>
                 <div className="Image" style={{width: '100%', height: 'auto', right: 0, top: 0, position: 'absolute', objectFit: "cover"}}>
-                    <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro-white2.png" alt='Placeholder'/>
+                    <img className="Samplebio21" style={{width: 'auto', height: '80vh', right: 0, top: '0vh', position: 'absolute'}} src="./biointro-tan.png" alt='Placeholder'/>
                 </div>
                 <div className="Intro" style={{ position: "relative",width: '85vw', height: '100vh', left: "5vw", top: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
                     {/* <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>E3 STRATEGIC SOLUTIONS</div> */}
                     <div className="Content" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
                         <div className='content-name' style={{width:'100%', fontSize: 'clamp(25px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>
                         <div className="Subheadline" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
-                            <div className="Text" style={{width: '100%',  fontSize: 'clamp(15px, 2vw, 24px)', marginBottom:'50px',fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word',lineHeight: '1.5' }}>
-                                <div>
+                            <div className="Text" style={{width: '100%',  fontSize: 'clamp(16px, 2vw, 24px)', marginBottom:'22vh',fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word',lineHeight: '1.5' }}>
+                                <div className='Experience'>
                                     I have over 20 years of experience working with non-profits.
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ function AboutUsMobile() {
                         </FadeInSection>
                     </div>
                 </div>
-                <div className="Blog" style={{ margin: "5%", marginBottom: "3rem"}}>
+                <div className="Blog" style={{ margin: "5%", marginBottom: "6rem"}}>
                     <div className="SectionHeader" style={{width: '100%', justifyContent: 'flex-start', alignItems: 'center', gap: 16.67, display: 'inline-flex'}}>
                         <div className="SectionTitle" style={{width: '100%', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                             <div className="RecentProjects" style={{textAlign: 'center', color: '#282938', fontSize: 'clamp(21px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '600', lineHeight: 3, wordWrap: 'break-word'}}>Recent Projects</div>
@@ -245,7 +245,7 @@ function AboutUsMobile() {
         <Contact />
         )}
 
-        <div className="Navmenudesktop" style={{width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
+        {/* <div className="Navmenudesktop" style={{width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
             <div className="ListitemDesktopNaActive" style={{zIndex:2, width: 'clamp(83px, 3vw, 16px)', height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#FFD700', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 100, textAlign: 'center', color: 'black', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>
             </div>
@@ -258,7 +258,7 @@ function AboutUsMobile() {
             <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>Contact</div>
             </div>
-        </div>
+        </div> */}
     </div>
     
   );

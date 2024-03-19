@@ -4,65 +4,50 @@ import './App.css';
 // import App from './App'
 // import Services from './services'
 // import Contact from './contact'
+import FadeInSection from './components/FadeIn';
 
 
-function Blog() {
-  //UNCOMMENT WHEN READY TO BUILD BLOG PAGE
-    // const [desktopState,setDesktopState] = useState('Blog1');  
+import React from 'react';
 
-    // const handleAboutClick = () => {
-    //     setDesktopState('AboutUs');
-    //   };
-    //   const handleServicesClick = () => {
-    //     setDesktopState('Services');
-    //   };
-    //   const handleBlogClick = () => {
-    //     setDesktopState('Blog');
-    //   };
-    //   const handleContactClick = () => {
-    //     setDesktopState('Contact');
-    //   };
-  
-  return (
-    
-    <div className="BlogX" style={{width: '100vw', height: '100vh', right:'0'}}>
-        {/* {desktopState === 'Blog1' && ( */}
-        <div>
-            <div className="BlogX" style={{width: '100vw', top:0,height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <div className="ComingSoon" style={{fontSize: 'clamp(30px, 10vw, 100px)', textAlign: 'center'}}>Coming Soon...</div>
+const Blog = () => {
+    return (
+        <div className="BlogContainer" style={{ width: '100vw', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px',background: '#efe6dd' }}>
+            <div className='Bloglogo'><img src='./logo-new.png' alt='logo mobile'style={{zIndex:2,position:'absolute',height:'5vh',marginTop:'2.8vh', left:0, top:0, marginLeft:'2.5vw'}}onClick={() => window.location.href = './'}/></div>
+            <div className="PostsWrapper" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px',marginTop: '80px' }}>
+                <FadeInSection>
+                <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '20px',background:'white' }}>
+                    {/* Post 1 */}
+                    <h1 style={{ marginTop: 0 }}>Keys to Strategic Planning</h1>
+                    <div className="ContentWrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                        <img src='./project1.jpg' alt='blog post' style={{ maxWidth: '100%', maxHeight: '50vh', marginBottom: '20px' }} />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, sapien sit amet finibus pharetra, mauris nulla consequat dolor, a pulvinar libero orci sed libero. Vestibulum nec justo id ipsum tincidunt placerat. Nullam congue nec neque at lacinia. Vestibulum consequat nibh eu nibh euismod ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+                </FadeInSection>
+                <FadeInSection>
+                <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '20px',background:'white' }}>
+                    {/* Post 2 */}
+                    <h1 style={{ marginTop: 0 }}>Importance of Time Management</h1>
+                    <div className="ContentWrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                        <img src='./project2.jpg' alt='blog post' style={{ maxWidth: '100%', maxHeight: '50vh', marginBottom: '20px' }} />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, sapien sit amet finibus pharetra, mauris nulla consequat dolor, a pulvinar libero orci sed libero. Vestibulum nec justo id ipsum tincidunt placerat. Nullam congue nec neque at lacinia. Vestibulum consequat nibh eu nibh euismod ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+                </FadeInSection>
+                <FadeInSection>
+                <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '80px',background:'white' }}>
+                    {/* Post 3 */}
+                    <h1 style={{ marginTop: 0 }}>Effective Communication Strategies</h1>
+                    <div className="ContentWrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                        <img src='./project3.jpg' alt='blog post' style={{ maxWidth: '100%', maxHeight: '50vh', marginBottom: '20px' }} />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, sapien sit amet finibus pharetra, mauris nulla consequat dolor, a pulvinar libero orci sed libero. Vestibulum nec justo id ipsum tincidunt placerat. Nullam congue nec neque at lacinia. Vestibulum consequat nibh eu nibh euismod ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+                </FadeInSection>
             </div>
         </div>
-        {/* )} */}
-        {/* {desktopState === 'Homedesktop1' && (
-        <App />
-        )}
-        {desktopState === 'Services' && (
-        <Services />
-        )}
-        {desktopState === 'Blog' && (
-        <Blog />
-        )}
-        {desktopState === 'Contact' && (
-        <Contact />
-        )}
-
-        <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex'}}>
-            <div className="ListitemDesktopNa" style={{width: 'clamp(83px, 3vw, 16px)', height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>
-            </div>
-            <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleServicesClick()}>Services</div>
-            </div>
-            <div className="ListitemDesktopNaActive" style={{zIndex:2,width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#FFD700', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'black', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleBlogClick()}>Blog</div>
-            </div>
-            <div className="ListitemDesktopNa" style={{width: 50, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                <div className="Label" style={{width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>Contact</div>
-            </div>
-        </div> */}
-    </div>
-    
-  );
-}
+    );
+};
 
 export default Blog;
+

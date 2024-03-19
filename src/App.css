@@ -1343,3 +1343,29 @@ button:hover {
   transform: none;
   visibility: visible;
 }
+
+@media (min-width: 400px) and (min-height:800px){
+  .Experience {
+    font-size: 20px !important;
+  }
+  .content-name {
+    font-size: 35px !important;
+  }
+}
+
+@media(max-width:400px){
+.BlogContainer{
+height:320% !important;
+}
+}
+@media(min-width:401px) and (max-width:600px){
+  .BlogContainer{
+  height:230% !important;
+  }
+  }
+
+  @media(min-width:601px){
+    .Bloglogo{
+    display:none;
+    }
+  }

@@ -6,20 +6,20 @@ import Blog from './blog'
 import FadeInSection from './components/FadeIn';
 
 function Contact() {
-    const [desktopState,setDesktopState] = useState('Contact1');  
+    const [desktopState] = useState('Contact1');  
     const [clientWidth, setClientWidth] = useState(window.innerWidth);
 
     const smallScreen = clientWidth <= 640;
 
-    const handleAboutClick = () => {
-        setDesktopState('AboutUs');
-      };
-      const handleServicesClick = () => {
-        setDesktopState('Services');
-      };
-      const handleBlogClick = () => {
-        setDesktopState('Blog');
-      };
+    // const handleAboutClick = () => {
+    //     setDesktopState('AboutUs');
+    //   };
+    //   const handleServicesClick = () => {
+    //     setDesktopState('Services');
+    //   };
+    //   const handleBlogClick = () => {
+    //     setDesktopState('Blog');
+    //   };
 
       React.useEffect( () => {
         const handleResize = () => {
@@ -37,7 +37,7 @@ function Contact() {
   return (
     
     <div className="ContactX" style={{width: '100%', height: '100vh', right:'0',backgroundColor:'#efe6dd'}}>
-        <div id='NavlogoMobile' className='ContactNav' style={{display:'none'}}><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => window.location.href = './'}/></div>
+        <div id='NavlogoMobile' className='ContactNav' style={{display:'none'}}><img src='./logo-new.png' alt='logo mobile'style={{height:'50px',marginTop:'15px'}}onClick={() => window.location.href = './'}/></div>
         <FadeInSection>
         {desktopState === 'Contact1' && (
             <div className="ContactX" style={{width: '100%', height: 'auto', top: "5vh", display: 'flex', justifyContent: 'center', alignItems: 'center', position: "absolute"}}>
@@ -80,7 +80,7 @@ function Contact() {
         <Contact />
         )}
     </FadeInSection>
-        <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex', paddingLeft: "calc(100vw - 100%)"}}>
+        {/* <div className="Navmenudesktop" style={{ width: '80vw', height: '10vh', right: '0vw', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'inline-flex', paddingLeft: "calc(100vw - 100%)"}}>
             <div className="ListitemDesktopNa" style={{width: 115, height: '100%', paddingLeft: 18, paddingRight: 18, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 100, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}onClick={() => handleAboutClick()}>About Us</div>
             </div>
@@ -93,7 +93,7 @@ function Contact() {
             <div className="ListitemDesktopNaActive" style={{zIndex:2,width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: 'rgb(130, 117, 78)', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                 <div className="Label" style={{width: 131, textAlign: 'center', color: 'white',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word'}}>Contact</div>
             </div>
-        </div>
+        </div> */}
     </div>
     
   );
