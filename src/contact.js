@@ -36,7 +36,7 @@ function Contact() {
   
   return (
     
-    <div className="ContactX" style={{width: '100%', height: '100vh', right:'0',backgroundColor:'#efe6dd'}}>
+    <div className="ContactX" style={{width: '100%', height: '100vh', right:'0',backgroundColor:'#f0ece7'}}>
         <div id='NavlogoMobile' className='ContactNav' style={{display:'none'}}><img src='./logo-new.png' alt='logo mobile'style={{height:'50px',marginTop:'15px'}}onClick={() => window.location.href = './'}/></div>
         <FadeInSection>
         {desktopState === 'Contact1' && (

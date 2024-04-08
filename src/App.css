@@ -393,7 +393,7 @@ body,html {
   height: 350px; /* Increased height for taller cards */
   position: relative;
   box-shadow: 5px 5px 60px -20px #5f5fb0;
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden; /* Ensure content doesn't overflow */
 }
 
@@ -428,7 +428,6 @@ body,html {
   width: 100%;
   height: auto;
   border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
   object-fit: cover;
 }
 
@@ -448,7 +447,7 @@ body,html {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   text-align: center;
-  padding: 10px 0; /* Adjust padding as needed */
+  padding: 10px 0;
 }
 
 .TitleSer {
@@ -483,7 +482,7 @@ body,html {
 @media (min-width:770px){
   .TitleSer {
     font-size: 20px !important;
-    font-weight: 100 !important;
+    font-weight: bold !important;
   }
   .CardTextx{
     font-size: 15px;
@@ -496,7 +495,7 @@ body,html {
   position: absolute;
   justify-content: center;
   bottom: 10px;
-  width: 76%;
+  width: 50%;
   text-align: center;
   margin-top: 2px; /* Adjust margin as needed */
   left: 50%;
@@ -1368,4 +1367,7 @@ height:320% !important;
     .Bloglogo{
     display:none;
     }
+  }
+  .x{
+  color:#f0ece7
   }

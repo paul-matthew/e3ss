@@ -109,11 +109,11 @@ function Services() {
   
   return (
     <>
-    <div className="Services" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: '#efe6dd'}}>
+    <div className="Services" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: '#f0ece7'}}>
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '100px'}}>
-                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "5vh", position: 'absolute', background: '#efe6dd', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
+                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "5vh", position: 'absolute', background: '#f0ece7', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
                     <div className="Home" style={{height: '13rem', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex'}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: 259, justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
                             <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', paddingLeft: 50, paddingRight: 60, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
@@ -130,14 +130,14 @@ function Services() {
                                 <div className="Servicecards1">
                                     <div className="Frame2230">
                                         {services.map((service, index) => (
-                                        <div className="Servicecard" key={index}style={{position:'relative',backgroundColor:'white',border:'rgb(130, 117, 78) solid'}}>
+                                        <div className="Servicecard" key={index}style={{position:'relative',backgroundColor:'white',border:'black 2px solid'}}>
                                             <div className="CardImage">
-                                            <img className="cardpic" src={`./${service.image}`} alt={service.title} />
+                                            <img className="cardpic" style={{maxHeight:'160px', opacity:'80%'}} src={`./${service.image}`} alt={service.title} />
                                             </div>
-                                            <div className="CardTextx">{service.description}</div>
-                                            <div className="Group5">
-                                            <div className="TitleSer">{service.title}</div>
+                                            <div className="CardTitle">
+                                                <div className="TitleSer">{service.title}</div>
                                             </div>
+                                            <div className="CardTextx" style={{paddingLeft:'20px',paddingRight:'30px'}}>{service.description}</div>
                                             <div className="Button">
                                                 <div className="ReadMore" onClick={() => handleReadMoreClick(service)}>READ MORE</div>
                                             </div>
@@ -185,7 +185,7 @@ function Services() {
                                 {showModal ? <div className="background-overlay" /> : null}
                             </div>
                         </div>
-                        <div className="IntroSection" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex',backgroundColor:'#efe6dd'}}>
+                        <div className="IntroSection" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex',backgroundColor:'#f0ece7', marginTop:'70px'}}>
                         <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', paddingLeft: 50, paddingRight: 60, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
                             <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>PRICING</div>
                                 <div className="Text" style={{alignSelf: 'stretch', height: 100, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
