@@ -37,15 +37,10 @@ function Contact() {
   return (
     
     <div className="ContactX" style={{width: '100%', height: '100vh', right:'0',backgroundColor:'#f0ece7'}}>
-        <div id='NavlogoMobile' className='ContactNav' style={{display:'none'}}><img src='./logo-new.png' alt='logo mobile'style={{height:'50px',marginTop:'15px'}}onClick={() => window.location.href = './'}/></div>
+        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
         <FadeInSection>
         {desktopState === 'Contact1' && (
-            <div className="ContactX" style={{width: '100%', height: 'auto', top: "5vh", display: 'flex', justifyContent: 'center', alignItems: 'center', position: "absolute"}}>
-                <div className="Frame1" style={{width:'auto',left:'0px',height:'auto',position:'relative',flex: '1 1 0', alignSelf: 'stretch', paddingLeft: "5vw", paddingRight: "5vw", display: "none"}}>
-                    <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>CONTACT</div>
-                    <div className="Text" style={{alignSelf: 'stretch', height: 0, width: 0, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'none'}}>
-                    </div>
-                </div>
+            <div className="ContactX" style={{width: '100%', height: 'auto', top: "1vh", display: 'flex', justifyContent: 'center', alignItems: 'center', position: "absolute"}}>
                 <form className="ContactForm" style={{width: '70%',minHeight:'60vh',paddingRight:'50px', border:'solid gray'}}>
                     <p className='contact-title' style={{ margin: "10px auto", textAlign: "center", color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700'}}>Contact Us</p>
                     <div className="FormGroup">

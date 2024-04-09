@@ -585,6 +585,13 @@ button:hover {
   top: 17vh;
   position: absolute;
 }
+@media(min-Width:576px){
+.ContactForm {
+  top: 10vh !important;
+  position: absolute;
+}
+}
+
 
 @media (max-width: 950px) {
   .ContactX .Frame1 {
