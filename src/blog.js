@@ -35,7 +35,7 @@ const Blog = () => {
                 </div>
                 </FadeInSection>
                 <FadeInSection>
-                <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '80px',background:'white' }}>
+                <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '20px',background:'white' }}>
                     {/* Post 3 */}
                     <h1 style={{ marginTop: 0 }}>Effective Communication Strategies</h1>
                     <div className="ContentWrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
@@ -44,6 +44,17 @@ const Blog = () => {
                     </div>
                 </div>
                 </FadeInSection>
+                <FadeInSection>
+                    <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '20px', background:'white' }}>
+                        {/* Post 4 */}
+                        <h1 style={{ marginTop: 0 }}>The Power of Collaboration</h1>
+                        <div className="ContentWrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                            <img src='./office.jpg' alt='blog post' style={{ maxWidth: '100%', maxHeight: '50vh', marginBottom: '20px' }} />
+                            <p>Discover how effective collaboration can drive innovation and success. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, sapien sit amet finibus pharetra, mauris nulla consequat dolor, a pulvinar libero orci sed libero. Vestibulum nec justo id ipsum tincidunt placerat. Nullam congue nec neque at lacinia. Vestibulum consequat nibh eu nibh euismod ultricies.</p>
+                        </div>
+                    </div>
+                </FadeInSection>
+
             </div>
         </div>
     );

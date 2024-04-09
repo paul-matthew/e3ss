@@ -415,7 +415,7 @@ body,html {
 
   .Frame1 {
    
-      padding-bottom: 5rem;
+      padding-bottom: 1rem;
     
   }
 }
@@ -631,6 +631,12 @@ button:hover {
 } */
 
 /*MODAL*/
+
+@media (min-width:576px){
+.modalImg{
+object-position: center -140px;
+}
+}
 
 .fade {
   -webkit-transition: opacity 0.15s linear;
@@ -1359,7 +1365,7 @@ height:320% !important;
 }
 @media(min-width:401px) and (max-width:600px){
   .BlogContainer{
-  height:230% !important;
+  height:300% !important;
   }
   }
 

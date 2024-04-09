@@ -114,7 +114,7 @@ function Services() {
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '10vh'}}>
                 <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: 0, position: 'relative', background: '#efe6dd', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
-                    <div className="Home" style={{height: 'auto', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex', marginBottom: "2rem", padding: "0px 3%"}}>
+                    <div className="Home" style={{height: 'auto', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex', marginBottom: "0rem", padding: "0px 3%"}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: "auto", justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex', position: "relative", top: "10vh"}}>
                             <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', top: "20px", paddingLeft: "5%", paddingRight: "5%", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
                                 <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>SERVICES</div>

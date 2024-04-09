@@ -46,8 +46,8 @@ function Contact() {
                     <div className="Text" style={{alignSelf: 'stretch', height: 0, width: 0, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'none'}}>
                     </div>
                 </div>
-                <form className="ContactForm" style={{width: '70%',paddingRight:'50px', border:'solid gray'}}>
-                    <p className='contact-title' style={{ margin: "10px auto", textAlign: "center", fontSize: "30px"}}>Contact Us</p>
+                <form className="ContactForm" style={{width: '70%',minHeight:'60vh',paddingRight:'50px', border:'solid gray'}}>
+                    <p className='contact-title' style={{ margin: "10px auto", textAlign: "center", color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700'}}>Contact Us</p>
                     <div className="FormGroup">
                         <label htmlFor="name" style={{ display: smallScreen ? "none": "block"}}>Name</label>
                         <input type="text" id="name" name="name" placeholder={ smallScreen ? "Name": "Enter your name"} required />
@@ -58,7 +58,7 @@ function Contact() {
                     </div>
                     <div className="FormGroup">
                         <label htmlFor="message" style={{ display: smallScreen ? "none": "block"}}>Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder={ smallScreen ? "Message": "Enter your message"} required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder={ smallScreen ? "Message": "Enter your message"} required style={{minHeight:'20vh'}}></textarea>
                     </div>
                     <div className="FormGroup last-form-group" >
                         <button className='Button' type="submit"><div className='Label'>Submit</div></button>

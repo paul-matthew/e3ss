@@ -113,7 +113,7 @@ function Services() {
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '100px'}}>
-                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "5vh", position: 'absolute', background: '#f0ece7', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
+                <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "1vh", position: 'absolute', background: '#f0ece7', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
                     <div className="Home" style={{height: '13rem', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex'}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: 259, justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
                             <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', paddingLeft: 50, paddingRight: 60, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
