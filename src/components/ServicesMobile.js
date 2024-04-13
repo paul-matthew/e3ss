@@ -125,7 +125,7 @@ function Services() {
                         </div>
                     </div>
                     {/* //flex */}
-                    <div className="BodyX" style={{height:'100%',background:'#efe6dd',width:'100%',flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'inline-flex'}}> 
+                    <div className="BodyX" style={{height:'100%',background:'#efe6dd',width:'100%',flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'inline-flex',marginBottom:'50px'}}> 
                         <div className="Servicecards1" >
                             <div className="Frame2230"style={{position:'relative'}}>
                                 <div className="Servicecards1">
