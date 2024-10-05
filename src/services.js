@@ -29,8 +29,8 @@ function Services() {
 
       const services = [
         { 
-            title: "Assessments", 
-            description: "Assessments include state analysis and an implementation roadmap.",
+            title: "Current State Assessments", 
+            description: "These include a comprehensive evaluation of an organization’s existing conditions, operations, and performance.",
             image:'./assessments.jpg',
             description2: (
                 <div>
@@ -63,7 +63,7 @@ function Services() {
         { 
             title: "Program Evaluation", 
             description: "Comprehensive analysis that is used to maintain effective program.",
-            image:"./groupmeeting.jpeg",
+            image:"./groupmeeting1.png",
             description2: (
                 <div>
                     <p>Our Program Evaluation service provides a comprehensive analysis of your organization's programs and initiatives to assess their effectiveness and impact. Through thorough evaluation and data analysis, we help you make informed decisions to improve program outcomes and maximize results.</p>
@@ -78,7 +78,7 @@ function Services() {
         },
         { 
             title: "Strategic Plan", 
-            description: "Strategic Plan for your organization",
+            description: "A plan for strategic guidance that outlines your organization’s goals, objectives, and strategies for achieving long-term success.",
             image:"./busyboardroom.jpg",
             description2: (
                 <div>
@@ -106,6 +106,12 @@ function Services() {
         setSelectedService(null);
         document.body.classList.remove('modal-open');
     };
+    const handleBackgroundClick = (event) => {
+        // Close modal if the clicked element is the modal background, not the content
+        if (event.target === event.currentTarget) {
+            handleCloseModal();
+        }
+      };
   
   return (
     <>
@@ -116,10 +122,10 @@ function Services() {
                 <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: "1vh", position: 'absolute', background: '#f0ece7', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
                     <div className="Home" style={{height: '13rem', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex'}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: 259, justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
-                            <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', paddingLeft: 50, paddingRight: 60, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
+                            <div className="Frame1" style={{alignSelf: 'stretch', paddingLeft: 50, paddingRight: 60, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
                                 <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>SERVICES</div>
-                                <div className="Text" style={{alignSelf: 'stretch', height: 100, width:'100%', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
-                                    <div className="CardTextz" style={{alignSelf: 'stretch', color: '#4D4D4D', paddingRight:'70px',fontSize: 'clamp(10px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our professional services will help align your business with your strategic goals.  We have over 20 years of experience providing extensive services for various organizations.</div>
+                                <div className="Text" style={{alignSelf: 'stretch',  width:'100%', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
+                                    <div className="CardTextz" style={{alignSelf: 'stretch', color: '#4D4D4D', paddingRight:'70px',fontSize: 'clamp(10px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our professional services will help align your business with your strategic goals.</div>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +138,7 @@ function Services() {
                                         {services.map((service, index) => (
                                         <div className="Servicecard" key={index}style={{position:'relative',backgroundColor:'white',border:'black 2px solid'}}>
                                             <div className="CardImage">
-                                            <img className="cardpic" style={{maxHeight:'160px', opacity:'80%'}} src={`./${service.image}`} alt={service.title} />
+                                                <img className="cardpic" style={{maxHeight:'160px', opacity:'80%'}} src={`./${service.image}`} alt={service.title} />
                                             </div>
                                             <div className="CardTitle">
                                                 <div className="TitleSer">{service.title}</div>
@@ -181,8 +187,11 @@ function Services() {
                                         <div className="ReadMore">READ MORE</div>
                                     </div>
                                 </div> */}
-                                {showModal && <Modal onClose={handleCloseModal} service={selectedService} />}
-                                {showModal ? <div className="background-overlay" /> : null}
+                                {showModal && (
+                                <div className="background-overlay" onClick={handleBackgroundClick}>
+                                    <Modal onClose={handleCloseModal} service={selectedService} />
+                                </div>
+                                )}                            
                             </div>
                         </div>
                         <div className="IntroSection" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex',backgroundColor:'#f0ece7', marginTop:'70px'}}>
@@ -191,7 +200,7 @@ function Services() {
                                 <div className="Text" style={{alignSelf: 'stretch', height: 100, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(10px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
-                                <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+                                <div className="Button book-consultation" style={{justifyContent: 'center', alignItems: 'center',marginTop:'20px', display: 'inline-flex'}}>
                                     <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(10px, 3vw, 20px)', fontFamily: 'Roboto', fontWeight: '600', letterSpacing: 3, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>BOOK A CONSULTATION</div>
                                 </div>
                             </div>

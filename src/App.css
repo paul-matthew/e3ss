@@ -250,7 +250,7 @@ body,html {
 
 
 .Button:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: transform ease-in-out 0.5s;
   background-color: white !important;
   cursor: pointer;
@@ -262,6 +262,7 @@ body,html {
 
 .Button:hover .ReadMore {
   color: black !important;
+  transition: color 0.6s ease;
 }
 
 .Button {
@@ -274,6 +275,7 @@ body,html {
   border: 2px black solid;
   display: inline-flex;
   align-items: center;
+  max-width: 200px;
 }
 
 .Label {
@@ -383,29 +385,67 @@ body,html {
 
 .Frame2230 {
   display: flex;
-  gap: 2vw; /* Reduce space between cards */
+  flex-wrap: wrap; /* Allow cards to wrap */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards */
 }
 
 .Servicecard {
   border: solid #5f5fb0;
-  width: 20vw;
+  width: 100%; /* Default to 100% width */
   max-width: 300px; /* Maximum width for each card */
   height: 350px; /* Increased height for taller cards */
-  position: relative;
-  box-shadow: 5px 5px 60px -20px #5f5fb0;
+  position: relative; 
+  box-shadow: 5px 5px 20px -10px #5f5fb0;
   border-radius: 30px;
   overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-@media (max-height: 500px) and (max-width: 950px) {
+/* Responsive layout adjustments */
+@media (max-width: 600px) { /* Small screens */
   .Servicecard {
-    width: 40% !important;
+    width: 100%; /* 1 per row */
+    margin-top: 20px;
+  }
+  .CardTextx{
+    margin-top:0px !important;
+    display: flex; /* Enable flexbox for vertical alignment */
+    flex-direction: column; 
+    justify-content: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1180px) { /* Medium screens */
+  .Servicecard {
+    width: calc(50% - 10px);/* 2 per row */
+    margin-top: 50px;
+   align-items: center;
+  }
+
+}
+
+@media (min-width: 1181px) { /* Large screens */
+  .Servicecard {
+    width: calc(25% - 25px); /* 4 per row */
+    /* margin:5px  */
+  }
+}
+
+@media (max-height: 500px) {
+  .Servicecard {
     height: 300px !important;
   }
 }
 
+@media (min-width: 1181px) {
+  .Servicecard {
+    height: 400px !important;
+  }
+}
+
+
 /* For mobile devices */
-@media (max-width: 950px) {
+@media (max-width: 1180px) {
   .Frame2230 {
     /* flex-wrap: wrap; */
     max-width: 100%;
@@ -437,6 +477,7 @@ body,html {
   font-family: Roboto;
   font-weight: 400;
   box-sizing: border-box; /* Include padding in width calculation */
+  text-align: center;
 }
 
 .Group5 {
@@ -453,12 +494,13 @@ body,html {
 .TitleSer {
   color:black;
   font-family: "Bowlby One SC", sans-serif;
-  margin: 10px; /* Remove default margin */
+  margin-top: 10px; /* Remove default margin */
+  text-align: center;
 }
-@media (max-width:575px){
+@media (max-width:1180px){
   .TitleSer {
-    font-size: 24px !important;
-    font-weight: 400px !important;
+    font-size: 34px !important;
+    font-weight:bold;
   }
   .CardTextx{
     padding-top: 10px;
@@ -468,24 +510,14 @@ body,html {
   }
 }
 
-@media (min-width:576px){
-  .TitleSer {
-    font-size: 15px !important;
-    font-weight: 100 !important;
-  }
-  .CardTextx{
-    font-size: 15px;
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 5px;  }
-}
-@media (min-width:770px){
+@media (min-width:1181px){
   .TitleSer {
     font-size: 20px !important;
-    font-weight: bold !important;
+    font-weight: bold;
+    margin:10px;
   }
   .CardTextx{
-    font-size: 15px;
+    font-size: 16px !important;
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;  }
@@ -504,7 +536,7 @@ body,html {
 
 .ReadMore {
   color: white;
-  font-size: clamp(14px, 2vw, 15px);
+  font-size: clamp(14px, 2vw, 14px);
   font-family: Roboto, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
@@ -678,14 +710,12 @@ object-position: center -140px;
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  -o-transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -webkit-transform: translate(0, -50px);
-  -ms-transform: translate(0, -50px);
+  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out, opacity 0.5s ease-out;
+  -o-transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   transform: translate(0, -50px);
+  opacity: 0;
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
@@ -695,9 +725,8 @@ object-position: center -140px;
   }
 }
 .modal.show .modal-dialog {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .modal.modal-static .modal-dialog {
   -webkit-transform: scale(1.02);
@@ -757,6 +786,9 @@ object-position: center -140px;
 }
 .modal-backdrop.fade {
   opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .modal-backdrop.show {
   opacity: 0.5;
@@ -883,7 +915,7 @@ object-position: center -140px;
   border-radius: 0;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 1180.98px) {
 
   .overlays-container-mobile {
     display: block !important;
@@ -949,7 +981,7 @@ object-position: center -140px;
     display: flex !important;
 
     .Servicesx {
-      top: 20px !important;
+      top: 0px !important;
 
       .Home {
 
@@ -1007,7 +1039,7 @@ object-position: center -140px;
 
     .Text, .content-name, .E3StrategicSolutions {
       color: black !important;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8)  !important;
+      text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8)  !important;
     }
   }
 }
@@ -1142,7 +1174,7 @@ object-position: center -140px;
 /* Largest devices such as desktops (1280px and up) */
 /* @media only screen and (min-width: 80em) {...} */
 
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: 1180px){
   #Navmenudesktop {
     display: none !important;
   }

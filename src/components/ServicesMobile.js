@@ -112,12 +112,12 @@ function Services() {
         <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'Services1' && (
         <div>
-            <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '10vh'}}>
+            <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white'}}>
                 <div className="Servicesdesktop" style={{width: '100%',  left: 0, top: 0, position: 'relative', background: '#efe6dd', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 1, display: 'inline-flex'}}>
                     <div className="Home" style={{height: 'auto', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 124, display: 'inline-flex', marginBottom: "0rem", padding: "0px 3%"}}>
                         <div className="IntroSection" style={{alignSelf: 'stretch', height: "auto", justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex', position: "relative", top: "10vh"}}>
                             <div className="Frame1" style={{flex: '1 1 0', alignSelf: 'stretch', top: "20px", paddingLeft: "5%", paddingRight: "5%", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 20, display: 'inline-flex'}}>
-                                <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', color: 'black', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>SERVICES</div>
+                                <div className="E3StrategicSolutions" style={{marginTop:'10px',alignSelf: 'stretch', color: 'black', fontSize: 'clamp(30px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>SERVICES</div>
                                 <div className="Text" style={{alignSelf: 'stretch', height: "auto", width:'100%', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
                                     <div className="CardTextz" style={{alignSelf: 'stretch', color: '#4D4D4D', paddingRight:'70px',fontSize: 'clamp(20px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our professional services will help align your business with your strategic goals.  We have over 20 years of experience providing extensive services for various organizations.</div>
                                 </div>
@@ -195,7 +195,7 @@ function Services() {
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(20px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
                                 <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}onClick={() => handleContactClick()}>
-                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>BOOK A CONSULTATION</div>
+                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(13px, 3vw,16px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>BOOK A CONSULTATION</div>
                                 </div>
                             </div>
                         </div>
