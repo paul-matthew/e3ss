@@ -7,7 +7,7 @@ import Contact from './contact'
 import MobileMenu from './components/MobileMenu';
 import OverlaysMobile from './components/OverlaysMobile';
 
-const desktopStateList = ["AboutUs", "Services", "Blog", "Contact"]
+const desktopStateList = ["About", "Services", "Blog", "Contact"]
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -123,7 +123,7 @@ function App() {
   useEffect(() => {
     const currentUrl = window.location.pathname.toLowerCase();
     const allowedUrls = [
-      "/aboutus",
+      "/about",
       "/services",
       "/blog",
       "/contact",
@@ -153,8 +153,8 @@ function App() {
   const handleAboutClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
-    setDesktopState('AboutUs');
-    changeUrl("/Aboutus");
+    setDesktopState('About');
+    changeUrl("/About");
   };
   const handleServicesClick = () => {
     setDisplayState('none');
@@ -188,18 +188,23 @@ function App() {
   changeUrl("/");
   };
 //FIX LATER, MAKE IT REACT NOT PLAIN JS
-  window.onload = function() {
-    setDesktopState("Homedesktop1");
+window.onload = function() {
 
-    const currentUrl = window.location.pathname.toLowerCase();
+  // Get the current URL path in lowercase
+  const currentUrl = window.location.pathname.toLowerCase();
 
-    // Check if current URL is in the list, and set the state accordingly
-    const matchingState = desktopStateList.find(state => currentUrl.includes(state.toLowerCase()));
+  // Check if the current URL matches any state in desktopStateList
+  const matchingState = desktopStateList.find(state => currentUrl.includes(state.toLowerCase()));
 
-    if (matchingState) {
+  // If we're on the home page, or no matching state is found, set "Homedesktop1"
+  if (currentUrl === '/' || !matchingState) {
+      setDesktopState("Homedesktop1");
+  } else {
+      // If a matching state is found, set it
       setDesktopState(matchingState);
-    }
-  };
+  }
+};
+
 
   return (
     <div className="Homepage" style={{ width: '100%', height: '100vh', position: 'relative', background: 'white', border: 'hidden red' }}>
@@ -308,7 +313,7 @@ function App() {
         </div>
       )}
 
-      {desktopState === 'AboutUs' && (
+      {desktopState === 'About' && (
         <About />
       )}
       {desktopState === 'Services' && (

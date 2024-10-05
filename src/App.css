@@ -1388,7 +1388,7 @@ object-position: center -140px;
   visibility: visible;
 }
 
-@media (min-width: 400px) and (min-height:800px){
+@media (min-width: 300px) and (min-height:800px){
   .Experience {
     font-size: 20px !important;
   }
@@ -1397,12 +1397,12 @@ object-position: center -140px;
   }
 }
 
-@media(max-width:400px){
+@media(max-width:300px){
 .BlogContainer{
 height:320% !important;
 }
 }
-@media(min-width:401px) and (max-width:600px){
+@media(min-width:301px) and (max-width:600px){
   .BlogContainer{
   height:300% !important;
   }
