@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import About from './aboutus'
 import Services from './services'
@@ -120,25 +120,59 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    const currentUrl = window.location.pathname.toLowerCase();
+    const allowedUrls = [
+      "/aboutus",
+      "/services",
+      "/blog",
+      "/contact",
+      // "/terms",
+    ];
+
+    if (allowedUrls.includes(currentUrl)) {
+      const stateFromUrl = currentUrl.replace("/", ""); // Remove the leading slash
+      setDesktopState(
+        stateFromUrl.charAt(0).toUpperCase() + stateFromUrl.slice(1)
+      ); // Capitalize the first letter
+    } else {
+      setDesktopState("Homedesktop1"); // Set default state if URL doesn't match
+    }
+    // if (currentUrl === '/') {
+    //   setShowLoadingScreen(true);
+    // } else {
+    //   setShowLoadingScreen(false);
+    // } 
+
+  }, []);
+
+  const changeUrl = (newUrl) => {
+    window.history.pushState({}, "", newUrl);
+  };
+
   const handleAboutClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
     setDesktopState('AboutUs');
+    changeUrl("/Aboutus");
   };
   const handleServicesClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
     setDesktopState('Services');
+    changeUrl("/Services");
   };
   const handleBlogClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
     setDesktopState('Blog');
+    changeUrl("/Blog");
   };
   const handleContactClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
     setDesktopState('Contact');
+    changeUrl("/Contact");
   };
   const handleHomeClick = () => {
     if (desktopState !== 'Homedesktop1') {
@@ -151,6 +185,20 @@ function App() {
       setBlogOverlayLeft('75vw');
       setManOverlayLeft('0vw');
   }
+  changeUrl("/");
+  };
+//FIX LATER, MAKE IT REACT NOT PLAIN JS
+  window.onload = function() {
+    setDesktopState("Homedesktop1");
+
+    const currentUrl = window.location.pathname.toLowerCase();
+
+    // Check if current URL is in the list, and set the state accordingly
+    const matchingState = desktopStateList.find(state => currentUrl.includes(state.toLowerCase()));
+
+    if (matchingState) {
+      setDesktopState(matchingState);
+    }
   };
 
   return (
