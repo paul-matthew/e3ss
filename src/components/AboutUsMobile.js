@@ -71,7 +71,7 @@ function AboutUsMobile() {
                                                     <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                         <div style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                             <div className="Project1" style={{ alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(22px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word' }}>Strategic Thinking</div>
-                                                            <div  style={{ alignSelf: 'stretch', color: 'black', fontSize: 'clamp(16px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Experienced in developing strategic plans that align with organizational goals. Innovative thinking to identify unique solutions.</div>
+                                                            <div  style={{ alignSelf: 'stretch', color: 'black', fontSize: 'clamp(20px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Experienced in developing strategic plans that align with organizational goals. Innovative thinking to identify unique solutions.</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -82,7 +82,7 @@ function AboutUsMobile() {
                                                     <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                         <div style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                             <div className="Project2" style={{ alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(22px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word' }}>Change Management</div>
-                                                            <div  style={{ alignSelf: 'stretch', color: '#1C1E53', fontSize: 'clamp(16px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Experience in guiding teams through change. Skilled in training, coaching and supporting staff through transitions.</div>
+                                                            <div  style={{ alignSelf: 'stretch', color: '#1C1E53', fontSize: 'clamp(20px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Experience in guiding teams through change. Skilled in training, coaching and supporting staff through transitions.</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -93,7 +93,7 @@ function AboutUsMobile() {
                                                     <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                         <div style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                             <div className="Project3" style={{ alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(22px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word' }}>Project Management</div>
-                                                            <div  style={{ alignSelf: 'stretch', color: '#1C1E53', fontSize: 'clamp(16px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Expertise in planning, executing and monitoring projects. Ability to manage time effectively and handle multiple tasks simultaneously.</div>
+                                                            <div  style={{ alignSelf: 'stretch', color: '#1C1E53', fontSize: 'clamp(20px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Expertise in planning, executing and monitoring projects. Ability to manage time effectively and handle multiple tasks simultaneously.</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -104,7 +104,7 @@ function AboutUsMobile() {
                                                     <div className="Content" style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                         <div style={{ alignSelf: 'stretch', height: '30vh', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10.67, display: 'flex' }}>
                                                             <div className="Project3" style={{ alignSelf: 'stretch', color: '#282938', fontSize: 'clamp(22px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word' }}>Technical Proficiency</div>
-                                                            <div  style={{ alignSelf: 'stretch', color: '#1C1E53', fontSize: 'clamp(16px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Deep understanding of not-for-profit landscape, municipal government and grant making.  Awareness of current trends, challenges and best practices that impact nonprofits and other community-based organizations.</div>
+                                                            <div  style={{ alignSelf: 'stretch', color: '#1C1E53', fontSize: 'clamp(20px, 3vw, 21px)', fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word' }}>Deep understanding of not-for-profit landscape, municipal government and grant making.  Awareness of current trends, challenges and best practices that impact nonprofits and other community-based organizations.</div>
                                                         </div>
                                                     </div>
                                                 </div>

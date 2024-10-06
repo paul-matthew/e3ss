@@ -28,6 +28,7 @@ function Services() {
 
       const services = [
         { 
+            id: 1,
             title: "Assessments", 
             description: "Assessments include state analysis and an implementation roadmap.",
             image:'./assessments.jpg',
@@ -44,6 +45,7 @@ function Services() {
             )
         },
         { 
+            id: 2,
             title: "Organizational Audits", 
             description: "Detailed audits of your organization.",
             image:"./audits.jpg",
@@ -60,6 +62,7 @@ function Services() {
             )
         },
         { 
+            id: 3,
             title: "Program Evaluation", 
             description: "Comprehensive analysis used to maintain an effective program",
             image:"./groupmeeting.jpeg",
@@ -76,6 +79,7 @@ function Services() {
             )
         },
         { 
+            id: 4,
             title: "Strategic Plan", 
             description: "Strategic Plan for your organization",
             image:"./boardroomsmile.jpg",
@@ -130,9 +134,9 @@ function Services() {
                             <div className="Frame2230"style={{position:'relative'}}>
                                 <div className="Servicecards1">
                                     <div className="Frame2230" style={{ display: "flex"}}>
-                                        {services.map((service, index) => (
-                                        <FadeInSection>
-                                        <div className="Servicecard" key={index} style={{backgroundColor:'white', border:'rgb(130, 117, 78) solid'}}>
+                                        {services.map((service) => (
+                                        <FadeInSection key={service.id}>
+                                        <div className="Servicecard" style={{backgroundColor:'white', border:'rgb(130, 117, 78) solid'}}>
                                             <div className="CardImage">
                                             <img className="cardpic" src={`./${service.image}`} alt={service.title} />
                                             </div>
