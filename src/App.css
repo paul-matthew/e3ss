@@ -1438,7 +1438,25 @@ height:320% !important;
   background: url('../public/loading.svg') no-repeat center center;
   background-size: contain;
   animation: pulseheart 1s infinite;
+  clip-path: inset(30% 0 30% 0);
 }
+
+
+
+.logo {
+  width: 250px; /* Adjust logo size */
+  animation: fadeInLogo 3s infinite;
+}
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0; /* Start fully transparent */
+  }
+  100% {
+    opacity: 1; /* End fully visible */
+  }
+}
+
 
 @keyframes fadeOut {
   0% {
@@ -1461,12 +1479,14 @@ height:320% !important;
   height: 100%;
   background: black;
   display: flex;
+  flex-direction: column; /* Stack items vertically */
   justify-content: center;
   align-items: center;
   z-index: 1000;
   transition: opacity 1s ease, visibility 1s ease;
   animation: fadeOut 2s forwards; /* Adjusted animation timing */
-  animation-delay: 1s; }
+  animation-delay: 1s; 
+}
 
 .loading-screen.hidden {
   opacity: 0;

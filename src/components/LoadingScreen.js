@@ -23,9 +23,16 @@ const LoadingScreen = ({ hidden }) => {
 
   return (
     <div className={`loading-screen ${hidden ? 'hidden' : ''}`}>
-      {showHeart && <div className="pulsing-heart"></div>}
+      {showHeart && (
+        <>
+          <div className="pulsing-heart"></div>
+          <div className="logo-container">
+          <img src="./logo-new.png" alt="Logo" className="logo" />
+          </div>
+        </>
+      )}
     </div>
   );
-};
+  };
 
 export default LoadingScreen;
