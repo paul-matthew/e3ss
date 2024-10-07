@@ -1438,6 +1438,8 @@ height:320% !important;
   background: url('../public/loading4.svg') no-repeat center center;
   background-size: contain;
   animation: pulseheart 1s infinite;
+  position: absolute;
+   
   /* clip-path: inset(30% 0 30% 0); */
 }
 
@@ -1446,6 +1448,8 @@ height:320% !important;
 .logo {
   width: 250px; /* Adjust logo size */
   animation: fadeInLogo 3s infinite;
+  margin-top: 20px; /* Space between loader and logo, adjust as needed */
+  position: absolute; 
 }
 
 @keyframes fadeInLogo {

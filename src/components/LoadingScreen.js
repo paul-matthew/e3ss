@@ -23,15 +23,13 @@ const LoadingScreen = ({ hidden }) => {
 
   return (
     <div className={`loading-screen ${hidden ? 'hidden' : ''}`}>
-      {showHeart && (
-        <>
-          <div className="pulsing-heart"></div>
-          <div className="logo-container">
-          <img src="./logo-new3.png" alt="Logo" className="logo" />
-          </div>
-        </>
-      )}
-    </div>
+    {showHeart && (
+      <>
+        <div className="pulsing-heart"></div>
+        <img src="./logo-new7.png" alt="Logo" className="logo" />
+      </>
+    )}
+  </div>
   );
   };
 
