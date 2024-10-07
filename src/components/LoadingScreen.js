@@ -27,7 +27,7 @@ const LoadingScreen = ({ hidden }) => {
         <>
           <div className="pulsing-heart"></div>
           <div className="logo-container">
-          <img src="./logo-new.png" alt="Logo" className="logo" />
+          <img src="./logo-new3.png" alt="Logo" className="logo" />
           </div>
         </>
       )}

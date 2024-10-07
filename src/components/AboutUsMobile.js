@@ -32,7 +32,7 @@ function AboutUsMobile() {
   return (
     
     <div className="AboutUs-mobile" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: 'white', maxWidth: "100%", display: "none"}}>
-        <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
+        <div id='NavlogoMobile'><img src='./logo-new5.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'About1' && (
         <div>
             <div className="Aboutus" style={{width: '100%', position: 'absolute', background: '#efe6dd', top: "10vh", overflow: 'hidden'}}>

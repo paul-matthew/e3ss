@@ -12,7 +12,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className="BlogContainer" style={{ width: '100vw', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px',background: '#f0ece7' }}>
-            <div className='Bloglogo'><img src='./logo-new.png' alt='logo mobile'style={{zIndex:2,position:'absolute',height:'5vh',marginTop:'3vh', left:0, top:0, marginLeft:'2.5vw'}}onClick={() => window.location.href = './'}/></div>
+            <div className='Bloglogo'><img src='./logo-new5.png' alt='logo mobile'style={{zIndex:2,position:'absolute',height:'5vh',marginTop:'2.5vh', left:0, top:0, marginLeft:'2.5vw'}}onClick={() => window.location.href = './'}/></div>
             <div className="PostsWrapper" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px',marginTop: '80px' }}>
                 <FadeInSection>
                 <div className="PostWrapper" style={{ border: '2px solid #000', padding: '20px', maxWidth: '600px', width: '100%', textAlign: 'center', marginBottom: '20px',background:'white' }}>

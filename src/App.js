@@ -216,7 +216,7 @@ window.onload = function() {
         <div className="Navbanner" style={{ width: '100%', height: '10vh', left: 0, top: 0, position: 'absolute', background: '#0E0E0E' }} />
         <div className="Navlogo" style={{ width: 99, height: '10vh', left: 39, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex' }}>
           <div className="Logos" style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }} onClick={() => handleHomeClick()}>
-            <img className="Logo1" style={{ width: 'auto', height: '6vh',marginTop:'0px' }} src="./logo-new.png" alt="logo" />
+            <img className="Logo1" style={{ width: 'auto', height: '6vh',marginTop:'0px' }} src="./logo-new5.png" alt="logo" />
 
           </div>
         </div>
