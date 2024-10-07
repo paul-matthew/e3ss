@@ -1416,3 +1416,59 @@ height:320% !important;
   .x{
   color:#f0ece7
   }
+
+/*LOADING SCREEN*/
+
+/* Pulsing Heart Animation */
+@keyframes pulseheart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulsing-heart {
+  width: 300px;
+  height: 300px;
+  background: url('../public/loading.svg') no-repeat center center;
+  background-size: contain;
+  animation: pulseheart 1s infinite;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 1s ease, visibility 1s ease;
+  animation: fadeOut 2s forwards; /* Adjusted animation timing */
+  animation-delay: 1s; }
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}

@@ -6,6 +6,7 @@ import Blog from './blog'
 import Contact from './contact'
 import MobileMenu from './components/MobileMenu';
 import OverlaysMobile from './components/OverlaysMobile';
+import LoadingScreen from "./components/LoadingScreen.js";
 
 const desktopStateList = ["About", "Services", "Blog", "Contact"]
 
@@ -18,6 +19,7 @@ function App() {
   const [BlogbuttonText, setBlogButtonText] = useState('Blog');
   const [displayState, setDisplayState] = useState('block');
   const [displayState2, setDisplayState2] = useState('1');
+  const [showLoadingScreen, setShowLoadingScreen] = useState(false);
 
   const isHomeDesktop = !desktopStateList.includes(desktopState);
 
@@ -138,11 +140,11 @@ function App() {
     } else {
       setDesktopState("Homedesktop1"); // Set default state if URL doesn't match
     }
-    // if (currentUrl === '/') {
-    //   setShowLoadingScreen(true);
-    // } else {
-    //   setShowLoadingScreen(false);
-    // } 
+    if (currentUrl === '/') {
+      setShowLoadingScreen(true);
+    } else {
+      setShowLoadingScreen(false);
+    } 
 
   }, []);
 
@@ -208,6 +210,8 @@ window.onload = function() {
 
   return (
     <div className="Homepage" style={{ width: '100%', height: '100vh', position: 'relative', background: 'white', border: 'hidden red' }}>
+            {showLoadingScreen && <LoadingScreen />}
+
       <div className="Navdesktop" style={{ zIndex: 2, position: 'absolute', width: "100%" }}>
         <div className="Navbanner" style={{ width: '100%', height: '10vh', left: 0, top: 0, position: 'absolute', background: '#0E0E0E' }} />
         <div className="Navlogo" style={{ width: 99, height: '10vh', left: 39, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex' }}>
