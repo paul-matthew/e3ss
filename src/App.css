@@ -499,14 +499,15 @@ body,html {
 }
 @media (max-width:1180px){
   .TitleSer {
-    font-size: 34px !important;
+    font-size: clamp(20px, 2.5vw, 25px) !important;
     font-weight:bold;
+    margin:6px;
   }
   .CardTextx{
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 20px;
+    font-size: clamp(20px, 2vw, 20px) !important;
   }
 }
 
@@ -1343,6 +1344,44 @@ object-position: center -140px;
     }
 
   }
+
+  #about-button{
+    position:absolute;  
+  } 
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+  .Samplebio21 {
+    left: 50%;
+    transform: translateX(-10%);
+    top: 23vh;
+  }
+  /* //FIXXX */
+  .MySkill {
+    position: absolute !important;
+    top: 5vh; /* Position it higher by setting a smaller value */
+    bottom: auto; /* Ensure bottom positioning does not conflict */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 56.67px;
+}
+
+}
+
+/* Portrait orientation */
+@media (orientation: portrait) {
+  .Samplebio21 {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 23vh;
+  }
+  #about-button{
+  top:40vh;
+  }
+}
+
 
   /* .last-form-group {
     display: flex !important;

@@ -29,8 +29,8 @@ function Services() {
       const services = [
         { 
             id: 1,
-            title: "Assessments", 
-            description: "Assessments include state analysis and an implementation roadmap.",
+            title: "Current State Assessments", 
+            description: "These include a comprehensive evaluation of an organization’s existing conditions, operations, and performance.",
             image:'./assessments.jpg',
             description2: (
                 <div>
@@ -198,8 +198,8 @@ function Services() {
                                 <div className="Text" style={{alignSelf: 'stretch', height: "auto", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(20px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
-                                <div className="Button book-consultation" style={{top:'90vh',height:'6vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}onClick={() => handleContactClick()}>
-                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(13px, 3vw,16px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>BOOK A CONSULTATION</div>
+                                <div className="Button book-consultation" style={{top:'90vh',justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}onClick={() => handleContactClick()}>
+                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(13px, 3vw,16px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', zIndex: 1}}>CONTACT</div>
                                 </div>
                             </div>
                         </div>

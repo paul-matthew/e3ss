@@ -35,11 +35,11 @@ function AboutUsMobile() {
         <div id='NavlogoMobile'><img src='./logo-new5.png' alt='logo mobile'style={{height:'5vh',marginTop:'1.5vh'}}onClick={() => window.location.href = './'}/></div>
         {desktopState === 'About1' && (
         <div>
-            <div className="Aboutus" style={{width: '100%', position: 'absolute', background: '#efe6dd', top: "10vh", overflow: 'hidden'}}>
+            <div className="Aboutus" style={{width: '100%', height:'auto', position: 'absolute', background: '#efe6dd', top: "10vh", overflow: 'hidden'}}>
                 <div className="Image" style={{width: '100%', height: 'auto', right: 0, top: 0, position: 'absolute', objectFit: "cover"}}>
-                    <img className="Samplebio21" style={{width: 'auto', height: '80vh', left: '50%',transform: 'translateX(-50%)', top: '23vh', position: 'absolute',filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5))' }} src="./erica-aboutme-c.png" alt='Placeholder'/>
+                    <img className="Samplebio21" style={{width: 'auto', height: '80vh', position: 'absolute',filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5))' }} src="./erica-aboutme-c.png" alt='Placeholder'/>
                 </div>
-                <div className="Intro" style={{ position: "relative",width: '85vw', height: '100vh', left: "5vw", top: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
+                <div className="Intro" style={{ position: "relative",width:'auto',height: '100vh', left: "5vw", margin:'0 auto',top: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'inline-flex'}}>
                     {/* <div className="E3StrategicSolutions" style={{alignSelf: 'stretch', fontSize: 'clamp(16px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', textTransform: 'uppercase', wordWrap: 'break-word'}}>E3 STRATEGIC SOLUTIONS</div> */}
                     <div className="Content" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 12, display: 'flex'}}>
                         <div className='content-name' style={{width:'100vw', fontSize: 'clamp(25px, 4vw, 64px)', fontFamily: 'Playfair Display', fontWeight: '700', wordWrap: 'break-word'}}>Hello, my name is Erica Opoku</div>

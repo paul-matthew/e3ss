@@ -201,7 +201,7 @@ function Services() {
                                     <div className="Pricingx" style={{alignSelf: 'stretch', color: '#4D4D4D', fontSize: 'clamp(10px, 3vw, 35px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word'}}>Our pricing is personalized to meet your specific needs, ensuring the best value for your investment. Contact us today for a consultation and allow us to elevate your business to the next level!</div>
                                 </div>
                                 <div className="Button book-consultation" style={{justifyContent: 'center', alignItems: 'center',marginTop:'20px', display: 'inline-flex'}}>
-                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(10px, 3vw, 20px)', fontFamily: 'Roboto', fontWeight: '600', letterSpacing: 3, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>BOOK A CONSULTATION</div>
+                                    <div className="Label" style={{textAlign: 'center', color: '#FBFDFD', fontSize: 'clamp(10px, 3vw, 20px)', fontFamily: 'Roboto', fontWeight: '600', letterSpacing: 3, wordWrap: 'break-word'}}onClick={() => handleContactClick()}>CONTACT</div>
                                 </div>
                             </div>
                         </div>
