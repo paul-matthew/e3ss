@@ -34,7 +34,7 @@ function About() {
     return (
 
         <>
-            <div className="AboutUs" style={{ width: '100%', height: '100%', right: '0', position: 'relative', background: 'white' }}>
+            <div className="AboutUs" style={{ width: '100%', height: '100%', right: '0', position: 'relative', background: 'white',overflowX:'hidden' }}>
                 {/* <div id='NavlogoMobile'><img src='./logo-new.png' alt='logo mobile'style={{height:'50px'}}onClick={() => './'()}/></div> */}
                 {desktopState === 'About1' && (
                     <div>

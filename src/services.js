@@ -115,7 +115,7 @@ function Services() {
   
   return (
     <>
-    <div className="Services" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: '#f0ece7'}}>
+    <div className="Services" style={{width: '100%', height: '100vh', right:'0', position: 'relative', background: '#f0ece7',overflowX:'hidden'}}>
         {desktopState === 'Services1' && (
         <div>
             <div className="Servicesx" style={{width: '100%', position: 'relative', background: 'white',top: '100px'}}>

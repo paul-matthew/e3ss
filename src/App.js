@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import About from './aboutus'
 import Services from './services'
-import Blog from './blog'
+// import Blog from './blog'
 import Contact from './contact'
 import MobileMenu from './components/MobileMenu';
 import OverlaysMobile from './components/OverlaysMobile';
 import LoadingScreen from "./components/LoadingScreen.js";
 
-const desktopStateList = ["About", "Services", "Blog", "Contact"]
+const desktopStateList = ["About", "Services", "Contact"]
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -16,7 +16,7 @@ function App() {
   const [ManoverlayLeft, setManOverlayLeft] = useState('0vw');
   const [BlogoverlayLeft, setBlogOverlayLeft] = useState('75vw');
   const [SerbuttonText, setSerButtonText] = useState('Services');
-  const [BlogbuttonText, setBlogButtonText] = useState('Blog');
+  const [BlogbuttonText, setBlogButtonText] = useState('Latest');
   const [displayState, setDisplayState] = useState('block');
   const [displayState2, setDisplayState2] = useState('1');
   const [showLoadingScreen, setShowLoadingScreen] = useState(false);
@@ -59,7 +59,7 @@ function App() {
       setManOverlayLeft('0vw');
       setTimeout(() => {
         setSerButtonText('Services');
-        setBlogButtonText('Blog');
+        setBlogButtonText('Latest');
       }, 0); // Wait for 0.5s transition duration
     }
   };
@@ -108,7 +108,7 @@ function App() {
       setBlogOverlayLeft('75vw');
       setTimeout(() => {
         setSerButtonText('About Us');
-        setBlogButtonText('Blog');
+        setBlogButtonText('Latest');
       }, 0);
     } // Wait for 0.5s transition duration
     else {
@@ -117,7 +117,7 @@ function App() {
       setBlogOverlayLeft('75vw');
       setTimeout(() => {
         setSerButtonText('About Us');
-        setBlogButtonText('Blog');
+        setBlogButtonText('Latest');
       }, 0); // Wait for 0.5s transition duration
     }
   };
@@ -164,12 +164,12 @@ function App() {
     setDesktopState('Services');
     changeUrl("/Services");
   };
-  const handleBlogClick = () => {
-    setDisplayState('none');
-    setDisplayState2('0');
-    setDesktopState('Blog');
-    changeUrl("/Blog");
-  };
+  // const handleBlogClick = () => {
+  //   setDisplayState('none');
+  //   setDisplayState2('0');
+  //   setDesktopState('Blog');
+  //   changeUrl("/Blog");
+  // };
   const handleContactClick = () => {
     setDisplayState('none');
     setDisplayState2('0');
@@ -179,7 +179,7 @@ function App() {
   const handleHomeClick = () => {
     if (desktopState !== 'Homedesktop1') {
       setSerButtonText('Services');
-      setBlogButtonText('Blog');
+      setBlogButtonText('Latest');
         setDisplayState('block');
         setDisplayState2('1');
       setDesktopState('Homedesktop1');
@@ -228,15 +228,17 @@ window.onload = function() {
         <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}onClick={() => handleServicesClick()}>
           <div className="Label" style={{ width: "auto", textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }}>Services</div>
         </div>
-        <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}onClick={() => handleBlogClick()}>
+        {/* <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}onClick={() => handleBlogClick()}>
           <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }} >Blog</div>
-        </div>
+        </div> */}
         <div className="ListitemDesktopNa" style={{ width: 115, height: '100%', paddingLeft: 38, paddingRight: 38, paddingTop: 0, paddingBottom: 0, background: '#0E0E0E', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}onClick={() => handleContactClick()}>
           <div className="Label" style={{ width: 131, textAlign: 'center', color: 'white', fontSize: 'clamp(13px, 2vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', letterSpacing: 2, wordWrap: 'break-word' }}>Contact</div>
         </div>
       </div>
 
-      <MobileMenu handleContactClick={handleContactClick} handleBlogClick={handleBlogClick} handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} desktopState={desktopState} />
+      <MobileMenu handleContactClick={handleContactClick} 
+      // handleBlogClick={handleBlogClick} 
+      handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} desktopState={desktopState} />
 
       <div className="Rectangle158" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '25vw', height: '15vh', maxHeight: "15%", left: `${SeroverlayLeft.replace("vw", "")}%`, top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)', transition: 'left 0.5s ease-in-out' }} />
       <div className="Rectangle158" style={{ display: desktopStateList.includes(desktopState) ? "none":displayState, zIndex: displayState2, width: '25vw', height: '15vh', maxHeight: "15%", left: `${BlogoverlayLeft.replace("vw", "")}%`, top: '70vh', position: 'absolute', background: 'rgba(217, 217, 217, 0.30)', transition: 'left 0.5s ease-in-out' }} />
@@ -255,7 +257,9 @@ window.onload = function() {
         <div className="ButtonBlog" style={{ zIndex: 1, color: '#DED8D8', position: 'absolute', height: '15vh', top: '70vh', textAlign: 'center', fontSize: 'clamp(12px, 3vw, 30px)', fontFamily: 'Roboto', fontWeight: '700', letterSpacing: 3, wordWrap: 'break-word', display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={() => handleButton2Click(desktopState)}>{BlogbuttonText}</div>
       </div>
 
-      {isHomeDesktop && <OverlaysMobile displayState={desktopStateList.includes(desktopState) ? "none":displayState} displayState2={displayState2} desktopState={desktopState} handleBlogClick={handleBlogClick} handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} setDesktopState={setDesktopState}/>}
+      {isHomeDesktop && <OverlaysMobile displayState={desktopStateList.includes(desktopState) ? "none":displayState} displayState2={displayState2} desktopState={desktopState} 
+      // handleBlogClick={handleBlogClick} 
+      handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} setDesktopState={setDesktopState}/>}
 
       {desktopState === 'Homedesktop1' && (
         <div id='Homedesktop1' className='Homedesktop1' style={{ left: 0, top: 0, position: 'absolute', width: "100%", display: desktopStateList.includes(desktopState) ? "none":"static" }}>
@@ -291,7 +295,7 @@ window.onload = function() {
               <div className="Title" style={{ color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center' }}>Stay up to date with current intitiatives and valuable insights</div>
             </div>
             <div className="Button"style={{background:'#efe6dd'}}>
-              <div className="Label" style={{color:'black'}} onClick={() => handleBlogClick()}>Read Blog</div>
+              <div className="Label" style={{color:'black'}} onClick={() => handleContactClick()}>Get Updates</div>
             </div>
           </div>
 
@@ -323,9 +327,9 @@ window.onload = function() {
       {desktopState === 'Services' && (
         <Services />
       )}
-      {desktopState === 'Blog' && (
+      {/* {desktopState === 'Blog' && (
         <Blog />
-      )}
+      )} */}
       {desktopState === 'Contact' && (
         <Contact />
       )}
