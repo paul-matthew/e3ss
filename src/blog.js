@@ -4,7 +4,7 @@ import './App.css';
 // import App from './App'
 // import Services from './services'
 // import Contact from './contact'
-import FadeInSection from './components/FadeIn';
+import FadeInSection from './components/FadeIn.js';
 
 
 import React from 'react';

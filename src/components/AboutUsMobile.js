@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import '../App.css';
-import App from '../App'
-import Services from '../services'
-import Blog from '../blog'
-import Contact from '../contact'
-import FadeInSection from './FadeIn';
+import App from '../App.js'
+import Services from '../services.js'
+import Blog from '../blog.js'
+import Contact from '../contact.js'
+import FadeInSection from './FadeIn.js';
 
 function AboutUsMobile() {
     const [desktopState] = useState('About1');  

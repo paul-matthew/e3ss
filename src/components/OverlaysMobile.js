@@ -1,12 +1,12 @@
 import { useState} from 'react';
 
-const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopState,handleBlogClick, handleServicesClick, handleAboutClick}) => {
+const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopState,handleContactClick, handleServicesClick, handleAboutClick}) => {
     
     const [SeroverlayLeft, setOverlayLeft] = useState('65vw');
     const [ManoverlayLeft, setManOverlayLeft] = useState('10vw');
     const [BlogoverlayLeft, setBlogOverlayLeft] = useState('80vw');
     const [SerbuttonText, setSerButtonText] = useState('Services');
-    const [BlogbuttonText, setBlogButtonText] = useState('Blog');
+    const [BlogbuttonText, setBlogButtonText] = useState('Latest');
 
     const handleButtonClick = (newState) => {
       const transitionDuration = 300; // Transition duration in milliseconds
@@ -40,7 +40,7 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
           setManOverlayLeft('10vw');
           setTimeout(() => {
               setSerButtonText('Services');
-              setBlogButtonText('Blog');
+              setBlogButtonText('Latest');
           }, transitionDuration / 2); // Wait for half of the transition duration
       }
   };
@@ -90,7 +90,7 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
         setBlogOverlayLeft('80vw');
         setTimeout(() => {
             setSerButtonText('About Us');
-            setBlogButtonText('Blog');
+            setBlogButtonText('Latest');
         }, transitionDuration / 2); // Wait for half of the transition duration
     } else {
         // Set overlay states for other cases
@@ -99,7 +99,7 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
         setBlogOverlayLeft('80vw');
         setTimeout(() => {
             setSerButtonText('About Us');
-            setBlogButtonText('Blog');
+            setBlogButtonText('Latest');
         }, transitionDuration / 2); // Wait for half of the transition duration
     }
 };
@@ -108,7 +108,7 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
     if (desktopState !== 'Homedesktop1') {
       setTimeout(() => {
       setSerButtonText('Services');
-      setBlogButtonText('Blog');
+      setBlogButtonText('Latest');
       // setDisplayState('block');
       // setDisplayState2('1');
       setDesktopState('Homedesktop1');
@@ -172,10 +172,10 @@ const OverlaysMobile = ({setDesktopState, displayState, displayState2, desktopSt
           
           <div className="TextContent1" style={{height: '50vh', paddingLeft:'0vw',left: '20vw', top: '40vh', position: 'absolute', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 24, display: 'inline-flex'}}>
               <div className="Title" style={{width: '60vw', height: 28, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'flex'}}>
-                  <div className="Title" style={{zIndex:'2',color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>Stay up to date with current intitiatives and valuable insights</div>
+                  <div className="Title" style={{zIndex:'2',color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>Subscribe to stay up to date with current intitiatives and valuable insights</div>
               </div>
               <div className="Button">
-                <div className="Label"onClick={() => handleBlogClick()}>READ BLOG</div>
+                <div className="Label"onClick={() => handleContactClick()}>GET UPDATES</div>
               </div>  
           </div>
 

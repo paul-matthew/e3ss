@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import '../App.css';
-import App from '../App'
-import Blog from '../blog'
-import Contact from '../contact'
-import Modal from '../modal'
-import FadeInSection from './FadeIn';
+import App from '../App.js'
+import Blog from '../blog.js'
+import Contact from '../contact.js'
+import Modal from '../modal.js'
+import FadeInSection from './FadeIn.js';
 
 function Services() {
     const [desktopState,setDesktopState] = useState('Services1');  

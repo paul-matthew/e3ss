@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-function MobileMenu({ handleAboutClick, handleServicesClick, handleBlogClick, handleContactClick, desktopState }) {
+function MobileMenu({ handleAboutClick, handleServicesClick, handleContactClick, desktopState }) {
   const [openMenuContent, setOpenMenuContent] = React.useState(false);
   const menuRef = useRef(null);
 
@@ -39,10 +39,10 @@ function MobileMenu({ handleAboutClick, handleServicesClick, handleBlogClick, ha
     setOpenMenuContent(false);
   };
 
-  const _handleBlogClick = () => {
-    handleBlogClick();
-    setOpenMenuContent(false);
-  };
+  // const _handleBlogClick = () => {
+  //   handleBlogClick();
+  //   setOpenMenuContent(false);
+  // };
 
   const _handleContactClick = () => {
     handleContactClick();
@@ -156,7 +156,7 @@ function MobileMenu({ handleAboutClick, handleServicesClick, handleBlogClick, ha
               </div>
             </div>
 
-            <div
+            {/* <div
               className={desktopState === "Blog" ? "active-menu-mobile" : "ListitemDesktopNa"}
               style={{
                 width: "100%",
@@ -185,7 +185,7 @@ function MobileMenu({ handleAboutClick, handleServicesClick, handleBlogClick, ha
               >
                 Blog
               </div>
-            </div>
+            </div> */}
 
             <div
               className={desktopState === "Contact" ? "active-menu-mobile" : "ListitemDesktopNa"}

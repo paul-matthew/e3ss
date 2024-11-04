@@ -567,7 +567,13 @@ body,html {
 .ContactX {
   position: absolute;
   background: white;
-  top: 0;
+  top: 0px;
+}
+
+@media (min-width:576px){
+  .Contact2 {
+    top: 70px !important;
+  }
 }
 
 .ComingSoon {
@@ -1175,6 +1181,12 @@ object-position: center -140px;
 /* Largest devices such as desktops (1280px and up) */
 /* @media only screen and (min-width: 80em) {...} */
 
+@media (min-width: 757px) {
+  #NavlogoMobile {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1180px){
   #Navmenudesktop {
     display: none !important;
@@ -1185,8 +1197,17 @@ object-position: center -140px;
   #NavlogoMobile{
     display: flex !important;
     position:absolute;
-    z-index:20;
+    z-index:9;
     margin:10px;
+  }
+
+  #NavlogoMobile img {
+    height: 7vh;
+    margin-top: 0vh;
+    position: absolute;
+    left: 10px;
+    top:0px;
+    cursor: pointer;
   }
 
   #mobile-menu {
@@ -1436,16 +1457,20 @@ object-position: center -140px;
   }
 }
 
-@media(max-width:300px){
-.BlogContainer{
-height:320% !important;
+/* .BlogContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background: white;
+} */
+
+.contentContainer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
 }
-}
-@media(min-width:301px) and (max-width:600px){
-  .BlogContainer{
-  height:300% !important;
-  }
-  }
 
   @media(min-width:601px){
     .Bloglogo{
@@ -1534,4 +1559,27 @@ height:320% !important;
 .loading-screen.hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.subscribe-button{
+  animation: pulse 2s infinite;
+}
+
+
+.subscribe-button:hover,.donate-button:hover{
+  transform: scale(1.1) !important;
+  background-color:white !important;
+  color:black !important;
 }

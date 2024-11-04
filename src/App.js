@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import About from './aboutus'
-import Services from './services'
+import About from './aboutus.js'
+import Services from './services.js'
 // import Blog from './blog'
-import Contact from './contact'
-import MobileMenu from './components/MobileMenu';
-import OverlaysMobile from './components/OverlaysMobile';
+import Contact from './contact.js'
+import MobileMenu from './components/MobileMenu.js';
+import OverlaysMobile from './components/OverlaysMobile.js';
 import LoadingScreen from "./components/LoadingScreen.js";
+import Terms from "./terms.js";
 
-const desktopStateList = ["About", "Services", "Contact"]
+const desktopStateList = ["About", "Services", "Contact", "Terms"]
 
 function App() {
   const [desktopState, setDesktopState] = useState('Homedesktop1');
@@ -129,7 +130,7 @@ function App() {
       "/services",
       "/blog",
       "/contact",
-      // "/terms",
+      "/terms",
     ];
 
     if (allowedUrls.includes(currentUrl)) {
@@ -176,6 +177,14 @@ function App() {
     setDesktopState('Contact');
     changeUrl("/Contact");
   };
+  const handleTermsClick = () => {
+    setDisplayState("none");
+    setDisplayState2("0");
+    setDesktopState("Terms");
+    changeUrl("/Terms");
+    // setShowCart(false);
+  };
+
   const handleHomeClick = () => {
     if (desktopState !== 'Homedesktop1') {
       setSerButtonText('Services');
@@ -258,7 +267,8 @@ window.onload = function() {
       </div>
 
       {isHomeDesktop && <OverlaysMobile displayState={desktopStateList.includes(desktopState) ? "none":displayState} displayState2={displayState2} desktopState={desktopState} 
-      // handleBlogClick={handleBlogClick} 
+      // handleBlogClick={handleBlogClick}
+      handleContactClick={handleContactClick}  
       handleServicesClick={handleServicesClick} handleAboutClick={handleAboutClick} setDesktopState={setDesktopState}/>}
 
       {desktopState === 'Homedesktop1' && (
@@ -292,10 +302,10 @@ window.onload = function() {
 
           <div className="TextContent1" style={{ height: '87vh', paddingLeft: '0vw', left: '60vw', top: '10vh', position: 'absolute', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 24, display: 'inline-flex' }}>
             <div className="Title" style={{ width: '30vw', height: 28, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', display: 'flex' }}>
-              <div className="Title" style={{ color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center' }}>Stay up to date with current intitiatives and valuable insights</div>
+              <div className="Title" style={{ color: 'white', fontSize: 'clamp(20px, 4vw, 54px)', fontFamily: 'Roboto', lineHeight: 1, wordWrap: 'break-word', textAlign: 'center' }}>Subscribe to stay up to date with current intitiatives and valuable insights</div>
             </div>
             <div className="Button"style={{background:'#efe6dd'}}>
-              <div className="Label" style={{color:'black'}} onClick={() => handleContactClick()}>Get Updates</div>
+              <div className="Label" style={{color:'black'}} onClick={() => handleContactClick()}>GET UPDATES</div>
             </div>
           </div>
 
@@ -333,15 +343,16 @@ window.onload = function() {
       {desktopState === 'Contact' && (
         <Contact />
       )}
+      {desktopState === "Terms" && <Terms />}
 
       <div className="Footerdesktop" style={{ zIndex: 4, width: '100%', height: 43, left: 0, bottom: '0vh', position: 'fixed', background: '#0E0E0E' }}>
         <div className="Footerprivacy" style={{ height: 43, marginRight: 20, right: '0vw', top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
           <div className="HeadingName" style={{ height: 43, paddingTop: 0, paddingBottom: 0, justifyContent: 'center', alignItems: 'flex-start', gap: 20, display: 'flex' }}>
             <div className="HeaderMenuDefault" style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
-              <div className="Label" style={{ color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word', textAlign: "center" }}>Terms of Use</div>
+              <div className="Label" style={{ color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word', textAlign: "center" }}onClick={() => handleTermsClick()}>Terms of Use</div>
             </div>
             <div className="MenuItemDefault" style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
-              <div className="Label" style={{ color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word' }}>Privacy</div>
+              <div className="Label" style={{ color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word' }}onClick={() => handleTermsClick()}>Privacy</div>
             </div>
             <div className="MenuItemDefault contact-footer" style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
               <div className="Label" style={{ color: 'white', fontSize: 'clamp(11px, 1vw, 16px)', fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word' }}onClick={() => handleContactClick()}>Contact</div>

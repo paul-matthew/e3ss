@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import App from './App'
-import Blog from './blog'
-import Contact from './contact'
-import Modal from './modal'
-import ServicesMobile from './components/ServicesMobile';
+import App from './App.js'
+import Blog from './blog.js'
+import Contact from './contact.js'
+import Modal from './modal.js'
+import ServicesMobile from './components/ServicesMobile.js';
 
 
 function Services() {
