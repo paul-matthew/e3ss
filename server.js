@@ -9,7 +9,7 @@ import { dirname } from 'path';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 const emailUser = process.env.EMAIL_USER;
 const emailPass = process.env.EMAIL_PASS;
 const __filename = fileURLToPath(import.meta.url);
@@ -70,8 +70,8 @@ app.post('/contact', (req, res) => {
   const mailOptions = {
     from: email,
     to: emailUser, // Your email address
-    subject: `Contact Form Submission from ${name}`,
-    text: message,
+    subject: `E3SS Inquiry from ${name}`,
+    text: `From: ${email}\n\nMessage:\n${message}`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

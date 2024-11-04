@@ -234,7 +234,7 @@ function Contact() {
                         fontSize: 'clamp(12px, 2vw, 16px)',
                         textAlign: 'center',
                         margin: '0 0 20px'
-                    }}>Stay up to date with my content focusing on XXXpublic policy, and everything else E3 Strategic Solutions.</p>
+                    }}>Stay up to date with my content focusing on public policy, and everything else E3 Strategic Solutions.</p>
                     <form onSubmit={handleSubscribe} style={{
                         display: 'flex',
                         flexDirection: 'column',
