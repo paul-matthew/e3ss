@@ -5,16 +5,25 @@ function FadeInSection(props) {
     const domRef = React.useRef();
 
     React.useEffect(() => {
-        const currentRef = domRef.current; // Store the current value of domRef.current
+        const currentRef = domRef.current;
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setVisible(entry.isIntersecting));
-        });
-        observer.observe(currentRef);
-      
+        // Create an IntersectionObserver with a rootMargin of "-20px"
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => setVisible(entry.isIntersecting));
+            },
+            {
+                rootMargin: '20px', // Trigger when the element is within 20px of the viewport
+            }
+        );
+
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
         return () => {
             if (currentRef) {
-                observer.unobserve(currentRef); // Use the stored currentRef in the cleanup function
+                observer.unobserve(currentRef);
             }
         };
     }, []);
@@ -30,3 +39,4 @@ function FadeInSection(props) {
 }
 
 export default FadeInSection;
+

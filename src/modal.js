@@ -7,7 +7,7 @@ const Modal = ({ onClose, service }) => {
                 <div style={{margin:'15px'}}>
                     <span className="close" style={{cursor:'pointer', fontSize:'40px', display:'flex',position:'absolute', right:20 }}onClick={onClose}>&times;</span>
                     <h2>{service.title}</h2>
-                    <p>{service.description2}</p>
+                    <div>{service.description2}</div>
                 </div>
                     <img className='modalImg' style={{maxHeight:'400px',objectFit:'cover'}} src={service.image} alt={service.title} />
             </div>
